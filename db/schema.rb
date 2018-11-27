@@ -10,10 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_26_155745) do
+ActiveRecord::Schema.define(version: 2018_11_27_065806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "workshop_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.index ["workshop_id"], name: "index_bookings_on_workshop_id"
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.text "content"
+    t.string "title"
+    t.bigint "workshop_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_notes_on_user_id"
+    t.index ["workshop_id"], name: "index_notes_on_workshop_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "description"
+    t.integer "rating"
+    t.bigint "booking_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["booking_id"], name: "index_reviews_on_booking_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +56,23 @@ ActiveRecord::Schema.define(version: 2018_11_26_155745) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "workshops", force: :cascade do |t|
+    t.string "name"
+    t.string "category"
+    t.integer "price"
+    t.integer "capacity"
+    t.string "difficulty"
+    t.text "description"
+    t.string "area"
+    t.string "date"
+    t.text "syllabus"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "workshops"
+  add_foreign_key "notes", "users"
+  add_foreign_key "notes", "workshops"
+  add_foreign_key "reviews", "bookings"
 end
