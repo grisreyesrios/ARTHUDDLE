@@ -19,6 +19,10 @@ class BookingsController < ApplicationController
     end
   end
 
+  def edit
+    @booking = Booking.find(params[:booking_id])
+  end
+
   def index
     @bookings = Booking.where(user_id: current_user.id)
   end
@@ -32,6 +36,7 @@ class BookingsController < ApplicationController
 
   def find_and_authorize_current_booking
     @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def booking_params
