@@ -9,7 +9,7 @@ puts 'Cleaning database...'
 Workshop.destroy_all
 
 puts 'Creating workshops...'
-workshop1 = Workshop.new(
+workshop1 = Workshop.create!(
   name:         'Life Painting 60min Class',
   category:     'painting',
   price:         30,
@@ -21,7 +21,7 @@ workshop1 = Workshop.new(
   syllabus:       'Ensure you come prepared with brushes and pencils. All paints will be provided'
   )
 
-workshop2 = Workshop.new(
+workshop2 = Workshop.create!(
   name:         'Pot-Throwing Crash Course',
   category:     'pottery',
   price:         25,
@@ -33,7 +33,7 @@ workshop2 = Workshop.new(
   syllabus:       'Firstly we will recap the basics of rolling your clay on wooden boards and kneeding excess air out. After an in-depth demo from your teacher, students will take turns on the wheel spinning their first set of cups!'
   )
 
-workshop3 = Workshop.new(
+workshop3 = Workshop.create!(
   name:           'Screen-printing Masterclass',
   category:       'printmaking',
   price:          30,
@@ -45,7 +45,7 @@ workshop3 = Workshop.new(
   syllabus:       'Come prepared; we will dive straight in with this course. Please bring your designs on a USB in photoshop, we will be printing them on trace. Later, we will show you how to handle emulsion on screens, before moving onto the specifics.'
   )
 
-workshop4 = Workshop.new(
+workshop4 = Workshop.create!(
   name:           'Cat Painting 101',
   category:       'printmaking',
   price:          10,
@@ -57,7 +57,7 @@ workshop4 = Workshop.new(
   syllabus:       'The day may be short, but we will pack in a great deal! We will meet at the BaristaCats Katzencafé.'
   )
 
-workshop5 = Workshop.new(
+workshop5 = Workshop.create!(
   name:           'Colour film photography walking tour',
   category:       'photography',
   price:          20,
@@ -69,7 +69,7 @@ workshop5 = Workshop.new(
   syllabus:       'We will spend the morning taking a quick walk around to explore, before heading back into the studio to develop your film and give you a quick lecture on getting that perfect shot.'
   )
 
-workshop6 = Workshop.new(
+workshop6 = Workshop.create!(
   name:           'Ice Sculpture with Barbara Scott',
   category:       'sculpture',
   price:          70,
@@ -81,7 +81,7 @@ workshop6 = Workshop.new(
   syllabus:       'We will kick off with a lecture on the history of ice sculpting, before we pick up a chisel. Bring a coat.'
   )
 
-workshop7 = Workshop.new(
+workshop7 = Workshop.create!(
   name:           'An Introduction to Origami',
   category:       'sculpture',
   price:          10,
@@ -93,7 +93,7 @@ workshop7 = Workshop.new(
   syllabus:       'This workshop takes place over two hours, we shall start with a group chat over coffee, before starting on your designs. Bring a range of coloured paper.'
   )
 
-workshop8 = Workshop.new(
+workshop8 = Workshop.create!(
   name:           'Performance Art and Media',
   category:       'sculpture',
   price:          15,
