@@ -1,6 +1,6 @@
 class Workshop < ApplicationRecord
   validates :name, presence: true, uniqueness: true
-  validates :address, presence: true
+  validates :area, presence: true
   validates :capacity, numericality: { only_integer: true }
   validates :price, numericality: { only_integer: true }
 
