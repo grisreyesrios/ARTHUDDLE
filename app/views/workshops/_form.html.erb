@@ -1,0 +1,17 @@
+
+<% simple_form_for(@workshop) do |w| %>
+
+  <div class="form-inputs">
+    <%= w.input :name %>
+    <%= w.input :category %>
+    <%= w.input :price %>
+    <%= w.input :capacity %>
+    <%= w.input :description %>
+    <%= w.input :difficulty %>
+    <%= w.input :area %>
+    <%= w.input :syllabus %>
+  </div>
+    <div class="form-control">
+<%= w.button :submit, class: 'btn btn-primary' %>
+<% end %>
+</div>
