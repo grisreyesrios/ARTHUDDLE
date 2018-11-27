@@ -1,0 +1,10 @@
+<div class="container">
+  <% @bookings.each do |booking| %>
+    <p><%= booking.workshop.name %><p>
+    <p><%= booking.workshop.category %><p>
+    <p><%= booking.workshop.price %><p>
+    <p><%= booking.workshop.capacity %><p>
+    <p><%= booking.workshop.difficulty %><p>
+    <p><%= booking.workshop.description %><p>
+  <% end %>
+</div>
