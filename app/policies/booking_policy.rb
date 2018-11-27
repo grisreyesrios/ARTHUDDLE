@@ -1,5 +1,6 @@
 class BookingPolicy < ApplicationPolicy
   def index?
+    raise
     booking.user == user
   end
 
