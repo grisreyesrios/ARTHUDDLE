@@ -3,6 +3,7 @@ class WorkshopsController < ApplicationController
   before_action :find_and_authorize_current_space, only: [:show, :edit, :update, :destroy]
 
   def index
+    # @workshops = Workshop.all
     @workshops = policy_scope(Workshop).order(created_at: :desc)
   end
 
