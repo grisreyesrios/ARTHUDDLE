@@ -1,6 +1,6 @@
 class Workshop < ApplicationRecord
 
-   # include PgSearch
+  include PgSearch
   validates :name, presence: true, uniqueness: true
   validates :area, presence: true
   validates :capacity, numericality: { only_integer: true }
@@ -11,6 +11,6 @@ class Workshop < ApplicationRecord
 
   belongs_to :user, optional: true
 
-  # pg_search_scope :search_by_category, against => :category
+  pg_search_scope :search_by_category, :against => :category
 
 end
