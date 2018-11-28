@@ -10,10 +10,25 @@ body {
 }
 .landing-title {
   font-size: 150px;
+  color: #8C3DC3;
 }
 
 .landing-subheading {
-  font-size: 54px;
+  font-size: 40px;
+}
+
+.landing-search {
+  width: 50vh;
+  margin: 0 auto;
+  padding-top: 2em;
+}
+
+.icon-bar {
+  display: flex;
+  background-color: blue;
+  width: 100%;
+  height: 28vh;
+  margin-top: 3em;
 }
 
 
