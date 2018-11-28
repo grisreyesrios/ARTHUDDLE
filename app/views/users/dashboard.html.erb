@@ -1,0 +1,14 @@
+<id class="dashboard-container">
+<h1>Welcome to your dashboard!</h1>
+<div class="grid">
+   <div class="favourited-workshop-section">
+    <!-- stuff -->
+    </div>
+    <div class="booked-section">
+      <%= @bookings.each do |booking| %>
+          <h2><%= booking.workshop.name %></h2>
+          <p>Booked: <strong><%= booking.date %></strong></p>
+      <% end %>
+    </div>
+</div>
+</id>

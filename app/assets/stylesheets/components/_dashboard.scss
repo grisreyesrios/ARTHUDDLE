@@ -1,0 +1,9 @@
+.dashboard-container {
+  display: flex;
+}
+
+#booked-section {
+  flex: 0 0 450px;
+  height: 100vh;
+  top: 0 !important;
+}
