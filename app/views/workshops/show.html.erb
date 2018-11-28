@@ -1,5 +1,27 @@
-<div class="container text-center">
+<div class="banner" style="background-image: url('https://www.potteryinwaukesha.com/wp-content/uploads/2015/08/making-pottery-on-the-wheel-classes.jpg');">
+  <div class="banner-content">
+    <h1> <%= @workshop.name %> </h1>
+  </div>
+</div>
 
-<h1><%= @workshop.name %></h1>
+<div class="show-box">
+
+  <div class="info">
+    <div>
+       <p><%= @workshop.description %></p>
+    </div>
+     <div>
+       <p><button class="btn-book">Book</button></p>
+    </div>
+     <div>
+       <p>Button 2</p>
+    </div>
+  </div>
+
+  <div class="map">
+    <div>
+     <p>MAP</p>
+    </div>
+  </div>
 
 </div>

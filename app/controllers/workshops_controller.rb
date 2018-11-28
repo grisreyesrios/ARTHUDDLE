@@ -31,7 +31,7 @@ class WorkshopsController < ApplicationController
   private
 
   def find_and_authorize_current_workshop
-    @workshop = Workshop.find(params[:user_id])
+    @workshop = Workshop.find(params[:id])
     authorize @workshop
   end
 
