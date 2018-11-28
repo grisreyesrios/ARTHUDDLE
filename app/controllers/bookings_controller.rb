@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
     @user = current_user
     @workshop = Workshop.find(params[:workshop_id])
     @booking = Booking.new
+    authorize @booking
   end
 
   def create
@@ -12,8 +13,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.workshop = @workshop
     @booking.user = current_user
+    authorize @booking
     if @booking.save!
-      redirect_to workshop_booking_path(@workshop, @booking), notice: 'Booking was successfully created.'
+      redirect_to new_workshop_booking_path(@workshop, @booking), notice: 'Booking was successfully created.'
     else
       redirect_to workshop_path(@workshop)
     end
@@ -41,6 +43,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:date)
+    params.require(:booking).permit(:date, :workshop_id)
   end
 end
