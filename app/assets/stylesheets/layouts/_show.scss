@@ -1,0 +1,38 @@
+.banner {
+  color: white;
+  text-align: center;
+  height: 40vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  font-size: 50px;
+}
+.banner p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.show-box {
+  display: flex;
+  padding: 5em;
+  justify-content: space-between;
+  // flex-direction: column;
+}
+
+.info {
+  flex: 2 auto;
+  width: 200px;
+  justify-content: center;
+}
+
+.map {
+  flex: 1 1 auto;
+}
+
