@@ -1,14 +1,18 @@
-<div class="container">
-  <%= @workshop.name %>
-  <%= @workshop.description %>
-  <%= simple_form_for ([@workshop, @booking]) do |b| %>
-  <div class="form-group row">
-    <div class="col-md-4 mb-3">
-      <h2>Please select the date:</h2>
-      <%= b.input :date, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>
+<div class="show-box">
+  <div class="show-info show-booking">
+    <h1><%= @workshop.name %></h1>
+    <div class="workshop-show-data"><%= @workshop.description %></div>
+    <%= simple_form_for ([@workshop, @booking]) do |b| %>
+    <div class="form-group row">
+      <div class="col-md-4 mb-3">
+        <h2>Please select the date:</h2>
+        <%= b.input :date, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>
+      </div>
     </div>
+    <%= b.button :submit, class: 'btn-book' %>
   </div>
-    <%= b.button :submit, class: 'btn' %>
-    </div>
-    <% end %>
+  <% end %>
+</div>
+</div>
+</div>
 

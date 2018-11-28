@@ -1,3 +1,4 @@
 <h1>Great! You're going to <%= @workshop.name %></h1>
-<%= @workshop.description %>
-<p><%= @booking.date.to_date.strftime('%A, %b %d') %></p>
+<p>Your booking date is: <%= @booking.date.to_date.strftime('%A, %b %d') %></p>
+
+<%= link_to 'Make another booking', workshops_path %>
