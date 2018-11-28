@@ -21,18 +21,39 @@
 
 .show-box {
   display: flex;
-  padding: 5em;
+  padding: 2em;
   justify-content: space-between;
   // flex-direction: column;
+  margin: 20px;
 }
 
-.info {
+.show-info {
   flex: 2 auto;
   width: 200px;
   justify-content: center;
+  background: #C4C4C4;
 }
 
-.map {
-  flex: 1 1 auto;
+.workshop-show-data {
+  padding: 2em;
+}
+
+.show-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.show-button-book {
+  padding: 2em;
+}
+
+.show-button-info {
+  padding: 2em;
+}
+
+.show-map {
+  flex: 1 auto;
+  background: #C4C4C4;
+  margin-left: 50px;
 }
 

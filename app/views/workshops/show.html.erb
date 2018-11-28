@@ -6,22 +6,29 @@
 
 <div class="show-box">
 
-  <div class="info">
+  <div class="show-info">
     <div>
-       <p><%= @workshop.description %></p>
+       <div class="workshop-show-data"><%= @workshop.description %></div>
+       <div class="workshop-show-data"><%= @workshop.syllabus %></div>
+       <div class="workshop-show-data"><%= @workshop.category %></div>
+       <div class="workshop-show-data"><%= @workshop.area %></div>
+       <div class="workshop-show-data"><%= @workshop.date %></div>
     </div>
-     <div>
-       <p><button class="btn-book">Book</button></p>
-    </div>
-     <div>
-       <p>Button 2</p>
+    <div class="show-button-container">
+      <div class="show-button-book">
+         <button class="btn-book">Book</button>
+      </div>
+      <div class="show-button-info">
+         <button class="btn-info">Info</button>
+      </div>
     </div>
   </div>
 
-  <div class="map">
+  <div class="show-map">
     <div>
      <p>MAP</p>
     </div>
   </div>
 
 </div>
+
