@@ -8,11 +8,11 @@ class WorkshopPolicy < ApplicationPolicy
   end
 
   def create?
-    workshop.user == user
+    true
   end
 
   def new?
-    workshop.user == user
+    true
   end
 
   def destroy
@@ -20,7 +20,7 @@ class WorkshopPolicy < ApplicationPolicy
   end
 
   def workshop
-    # record is an instance of Space
+    # record is an instance of
     record
   end
 
