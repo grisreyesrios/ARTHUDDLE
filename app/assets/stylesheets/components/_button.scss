@@ -1,4 +1,4 @@
-.bookButton {
+.btn-book {
   background-color:#d4ffa8;
   border:1px solid #d4ffa8;
   display:inline-block;
@@ -8,12 +8,31 @@
   font-size:17px;
   padding:7px 49px;
   text-decoration:none;
-  text-shadow:0px 0px 0px #fcfcfc;
 }
-.bookButton:hover {
+.btn-book:hover {
   background-color:#ceff99;
 }
-.bookButton:active {
+.btn-book:active {
   position:relative;
   top:1px;
 }
+
+.btn-info {
+  background-color:#c0bdbd;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  padding:7px 49px;
+  text-decoration:none;
+}
+.btn-active:hover {
+  background-color:#b5a3a3;
+}
+.btn-active:active {
+  position:relative;
+  top:1px;
+}
+
+

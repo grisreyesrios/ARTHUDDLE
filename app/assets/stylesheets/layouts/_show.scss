@@ -22,12 +22,14 @@
 .show-box {
   display: flex;
   padding: 5em;
+  justify-content: space-between;
   // flex-direction: column;
 }
 
 .info {
   flex: 2 auto;
   width: 200px;
+  justify-content: center;
 }
 
 .map {
