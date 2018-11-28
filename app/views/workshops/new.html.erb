@@ -1,5 +1,7 @@
 <div class="wrapper" id="form">
-<h1>Add your workshop:</h1>
-<%= render 'form', workshop: @workshop %>
-<%= link_to 'Back', workshops_path %>
+  <h1>Add your workshop:</h1>
+    <%= render 'form', workshop: @workshop %>
+  <div class="btn-new">
+    <%= link_to 'Back', workshops_path %>
+  </div>
 </div>
