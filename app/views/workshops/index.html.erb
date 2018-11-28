@@ -3,6 +3,7 @@
 <%= link_to 'HOSTING A WORKSHOP? LIST IT HERE!', new_workshop_path, class: "btn btn-primary" %>
 
 <% @workshops.each do |workshop| %>
- <h4><%= workshop.name %></h4>
+ <h4><%= link_to workshop.name, workshop_path(workshop) %></h4>
   <p><%= workshop.description %></p>
 <% end %>
+
