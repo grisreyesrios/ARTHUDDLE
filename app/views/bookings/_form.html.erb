@@ -1,13 +1,14 @@
-<%= simple_form_for ([@workshop, @booking]) do |b| %>
 <div class="container">
-  <div class="col-md-4 mb-3">
-  <%= b.input :theme , class: 'form-control' %>
+  <%= @workshop.name %>
+  <%= @workshop.description %>
+  <%= simple_form_for ([@workshop, @booking]) do |b| %>
+  <div class="form-group row">
+    <div class="col-md-4 mb-3">
+      <h2>Please select the date:</h2>
+      <%= b.input :date, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>
+    </div>
   </div>
-</div>
-<div class="form-group row">
-  <div class="col-md-4 mb-3">
-  <%= b.input :date, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>
-</div>
-</div>
     <%= b.button :submit, class: 'btn btn-primary' %>
-<% end %>
+    </div>
+    <% end %>
+
