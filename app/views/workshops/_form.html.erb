@@ -1,20 +1,25 @@
 
-<div class="container"></div>
-<div class="row"></div>
-<div class="col-xs-12 col-sm-4 col-sm-offset-4"></div>
-<%= simple_form_for(@workshop) do |w| %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <div class="form-new">
+      <%= simple_form_for(@workshop) do |w| %>
+    <div class="form-inputs">
+      <%= w.input :name %>
+      <%= w.input :category %>
+      <%= w.input :price %>
+      <%= w.input :capacity %>
+      <%= w.input :description %>
+      <%= w.input :difficulty %>
+      <%= w.input :area %>
+      <%= w.input :syllabus %>
+    </div>
 
-  <div class="form-inputs">
-    <%= w.input :name %>
-    <%= w.input :category %>
-    <%= w.input :price %>
-    <%= w.input :capacity %>
-    <%= w.input :description %>
-    <%= w.input :difficulty %>
-    <%= w.input :area %>
-    <%= w.input :syllabus %>
-  </div>
     <div class="form-control">
-<%= w.button :submit, class: 'btn btn-primary' %>
-</div>
+      <%= w.button :submit, class: 'btn btn-primary' %>
+    </div>
  <% end %>
+      </div>
+    </div>
+  </div>
+</div>
