@@ -13,5 +13,4 @@ class Workshop < ApplicationRecord
 
   # pg_search_scope :search_by_category, against => :category
 
-
 end

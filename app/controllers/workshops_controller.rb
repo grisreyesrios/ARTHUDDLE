@@ -12,6 +12,9 @@ class WorkshopsController < ApplicationController
     @workshop = Workshop.new
   end
 
+  def show
+    @workshop = Workshop.find(params[:id])
+  end
 
   private
 
