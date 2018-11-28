@@ -1,1 +1,29 @@
 // Specific CSS for your home-page
+body {
+  background-color: #eee9eb;
+}
+
+
+.header-box {
+  height: 30vh;
+  text-align: center;
+}
+.landing-title {
+  font-size: 150px;
+}
+
+.landing-subheading {
+  font-size: 54px;
+}
+
+.landing-box-1 {
+  display: flex;
+  color: white;
+}
+
+.landing-about-1 {
+  background-color: #FF5634;
+  flex: 2 auto;
+}
+
+
