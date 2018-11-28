@@ -5,7 +5,7 @@ body {
 
 
 .header-box {
-  height: 30vh;
+  height: 95vh;
   text-align: center;
 }
 .landing-title {
@@ -16,14 +16,91 @@ body {
   font-size: 54px;
 }
 
+
 .landing-box-1 {
   display: flex;
   color: white;
+  width: 70vw;
+  margin: 0 auto;
+  position: relative;
 }
 
 .landing-about-1 {
-  background-color: #FF5634;
+  display: flex;
   flex: 2 auto;
+  background-color: #FF5634;
+  justify-content: flex-end;
+  padding: 10%;
 }
+
+.text-content-1 {
+  flex: 0 0 50%;
+}
+
+.landing-image-1 {
+  flex: 1 auto;
+  width: 440px;
+}
+
+.landing-image-box-1 {
+  position: absolute;
+  top: 138px;
+  left: -70px;
+}
+
+.seperator-box-1 {
+  height: 200px;
+}
+
+
+.landing-box-2 {
+  display: flex;
+  color: white;
+  width: 70vw;
+  margin: 0 auto;
+  position: relative;
+}
+
+.landing-about-2 {
+  display: flex;
+  flex: 2 auto;
+  background-color: #8C3DC3;
+  justify-content: flex-start;
+  padding: 10%;
+}
+
+.text-content-2 {
+  flex: 0 0 50%;
+}
+
+.landing-image-2 {
+  flex: 1 auto;
+  width: 440px;
+}
+
+.landing-image-box-2 {
+  position: absolute;
+  top: 138px;
+  left: 620px;
+}
+
+.seperator-box-2 {
+  height: 200px;
+}
+
+
+.landing-box-3 {
+  display: flex;
+  color: white;
+  width: 100vw;
+  height: 50vh;
+  margin: 0 auto;
+  position: relative;
+  background: #D4FFA8;
+}
+
+
+
+
 
 
