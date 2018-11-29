@@ -1,0 +1,34 @@
+<div class="container">
+
+  <div class="note-title">
+   <%= @workshop.name %>
+  </div>
+
+  <div class="note-poster">
+
+  <%= simple_form_for([@workshop, Note.new]) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%= f.submit %>
+  <% end %>
+
+</div>
+
+
+
+  <% @notes.reverse.each do |note| %>
+
+    <div class="note">
+          <p><%= note.title %></p>
+          <br><br>
+          <p> <%= "#{note.user.email} said:"  %>
+          <p><%= note.content %></p>
+          <br><br>
+          <p><%= time_ago_in_words(note.created_at) %> ago<p>
+    </div>
+    <% end %>
+
+</div>
+
+
+

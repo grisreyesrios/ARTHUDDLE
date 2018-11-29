@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :workshops do
     post :favourited
     resources :bookings, only: [:index, :show, :new, :create, :destroy, :edit]
+    resources :notes, only: [:index, :create, :destroy, :edit, :update]
   end
+
 
   devise_for :users
   root to: 'pages#home'
