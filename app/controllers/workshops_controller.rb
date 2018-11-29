@@ -3,8 +3,14 @@ class WorkshopsController < ApplicationController
   before_action :find_and_authorize_current_workshop, only: [:show, :edit, :update, :destroy]
 
   def index
-    @workshops = Workshop.all
+    if params[:query].present?
+      @ẃorkshops = Workshop.where(category: params[:query])
+    else
+      @workshops = Workshop.all
+    end
+
     @workshops = policy_scope(Workshop).order(created_at: :desc)
+
   end
 
   def new
@@ -29,6 +35,18 @@ class WorkshopsController < ApplicationController
     authorize @workshop
   end
 
+  def favourited
+    @workshop = Workshop.find(params[:workshop_id])
+    authorize @workshop
+    if current_user.voted_up_on? @workshop
+      current_user.dislikes @workshop
+    else
+      current_user.likes @workshop
+    end
+    redirect_to workshops_path
+    # @workshop.favourited = !@workshop.favourited
+  end
+
   private
 
   def find_and_authorize_current_workshop
@@ -37,6 +55,6 @@ class WorkshopsController < ApplicationController
   end
 
   def workshop_params
-    params.require(:workshop).permit(:name, :category, :capacity, :price, :description, :difficulty, :area, :syllabus, :user_id)
+    params.require(:workshop).permit(:name, :category, :capacity, :price, :description, :difficulty, :area, :syllabus, :user_id, :favourited)
   end
 end

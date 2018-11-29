@@ -1,22 +1,43 @@
+.dashboard-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
 .card {
-  background: white;
-  padding: 64px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  background-color: #ED6242;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  h2 {
+  h1 {
     font-size: 50px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  a {
+    color: white;
   }
 }
 
-.dashboard-container {
-  display: grid;
+.card-content {
+  padding: 80px;
+  text-align: justify;
+}
+
+
+#favourited-workshop-section {
+
 }
 
 #booked-section {
-  flex: 0 0 450px;
-  height: 100vh;
-  top: 0 !important;
+
 }
 
