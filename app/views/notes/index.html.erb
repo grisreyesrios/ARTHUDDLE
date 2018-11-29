@@ -1,11 +1,29 @@
-<%= simple_form_for([@workshop, Note.new]) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :content %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+
+  <div class="note-poster">
+
+  <%= simple_form_for([@workshop, Note.new]) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%= f.submit %>
+  <% end %>
+
+</div>
 
 
-<% @notes.each do |note| %>
-  <%= note.title %>
-  <%= note.content %>
-<% end %>
+
+
+  <% @notes.reverse.each do |note| %>
+
+    <div class="note-card">
+          <p><%= note.title %></p>
+          <br><br>
+          <p> <%= "#{note.user.email} says:"  %>
+          <p><%= note.content %></p>
+    </div>
+    <% end %>
+
+</div>
+
+
+
