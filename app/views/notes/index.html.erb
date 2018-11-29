@@ -1,7 +1,8 @@
 <div class="container">
 
-  <div class="note-title">
-   <%= @workshop.name %>
+  <div class="note-title-box">
+   <h1 id="note-header"><%= @workshop.name %></h1>
+   <h2 id="note-about">share your notes notes with the workshop!</h2>
   </div>
 
   <div class="note-poster">
@@ -19,12 +20,11 @@
   <% @notes.reverse.each do |note| %>
 
     <div class="note">
-          <p><%= note.title %></p>
+          <p id="note-title"><%= note.title %></p>
+          <br>
+          <p id="note-content"><%= note.content %></p>
           <br><br>
-          <p> <%= "#{note.user.email} said:"  %>
-          <p><%= note.content %></p>
-          <br><br>
-          <p><%= time_ago_in_words(note.created_at) %> ago<p>
+          <p id="note-stamp"><%= "-#{note.user.email}, #{time_ago_in_words(note.created_at)} ago " %></p>
     </div>
     <% end %>
 
