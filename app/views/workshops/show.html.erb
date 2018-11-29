@@ -1,4 +1,4 @@
-<% photo = @workshop.photo.url ? cl_image_path(@workshop.photo, transformation: {width: 400}) : 'https://images.pexels.com/photos/1166431/pexels-photo-1166431.jpeg' %>
+<% photo = @workshop.photo.url ? cl_image_path(@workshop.photo, transformation: {height: 400}) : 'https://images.pexels.com/photos/1166431/pexels-photo-1166431.jpeg' %>
 
 <div class="banner" style="background-image: url(<%= photo %>);">
   <div class="banner-content">

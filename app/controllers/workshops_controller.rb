@@ -4,7 +4,7 @@ class WorkshopsController < ApplicationController
 
   def index
     if params[:query].present?
-      @ẃorkshops = Workshop.where(category: params[:query])
+      @workshops = Workshop.where(category: params[:query])
     else
       @workshops = Workshop.all
     end
