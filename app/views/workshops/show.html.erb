@@ -7,13 +7,11 @@
 <div class="show-box">
 
   <div class="show-info">
-    <div>
        <div class="workshop-show-data"><%= @workshop.description %></div>
        <div class="workshop-show-data"><%= @workshop.syllabus %></div>
        <div class="workshop-show-data"><%= @workshop.category %></div>
        <div class="workshop-show-data"><%= @workshop.area %></div>
        <div class="workshop-show-data"><%= @workshop.date %></div>
-    </div>
     <div class="show-button-container">
       <div class="show-button-book">
          <%= link_to "Book", new_workshop_booking_path(@workshop), class: 'btn-book' %>
@@ -25,9 +23,13 @@
   </div>
 
   <div class="show-map">
-    <div>
-     <p>MAP</p>
-    </div>
+    <div
+        id="map"
+        style="width: 400px;
+        height: 400px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
   </div>
 
 </div>
