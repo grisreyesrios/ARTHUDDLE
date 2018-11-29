@@ -4,6 +4,8 @@ class Workshop < ApplicationRecord
   include PgSearch
   acts_as_votable
 
+  mount_uploader :photo, PhotoUploader
+
   validates :name, presence: true, uniqueness: true
   validates :area, presence: true
   validates :capacity, numericality: { only_integer: true }
