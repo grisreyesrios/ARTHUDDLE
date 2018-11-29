@@ -7,7 +7,7 @@
 }
 
 .card {
-  background-color: red;
+  background-color: #ED6242;
   color: white;
   padding: 10px;
   margin: 10px;
@@ -20,18 +20,21 @@
     font-size: 50px;
   }
   h2 {
-    font-size: 40px;
+    font-size: 30px;
+  }
+  a {
+    color: white;
   }
 }
 
 .card-content {
   padding: 80px;
   text-align: justify;
-
 }
 
-.card.booked-section {
-  background-color: black;
+
+#favourited-workshop-section {
+
 }
 
 #booked-section {

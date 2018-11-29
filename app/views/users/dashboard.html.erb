@@ -6,7 +6,7 @@
           <div class="favourited-workshop-section">
             <h1>My favourited classes:</h1>
              <% current_user.find_liked_items.each do |workshop| %>
-             <%=  workshop.name %>
+             <p><%=  link_to workshop.name, workshop_path(workshop) %></p>
              <% end %>
           </div>
           </div>
@@ -16,9 +16,11 @@
           <div class="card-content">
           <div class="booked-section">
             <h1>My booked classes:</h1>
+            <div class="class-item">
             <% @bookings.each do |booking| %>
             <h2><%= booking.workshop.name %></h2>
             <p>Booked: <strong><%= booking.date %></strong></p>
+             </div>
           <% end %>
           </div>
         </div>
