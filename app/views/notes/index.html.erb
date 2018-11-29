@@ -1,8 +1,9 @@
-<div class="container">
+<div class="container" id="notes-container">
 
   <div class="note-title-box">
-   <h1 id="note-header"><%= @workshop.name %></h1>
-   <h2 id="note-about">share your notes notes with the workshop!</h2>
+   <h1 id="notes-header"><%= @workshop.name %></h1>
+   <p id="notes-icon"><%= image_tag "notebook.png", height: 100; %></p>
+   <h2 id="notes-about">share your notes notes with the workshop!</h2>
   </div>
 
   <div class="note-poster">
@@ -10,7 +11,7 @@
   <%= simple_form_for([@workshop, Note.new]) do |f| %>
     <%= f.input :title %>
     <%= f.input :content %>
-    <%= f.submit %>
+    <p id="notes-submit"><%= f.submit "Add" %></p>
   <% end %>
 
 </div>
