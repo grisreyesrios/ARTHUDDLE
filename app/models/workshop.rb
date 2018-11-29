@@ -1,6 +1,7 @@
 class Workshop < ApplicationRecord
 
   include PgSearch
+  acts_as_votable
   validates :name, presence: true, uniqueness: true
   validates :area, presence: true
   validates :capacity, numericality: { only_integer: true }

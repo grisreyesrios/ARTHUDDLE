@@ -15,6 +15,10 @@ class WorkshopPolicy < ApplicationPolicy
     true
   end
 
+  def favourited?
+    true
+  end
+
   def destroy
     workshop.user == user
   end

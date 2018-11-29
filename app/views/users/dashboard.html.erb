@@ -1,21 +1,24 @@
+ <h1>Welcome to your dashboard!</h1>
 <id class="dashboard-container">
-  <div class="grid">
-    <h1>Welcome to your dashboard!</h1>
-    <div class="card user-profile">
+    <div class="card">
       <div class="card-content">
-        <div class="favourited-workshop-section">
-           <%# Favourited classes go here! %>
+        <id class="favourited-workshop-section">
+          <h1>My favourited classes:</h1>
+           <% current_user.find_liked_items.each do |workshop| %>
+           <%=  workshop.name %>
+           <% end %>
+        </id>
         </div>
-        </div>
+      </div>
        <div class="card">
         <div class="card-content">
-        <div class="booked-section">
+        <id class="booked-section">
           <h1>My booked classes:</h1>
           <%= @bookings.each do |booking| %>
           <h2><%= booking.workshop.name %></h2>
           <p>Booked: <strong><%= booking.date %></strong></p>
         <% end %>
-        </div>
+        </id>
       </div>
     </div>
 </id>

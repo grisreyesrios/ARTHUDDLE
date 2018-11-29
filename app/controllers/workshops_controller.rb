@@ -1,6 +1,6 @@
 class WorkshopsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
-  before_action :find_and_authorize_current_workshop, only: [:show, :edit, :update, :destroy, :favourited]
+  before_action :find_and_authorize_current_workshop, only: [:show, :edit, :update, :destroy]
 
   def index
     @workshops = Workshop.all
@@ -30,7 +30,15 @@ class WorkshopsController < ApplicationController
   end
 
   def favourited
-    @workshop.favourited = !@workshop.favourited
+    @workshop = Workshop.find(params[:workshop_id])
+    authorize @workshop
+    if current_user.voted_up_on? @workshop
+      current_user.dislikes @workshop
+    else
+      current_user.likes @workshop
+    end
+    redirect_to workshops_path
+    # @workshop.favourited = !@workshop.favourited
   end
 
   private
@@ -41,6 +49,6 @@ class WorkshopsController < ApplicationController
   end
 
   def workshop_params
-    params.require(:workshop).permit(:name, :category, :capacity, :price, :description, :difficulty, :area, :syllabus, :user_id)
+    params.require(:workshop).permit(:name, :category, :capacity, :price, :description, :difficulty, :area, :syllabus, :user_id, :favourited)
   end
 end

@@ -21,6 +21,7 @@ gem 'webpacker'
 gem 'devise'
 gem 'pg_search'
 gem 'bootstrap-datepicker-rails'
+gem 'acts_as_votable', '~> 0.12.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
