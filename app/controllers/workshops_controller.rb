@@ -4,13 +4,11 @@ class WorkshopsController < ApplicationController
 
   def index
     if params[:query].present?
-      @ẃorkshops = Workshop.where(category: params[:query])
+      @workshops = Workshop.where(category: params[:query])
     else
       @workshops = Workshop.all
     end
-
     @workshops = policy_scope(Workshop).order(created_at: :desc)
-
   end
 
   def new
@@ -33,6 +31,16 @@ class WorkshopsController < ApplicationController
   def show
     @workshop = Workshop.find(params[:id])
     authorize @workshop
+    # @workshop = Workshop.where.not(latitude: nil, longitude: nil)
+    if @workshop.longitude && @workshop.latitude
+      @markers = [
+        {
+          lng: @workshop.longitude,
+          lat: @workshop.latitude,
+          infoWindow: { content: render_to_string(partial: "/workshops/map_window", locals: { workshop: workshop }) }
+        }]
+
+    end
   end
 
   def favourited
@@ -55,6 +63,6 @@ class WorkshopsController < ApplicationController
   end
 
   def workshop_params
-    params.require(:workshop).permit(:name, :category, :capacity, :price, :description, :difficulty, :area, :syllabus, :user_id, :favourited)
+    params.require(:workshop).permit(:name, :category, :capacity, :price, :description, :difficulty, :area, :syllabus, :user_id, :favourited, :photo)
   end
 end

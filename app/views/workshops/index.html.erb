@@ -1,15 +1,21 @@
+<div class="container">
 <h1>Browse Workshops</h1>
 
-<%= link_to 'HOSTING A WORKSHOP? LIST IT HERE!', new_workshop_path, class: "btn btn-primary" %>
+<%= link_to 'HOSTING A WORKSHOP? LIST IT HERE!', new_workshop_path, class: "btn-book" %>
 
-<% @workshops.index do |workshop| %>
+<% @workshops.each do |workshop| %>
+<div class="card">
   <h4><%= link_to workshop.name, workshop_path(workshop) %></h4>
   <p><%= workshop.description %></p>
-  <%= link_to workshop_favourited_path(workshop), method: :post do %>
-    <% if current_user.voted_up_on? workshop %>
-      <i class="fas fa-stroopwafel"></i>
-    <% else %>
-     Not in your favourites yet
+  <% if current_user %>
+    <%= link_to workshop_favourited_path(workshop), method: :post do %>
+      <% if current_user.voted_up_on? workshop %>
+        <i class="fas fa-heart"></i>
+      <% else %>
+        <i class="far fa-heart"></i>
+      <% end %>
+      </div>
     <% end %>
   <% end %>
 <% end %>
+</div>

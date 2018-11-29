@@ -1,4 +1,6 @@
-<div class="banner" style="background-image: url('https://www.potteryinwaukesha.com/wp-content/uploads/2015/08/making-pottery-on-the-wheel-classes.jpg');">
+<% photo = @workshop.photo.url ? cl_image_path(@workshop.photo, transformation: {height: 400}) : 'https://images.pexels.com/photos/1166431/pexels-photo-1166431.jpeg' %>
+
+<div class="banner" style="background-image: url(<%= photo %>);">
   <div class="banner-content">
     <h1> <%= @workshop.name %> </h1>
   </div>
@@ -7,13 +9,11 @@
 <div class="show-box">
 
   <div class="show-info">
-    <div>
        <div class="workshop-show-data"><%= @workshop.description %></div>
        <div class="workshop-show-data"><%= @workshop.syllabus %></div>
        <div class="workshop-show-data"><%= @workshop.category %></div>
        <div class="workshop-show-data"><%= @workshop.area %></div>
        <div class="workshop-show-data"><%= @workshop.date %></div>
-    </div>
     <div class="show-button-container">
       <div class="show-button-book">
          <%= link_to "Book", new_workshop_booking_path(@workshop), class: "btn-info" %>
@@ -25,10 +25,16 @@
   </div>
 
   <div class="show-map">
-    <div>
-     <p>MAP</p>
-    </div>
+    <div
+        id="map"
+        style="width: 400px;
+        height: 400px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
   </div>
 
 </div>
+
+
 
