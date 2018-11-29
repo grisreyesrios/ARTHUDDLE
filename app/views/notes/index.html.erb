@@ -1,0 +1,11 @@
+<%= simple_form_for([@workshop, Note.new]) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :content %>
+  <%= f.submit %>
+<% end %>
+
+
+<% @notes.each do |note| %>
+  <%= note.title %>
+  <%= note.content %>
+<% end %>
