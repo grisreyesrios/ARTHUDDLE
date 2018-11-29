@@ -3,7 +3,6 @@ body {
   background-color: #eee9eb;
 }
 
-
 .header-box {
   height: 95vh;
   text-align: center;
@@ -18,17 +17,37 @@ body {
 }
 
 .landing-search {
+  display: flex;
   width: 50vh;
   margin: 0 auto;
   padding-top: 2em;
 }
 
+.landing-icon {
+  position: relative;
+  padding: 1em;
+  margin-left: 5em;
+  margin-top: 1em;
+}
+
+#search-bar {
+  flex: 1 auto;
+}
+
+#search-button {
+  flex: 2 auto;
+}
+
 .icon-bar {
   display: flex;
-  background-color: blue;
+  background-color: #D4FFA8;
   width: 100%;
   height: 28vh;
   margin-top: 3em;
+}
+
+.icon {
+
 }
 
 

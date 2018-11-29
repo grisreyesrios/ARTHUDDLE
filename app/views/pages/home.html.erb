@@ -5,11 +5,32 @@
   <h2 class="landing-subheading">Discover your creative potential</h2>
 
   <div class="landing-search">
-    <%= render 'form', workshop: @workshops_path %>
+    <div id="search-bar"><%= render 'form', workshop: @workshops_path %></div>
+    <div class="search-button"><button class="btn-info" id="to-top">Search</button></div>
   </div>
 
   <div class="icon-bar">
-    <p>Haha</p>
+    <div class="landing-icon">
+      <%= image_tag "sewing.png", height: 100 %>
+    </div>
+     <div class="landing-icon">
+      <%= image_tag "paint.png", height: 100 %>
+    </div>
+    <div class="landing-icon">
+      <%= image_tag "paintroll.png", height: 100 %>
+    </div>
+     <div class="landing-icon">
+      <%= image_tag "penpot.png", height: 100 %>
+    </div>
+     <div class="landing-icon">
+      <%= image_tag "ceramics.png", height: 100 %>
+    </div>
+     <div class="landing-icon">
+      <%= image_tag "camera.png", height: 100 %>
+    </div>
+    <div class="landing-icon">
+      <%= image_tag "design.png", height: 100 %>
+    </div>
   </div>
 
 </div>
@@ -23,7 +44,11 @@
 
      <div class="landing-about-1">
         <div class="text-content-1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dui sem, dapibus sit amet orci lacinia, consectetur tincidunt quam. Nunc vestibulum arcu nisl, eget dictum ante laoreet blandit. Praesent vitae tellus at lorem ultrices mollis. Maecenas scelerisque, nisi ut vestibulum rhoncus, dui metus vulputate augue, non venenatis nisi ex non risus.
+         <p id="blurb-1-header">Find local workshops.</p>
+         <br><br>
+         <p id="blurb-1">Filter through upcoming events and find the ideal place to try something new.</p>
+         <br><br>
+           <button class="btn-info" id="to-top">Info</button>
         </div>
       <div></div>
 
@@ -36,13 +61,16 @@
 
 <div class="landing-box-2">
   <div class="landing-image-box-2">
-    <img class="landing-image-1" src="https://www.plymouthart.ac.uk/images/uploads/courses/BA_Painting_Drawing_and_Printmaking/15709633014_e2283923ed_k.jpg" alt="class">
+    <img class="landing-image-1" src="https://fryemuseum.org/images/program_images/path-printmaking.jpg" alt="class">
   </div>
 
 
      <div class="landing-about-2">
         <div class="text-content-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dui sem, dapibus sit amet orci lacinia, consectetur tincidunt quam. Nunc vestibulum arcu nisl, eget dictum ante laoreet blandit. Praesent vitae tellus at lorem ultrices mollis. Maecenas scelerisque, nisi ut vestibulum rhoncus, dui metus vulputate augue, non venenatis nisi ex non risus.
+         <p id="blurb-2-header">Share notes.</p>
+         <br><br>
+         <p id="blurb-2">Post insights from workshops, reflect on experiences and share inspiration.</p>
+         <br><br>
         </div>
       <div><!-- for flexbox --></div>
 
@@ -59,6 +87,8 @@
         <div class="text-content-3">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dui sem, dapibus sit amet orci lacinia, consectetur tincidunt quam. Nunc vestibulum arcu nisl, eget dictum ante laoreet blandit. Praesent vitae tellus at lorem ultrices mollis. Maecenas scelerisque, nisi ut vestibulum rhoncus, dui metus vulputate augue, non venenatis nisi ex non risus.
         </div>
+        <br><br>
+           <button class="btn-info">Info</button>
       <div><!-- for flexbox --></div>
 
     </div>
