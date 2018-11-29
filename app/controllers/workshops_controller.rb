@@ -3,8 +3,14 @@ class WorkshopsController < ApplicationController
   before_action :find_and_authorize_current_workshop, only: [:show, :edit, :update, :destroy]
 
   def index
-    @workshops = Workshop.all
+    if params[:query].present?
+      @ẃorkshops = Workshop.where(category: params[:query])
+    else
+      @workshops = Workshop.all
+    end
+
     @workshops = policy_scope(Workshop).order(created_at: :desc)
+
   end
 
   def new
