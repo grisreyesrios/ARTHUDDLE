@@ -1,4 +1,7 @@
-<div class="banner" style="background-image: url('https://www.potteryinwaukesha.com/wp-content/uploads/2015/08/making-pottery-on-the-wheel-classes.jpg');">
+<% photo = @workshop.photo.url ? cl_image_path(@workshop.photo, transformation: {width: 400}) : 'https://www.harrisonburgva.gov/sites/default/files/Parks/images/pottery-class.jpg' %>
+
+<div class="banner" style="background-image: url(<%= photo %>);">
+
   <div class="banner-content">
     <h1> <%= @workshop.name %> </h1>
   </div>
@@ -31,4 +34,6 @@
   </div>
 
 </div>
+
+
 
