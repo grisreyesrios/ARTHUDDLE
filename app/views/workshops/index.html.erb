@@ -7,6 +7,11 @@
 <div class="card">
   <h4><%= link_to workshop.name, workshop_path(workshop) %></h4>
   <p><%= workshop.description %></p>
+
+  <% if workshop.description.include?("painting") || workshop.name.include?("painting") %>
+  <%= image_tag "paint.png", height: 50 %>
+  <% end %>
+
   <% if current_user %>
     <%= link_to workshop_favourited_path(workshop), method: :post do %>
       <% if current_user.voted_up_on? workshop %>
