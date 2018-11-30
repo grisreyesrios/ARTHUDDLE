@@ -4,6 +4,7 @@ class Workshop < ApplicationRecord
   include PgSearch
   acts_as_votable
   pg_search_scope :search_by_category, :against => [:category]
+  pg_search_scope :search_by_area, :against => [:area]
 
   mount_uploader :photo, PhotoUploader
 

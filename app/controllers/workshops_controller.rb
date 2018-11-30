@@ -5,6 +5,7 @@ class WorkshopsController < ApplicationController
   def index
     if params[:query].present?
       @workshops = policy_scope(Workshop).search_by_category(params[:query])
+      @workshops = policy_scope(Workshop).search_by_area(params[:query])
     else
       @workshops = policy_scope(Workshop).order(created_at: :desc)
     end
