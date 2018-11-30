@@ -1,48 +1,64 @@
 <div class="container">
 <h1>Browse Workshops</h1>
 
+<div class="div" id="hostbutton">
 <%= link_to 'HOSTING A WORKSHOP? LIST IT HERE!', new_workshop_path, class: "btn-book" %>
-
-<% @workshops.each do |workshop| %>
-<div class="card">
-  <h4><%= link_to workshop.name, workshop_path(workshop) %></h4>
-  <p><%= workshop.description %></p>
-
-  <% if workshop.description.include?("painting") || workshop.name.include?("painting") %>
-    <%= image_tag "paint.png", height: 50 %>
-  <% elsif workshop.description.include?("origami") || workshop.name.include?("origami") %>
-    <%= image_tag "origami.png", height: 50 %>
-   <% elsif workshop.description.include?("pottery") || workshop.name.include?("pottery") %>
-    <%= image_tag "ceramics.png", height: 50 %>
-  <% elsif workshop.description.include?("printing") || workshop.name.include?("priting") %>
-    <%= image_tag "paintroll.png", height: 50 %>
-  <% elsif workshop.description.include?("photography") || workshop.name.include?("photography") %>
-    <%= image_tag "camera.png", height: 50 %>
-  <% elsif workshop.description.include?("Cat") || workshop.name.include?("Cat") %>
-    <%= image_tag "cat.png", height: 50 %>
-  <% elsif workshop.description.include?("ice") || workshop.name.include?("ice") %>
-    <%= image_tag "ice.png", height: 50 %>
-  <% end %>
-
-  <% if workshop.price != 0 %>
-    <%= image_tag "money.png", height: 50 %>
-  <% end %>
-
-  <% if workshop.difficulty.include?("advanced") %>
-   <%= image_tag "puzzle.png", height: 50 %>
-  <% end %>
-
-
-
-  <% if current_user %>
-    <%= link_to workshop_favourited_path(workshop), method: :post do %>
-      <% if current_user.voted_up_on? workshop %>
-        <i class="fas fa-heart"></i>
-      <% else %>
-        <i class="far fa-heart"></i>
-      <% end %>
-      </div>
-    <% end %>
-  <% end %>
-<% end %>
 </div>
+
+
+
+<div class="card-contaienr">
+  <% @workshops.each do |workshop| %>
+  <div class="card" id="workshop-card">
+
+    <div class="card-title"><%= link_to workshop.name, workshop_path(workshop) %></div>
+    <div class="card-body">
+      <div class="card-text">
+        <%= workshop.description %>
+      </div>
+      <div class="card-icons">
+  <!--  icons -->
+
+    <% if workshop.description.include?("painting") || workshop.name.include?("painting") %>
+      <%= image_tag "paint.png", height: 50 %>
+    <% elsif workshop.description.include?("origami") || workshop.name.include?("origami") %>
+      <%= image_tag "origami.png", height: 50 %>
+     <% elsif workshop.description.include?("pottery") || workshop.name.include?("pottery") %>
+      <%= image_tag "ceramics.png", height: 50 %>
+    <% elsif workshop.description.include?("printing") || workshop.name.include?("priting") %>
+      <%= image_tag "paintroll.png", height: 50 %>
+    <% elsif workshop.description.include?("photography") || workshop.name.include?("photography") %>
+      <%= image_tag "camera.png", height: 50 %>
+    <% elsif workshop.description.include?("Cat") || workshop.name.include?("Cat") %>
+      <%= image_tag "cat.png", height: 50 %>
+    <% elsif workshop.description.include?("ice") || workshop.name.include?("ice") %>
+      <%= image_tag "ice.png", height: 50 %>
+    <% end %>
+
+    <% if workshop.price != 0 %>
+      <%= image_tag "money.png", height: 50 %>
+    <% end %>
+
+    <% if workshop.difficulty.include?("advanced") %>
+     <%= image_tag "puzzle.png", height: 50 %>
+    <% end %>
+
+  <!--  icons -->
+
+    <% if current_user %>
+      <%= link_to workshop_favourited_path(workshop), method: :post do %>
+        <% if current_user.voted_up_on? workshop %>
+          <i class="fas fa-heart" id="favourite"></i>
+        <% else %>
+          <i class="far fa-heart" id="favourite"></i>
+        <% end %>
+        </div>
+      <% end %>
+    <% end %>
+      </div>
+  </div>
+  <% end %>
+</div>
+</div>
+
+
