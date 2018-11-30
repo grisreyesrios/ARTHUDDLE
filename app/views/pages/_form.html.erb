@@ -1,7 +1,4 @@
-<%= form_tag workshops_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a Workshop"
-  %>
+<%= form_tag(workshops_path, method: "get") do %>
+  <%= label_tag(:query, "Search for:") %>
+  <%= text_field_tag(:query) %>
 <% end %>
