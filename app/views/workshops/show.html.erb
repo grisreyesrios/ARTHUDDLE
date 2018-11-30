@@ -14,6 +14,7 @@
        <div class="workshop-show-data"><%= @workshop.category %></div>
        <div class="workshop-show-data"><%= @workshop.area %></div>
        <div class="workshop-show-data"><%= @workshop.date %></div>
+       <div class="workshop-show-data"><%= @workshop.price %> EUR</div>
     <div class="show-button-container">
       <div class="show-button-book">
          <%= link_to "Book", new_workshop_booking_path(@workshop), class: "btn-info" %>
