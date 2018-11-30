@@ -1,25 +1,28 @@
 <div class="container">
-   <h1 style="text-align: center">Your dashboard</h1>
+   <h1 style="text-align: center">Dashboard</h1>
   <div class="dashboard-container">
-      <div class="card">
+      <div class="card" id="booked-card">
         <div class="card-content">
           <div class="favourited-workshop-section">
-            <h1>My favourited classes:</h1>
+            <h3 id="my-favourited">My favourited workshops:</h3>
+            <br><br>
              <% current_user.find_liked_items.each do |workshop| %>
              <p><%=  link_to workshop.name, workshop_path(workshop) %></p>
+             <p id="favourited-details"><%=  link_to workshop.date, workshop_path(workshop) %>, <%=  link_to workshop.area, workshop_path(workshop) %>eur</p>
              <% end %>
           </div>
           </div>
         </div>
 
-         <div class="card">
+         <div class="card" id="favourited-card"">
           <div class="card-content">
           <div class="booked-section">
-            <h1>My booked classes:</h1>
+            <h3 id="my-booked">My booked workshops:</h3>
+            <br><br>
             <div class="class-item">
             <% @bookings.each do |booking| %>
-            <h2><%=  link_to booking.workshop.name, workshop_path(booking.workshop) %></h2>
-            <p>Booked: <strong><%= booking.date %></strong></p>
+            <p id="dashboard-workshop"><%=  link_to booking.workshop.name, workshop_path(booking.workshop) %></p>
+            <p id="booked">Booked: <strong><%= booking.date %></strong></p>
              </div>
           <% end %>
           </div>

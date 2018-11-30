@@ -28,19 +28,49 @@
 }
 
 .card-content {
-  padding: 80px;
+  padding: 26px;
+  text-align: justif;
   text-align: justify;
 }
 
+#favourited-header {
+  font-size: 25px;
+}
+
+#booked-header {
+  font-size: 25px;
+}
+
+#favourited-card {
+  margin-left: -13em;
+}
+
+#booked-card {
+}
 
 #favourited-workshop-section {
 
+}
+
+#my-favourited {
+  margin-top: -15px;
+}
+
+#my-booked {
+  margin-top: -15px;
+}
+
+#favourited-details {
+  font-size: 10px;
 }
 
 #booked-section {
 
 }
 
+#booked {
+  font-size: 10px;
+}
 
 #dashboard-footer {
   margin-top: 5em;
