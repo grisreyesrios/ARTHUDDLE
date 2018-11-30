@@ -9,12 +9,11 @@
 <div class="show-box">
 
   <div class="show-info">
-       <div class="workshop-show-data"><%= @workshop.description %></div>
+       <div class="workshop-show-data" id="show-description"><%= @workshop.description %></div>
        <div class="workshop-show-data"><%= @workshop.syllabus %></div>
-       <div class="workshop-show-data"><%= @workshop.category %></div>
-       <div class="workshop-show-data"><%= @workshop.area %></div>
-       <div class="workshop-show-data"><%= @workshop.date %></div>
-       <div class="workshop-show-data"><%= @workshop.price %> EUR</div>
+       <div class="workshop-show-data" id="show-address"><%= @workshop.address %></div>
+       <div class="workshop-show-data" id="show-date"><%= @workshop.date %></div>
+       <div class="workshop-show-data" id="show-price"><%= @workshop.price %> EUR</div>
     <div class="show-button-container">
       <div class="show-button-book">
          <%= link_to "Book", new_workshop_booking_path(@workshop), class: "btn-info" %>
