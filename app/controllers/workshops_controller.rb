@@ -32,15 +32,15 @@ class WorkshopsController < ApplicationController
     @workshop = Workshop.find(params[:id])
     authorize @workshop
     # @workshop = Workshop.where.not(latitude: nil, longitude: nil)
-    # if @workshop.longitude && @workshop.latitude
-    #   @markers = [
-    #     {
-    #       lng: @workshop.longitude,
-    #       lat: @workshop.latitude,
-    #       infoWindow: { content: render_to_string(partial: "/workshops/map_window", locals: { workshop: workshop }) }
-    #     }]
+    if @workshop.longitude && @workshop.latitude
+      @markers = [
+        {
+          lng: @workshop.longitude,
+          lat: @workshop.latitude,
+          infoWindow: { content: render_to_string(partial: "/workshops/map_window", locals: { workshop: workshop }) }
+        }]
 
-    # end
+    end
   end
 
   def favourited
