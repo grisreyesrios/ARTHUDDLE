@@ -25,7 +25,7 @@
 
 .card-text {
  flex: 1 auto;
- font-size: 10px;
+ font-size: 12px;
  text-align: left;
  margin-right: 21em;
  margin-top: 5em;
@@ -33,11 +33,10 @@
 }
 
 .card-icons {
- flex: 2 auto;
-    /* width: 10px; */
-    text-align: right;
-    margin-right: 1em;
-  }
+  flex: 2 auto;
+  text-align: right;
+  margin-right: 1em;
+}
 
 
 #favourite {
