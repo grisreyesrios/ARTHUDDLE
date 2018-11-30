@@ -3,10 +3,13 @@
 
 <%= link_to 'HOSTING A WORKSHOP? LIST IT HERE!', new_workshop_path, class: "btn-book" %>
 
+
+
 <% @workshops.each do |workshop| %>
-<div class="card">
+<div class="card" id="workshop-card">
   <h4><%= link_to workshop.name, workshop_path(workshop) %></h4>
   <p><%= workshop.description %></p>
+<!--  icons -->
 
   <% if workshop.description.include?("painting") || workshop.name.include?("painting") %>
     <%= image_tag "paint.png", height: 50 %>
@@ -32,7 +35,7 @@
    <%= image_tag "puzzle.png", height: 50 %>
   <% end %>
 
-
+<!--  icons -->
 
   <% if current_user %>
     <%= link_to workshop_favourited_path(workshop), method: :post do %>
@@ -46,3 +49,4 @@
   <% end %>
 <% end %>
 </div>
+
