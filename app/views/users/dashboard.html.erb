@@ -18,7 +18,7 @@
             <h1>My booked classes:</h1>
             <div class="class-item">
             <% @bookings.each do |booking| %>
-            <h2><%= booking.workshop.name %></h2>
+            <h2><%=  link_to booking.workshop.name, workshop_path(booking.workshop) %></h2>
             <p>Booked: <strong><%= booking.date %></strong></p>
              </div>
           <% end %>
