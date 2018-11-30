@@ -1,0 +1,51 @@
+
+.card {
+  display: flex;
+  border-radius: 3px;
+  background-color: #FC573D
+}
+
+
+.card-title {
+  flex: 1 auto;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 2em;
+  width: 33.333%
+}
+
+
+.card-body {
+  flex: 2 auto;
+  justify-content: flex-start;
+  margin-left: -1em;
+  width: 66.666%
+}
+
+
+.card-text {
+ flex: 1 auto;
+ font-size: 10px;
+ text-align: left;
+ margin-right: 21em;
+ margin-top: 5em;
+ padding: -2em;
+}
+
+.card-icons {
+ flex: 2 auto;
+    /* width: 10px; */
+    text-align: right;
+    margin-right: 1em;
+  }
+
+
+#favourite {
+font-size: 28px;
+}
+
+#hostbutton {
+    padding-left: 30em;
+    padding-bottom: 1em;
+    border-radius: 3px;
+}
