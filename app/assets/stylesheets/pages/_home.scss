@@ -3,6 +3,10 @@ body {
   background-color: #eee9eb;
 }
 
+#splash-info {
+  font-size: 14px;
+}
+
 .header-box {
   height: 95vh;
   text-align: center;
@@ -41,9 +45,10 @@ body {
 .icon-bar {
   display: flex;
   background-color: #D4FFA8;
-  width: 100%;
-  height: 28vh;
+  width: 100vw;
+  height: 25vh;
   margin-top: 3em;
+
 }
 
 .icon {
@@ -65,6 +70,7 @@ body {
   background-color: #FF5634;
   justify-content: flex-end;
   padding: 10%;
+  margin-top: 2em;
 }
 
 .text-content-1 {
@@ -73,7 +79,7 @@ body {
 
 .landing-image-1 {
   flex: 1 auto;
-  width: 440px;
+  width: 470px;
 }
 
 .landing-image-box-1 {
@@ -142,5 +148,9 @@ body {
 }
 
 #home-to-top {
+  text-align: center;
+}
+
+#footer-logo {
   text-align: center;
 }
