@@ -1,0 +1,4 @@
+var favLinkId = 'fav-link-' + "<%= @workshop.id %>";
+var favouriteLink = document.getElementById(favLinkId);
+
+favouriteLink.innerHTML = "<% if current_user %><%= j render 'favourited_link', workshop: @workshop %><% end %>"

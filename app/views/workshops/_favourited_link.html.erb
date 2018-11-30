@@ -1,0 +1,8 @@
+ <%= link_to workshop_favourited_path(workshop), method: :post, remote: true do %>
+  <% if current_user.voted_up_on? workshop %>
+    <i class="fas fa-heart" id="favourite"></i>
+  <% else %>
+    <i class="far fa-heart" id="favourite"></i>
+  <% end %>
+  </div>
+<% end %>

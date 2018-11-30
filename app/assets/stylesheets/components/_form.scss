@@ -8,6 +8,7 @@
 }
 
 .wrapper.form-background {
+  min-height: calc(100vh - 91px);
   h1 {
     color: white;
     margin-left: 20px;
