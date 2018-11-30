@@ -33,7 +33,8 @@ workshop1 = Workshop.create!(
   syllabus:       'Ensure you come prepared with brushes and pencils. All paints will be provided',
   user_id:        user1.id
   )
-
+workshop1.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589273/khara-woods-80967-unsplash.jpg'
+workshop1.save!
 workshop2 = Workshop.create!(
   name:         'Pot-Throwing Crash Course',
   category:     'pottery',
@@ -47,7 +48,8 @@ workshop2 = Workshop.create!(
   syllabus:       'Firstly we will recap the basics of rolling your clay on wooden boards and kneeding excess air out. After an in-depth demo from your teacher, students will take turns on the wheel spinning their first set of cups!',
   user_id:        user2.id
   )
-
+workshop2.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589391/pot-throwing.jpg'
+workshop2.save!
 workshop3 = Workshop.create!(
   name:           'Screen-printing Masterclass',
   category:       'printmaking',
@@ -61,7 +63,8 @@ workshop3 = Workshop.create!(
   syllabus:       'Come prepared; we will dive straight in with this course. Please bring your designs on a USB in photoshop, we will be printing them on trace. Later, we will show you how to handle emulsion on screens, before moving onto the specifics.',
   user_id:        user3.id
   )
-
+workshop3.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589281/jose-aljovin-486564-unsplash.jpg'
+workshop3.save!
 workshop4 = Workshop.create!(
   name:           'Cat Painting 101',
   category:       'printmaking',
@@ -75,7 +78,8 @@ workshop4 = Workshop.create!(
   syllabus:       'The day may be short, but we will pack in a great deal! We will meet at the BaristaCats Katzencafé.',
   user_id:        user4.id
   )
-
+workshop4.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589484/Degas-The-Dance-class-Met-cat-min.jpg'
+workshop4.save!
 workshop5 = Workshop.create!(
   name:           'Colour film photography walking tour',
   category:       'photography',
@@ -89,7 +93,8 @@ workshop5 = Workshop.create!(
   syllabus:       'We will spend the morning taking a quick walk around to explore, before heading back into the studio to develop your film and give you a quick lecture on getting that perfect shot.',
   user_id:        user5.id
   )
-
+workshop5.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589592/tim-graf-72723-unsplash.jpg'
+workshop5.save!
 workshop6 = Workshop.create!(
   name:           'Ice Sculpture with Barbara Scott',
   category:       'sculpture',
@@ -103,7 +108,8 @@ workshop6 = Workshop.create!(
   syllabus:       'We will kick off with a lecture on the history of ice sculpting, before we pick up a chisel. Bring a coat.',
   user_id:        user6.id
   )
-
+workshop6.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589680/ice_sculpture.jpg'
+workshop6.save!
 workshop7 = Workshop.create!(
   name:           'An Introduction to Origami',
   category:       'sculpture',
@@ -117,7 +123,8 @@ workshop7 = Workshop.create!(
   syllabus:       'This workshop takes place over two hours, we shall start with a group chat over coffee, before starting on your designs. Bring a range of coloured paper.',
   user_id:        user7.id
   )
-
+workshop7.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589158/origami.jpg'
+workshop7.save!
 workshop8 = Workshop.create!(
   name:           'Performance Art and Media',
   category:       'sculpture',
@@ -131,5 +138,6 @@ workshop8 = Workshop.create!(
   syllabus:       'This workshop is both a debate and a chance to perform. Bring questions and ideas. Feel free to suggest a theme in the notes.',
   user_id:        user8.id
   )
-
+workshop7.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589876/performance_art.jpg'
+workshop7.save!
 puts 'Finished!'
