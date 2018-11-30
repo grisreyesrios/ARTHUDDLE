@@ -1,9 +1,9 @@
 <div class = "flex-container">
 <%= form_tag(workshops_path, method: "get") do %>
-  <%= label_tag(:query_category, "Search for:") %>
-  <div style="display: flex">
-  <%= select_tag(:query_category, "<option>painting</option><option>pottery</option><option>printmaking</option><option>photography</option><<option>sculpture</option>".html_safe)%>
-  <%= submit_tag(value = "Start be creative") %>
+  <h2><%= label_tag(:query_category, "Search for:") %></h2>
+  <div style="display: flex, justify-content: center">
+  <p class="btn btn-secondary btn-lg" ><<%= select_tag(:query_category, "<option>painting</option><option>pottery</option><option>printmaking</option><option>photography</option><<option>sculpture</option>".html_safe)%>
+  <%= submit_tag(value = "Start be creative") %></p>
    </div>
 <% end %>
 </div>
