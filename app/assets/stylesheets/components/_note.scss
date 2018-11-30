@@ -1,3 +1,9 @@
+.note-title-box {
+    margin-top: 1em;
+    background-color: #d5feac;
+    padding: 1em;
+}
+
 .note-poster {
   margin-top: 3em;
 }
@@ -7,4 +13,50 @@
   margin-top: 2em;
   background-color: white;
   padding: 26px;
+}
+
+
+.add-note {
+  color: blue;
+}
+
+#notes-container {
+  margin-bottom: 2em;
+}
+
+#notes-header {
+  font-size: 60px;
+  text-align: center;
+}
+
+#notes-about {
+  font-size: 30px;
+  text-align: center;
+}
+
+#notes-icon {
+  text-align: center;
+}
+
+#note-stamp {
+  font-size: 12px;
+  text-align: right;
+}
+
+#note-title {
+  font-size: 19px;
+  text-align: center;
+}
+
+#note-content {
+ font-size: 14px;
+}
+
+
+#note-name {
+  font-size: 30px;
+}
+
+#notes-submit {
+  text-align: center;
 }
