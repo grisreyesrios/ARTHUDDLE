@@ -1,15 +1,13 @@
+<div class = "flex-container">
 <%= form_tag(workshops_path, method: "get") do %>
-  <%= label_tag(:query, "Search for:") %>
-  <%= select_tag(:query, "<option>painting</option><option>pottery</option><option>printmaking</option><option>photography</option><<option>sculpture</option>".html_safe)%>
+  <%= label_tag(:query_category, "Search for:") %>
+  <div style="display: flex">
+  <%= select_tag(:query_category, "<option>painting</option><option>pottery</option><option>printmaking</option><option>photography</option><<option>sculpture</option>".html_safe)%>
   <%= submit_tag(value = "Start be creative") %>
-  <%= label_tag(:query, "Search for a workshop in your area:") %>
-  <%#= text_field_tag(:query) %>
-<!--   <#%= text_field_tag(:query, collection: ["painting", "pottery", "printmaking", "photography", "sculpture"]) %>
-
- -->
-  <%= select_tag(:query, "<option>Mitte</option><option>Kreuzberg</option><option>Neukölln</option><option>Prenzlauer Berg</option><<option>Charlottenberg</option>".html_safe)%>
-  <%= submit_tag(value = "Start be creative in your area") %>
+   </div>
 <% end %>
+</div>
+
 
 
 
