@@ -8,8 +8,8 @@ class WorkshopsController < ApplicationController
       @workshops = policy_scope(Workshop).search_by_area(params[:query])
     else
       @workshops = policy_scope(Workshop).order(created_at: :desc)
+      # favourited
     end
-
   end
 
   def new
@@ -52,7 +52,10 @@ class WorkshopsController < ApplicationController
     else
       current_user.likes @workshop
     end
-    redirect_to workshops_path
+    respond_to do |format|
+      format.js
+      format.html { redirect_to workshops_path }
+    end
     # @workshop.favourited = !@workshop.favourited
   end
 

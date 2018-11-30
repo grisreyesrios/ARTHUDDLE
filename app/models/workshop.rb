@@ -2,9 +2,9 @@ class Workshop < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
   include PgSearch
-  acts_as_votable
   pg_search_scope :search_by_category, :against => [:category]
   pg_search_scope :search_by_area, :against => [:area]
+  acts_as_votable
 
   mount_uploader :photo, PhotoUploader
 

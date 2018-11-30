@@ -10,7 +10,7 @@ gem 'redis'
 gem 'pundit'
 gem 'cloudinary', '1.9.1'
 gem 'carrierwave', '~> 1.2'
-
+gem 'jquery-rails'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 5.0.9'
