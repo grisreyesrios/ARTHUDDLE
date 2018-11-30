@@ -65,7 +65,7 @@ workshop3 = Workshop.create!(
 workshop4 = Workshop.create!(
   name:           'Cat Painting 101',
   category:       'printmaking',
-  price:          10,
+  price:          0,
   capacity:       16,
   difficulty:     'beginner',
   description:    'Stuck on what to get Mittens for christmas? Why not a personalised portrait! Channel your inner-artist with our course in beautifying moggy until she purs with joy.',
@@ -79,7 +79,7 @@ workshop4 = Workshop.create!(
 workshop5 = Workshop.create!(
   name:           'Colour film photography walking tour',
   category:       'photography',
-  price:          20,
+  price:          0,
   capacity:       9,
   difficulty:     'intermediate',
   description:    'If you are looking to explore more of Berlin and capture its sites in beautiful colour photoghraphy, then this is the class for you! Whether you have some experience in handling a camera or are already at advanced level, this class will give you the chance to expand on those skills or gain more insight from our trained teachers.',
@@ -122,13 +122,13 @@ workshop8 = Workshop.create!(
   name:           'Performance Art and Media',
   category:       'sculpture',
   price:          15,
-  capacity:       20,
+  capacity:       0,
   difficulty:     'advanced',
-  description:    'An in-depth dive into the world of ice sculpture.',
+  description:    'Free introductory class on performance art with role play exercises.',
   area:           'Kreuzberg',
   address:        'Kottbusser Damm 95, 10967 Berlin',
   date:           '09/12/2018',
-  syllabus:       'This workshop is both a debate and a chance to perform. Bring questions and ideas.',
+  syllabus:       'This workshop is both a debate and a chance to perform. Bring questions and ideas. Feel free to suggest a theme in the notes.',
   user_id:        user8.id
   )
 
