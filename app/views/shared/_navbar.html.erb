@@ -1,7 +1,7 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
+    <%= image_tag "noun_Art_2065016.png", height: 50 %>
   <% end %>
 
   <!-- Right Navigation -->
@@ -11,8 +11,8 @@
 
       <!-- Links when logged in -->
       <%= link_to "Dashboard", dashboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Browse Classes", workshops_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Browse Workshops", workshops_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Add Your Workshop", new_workshop_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
