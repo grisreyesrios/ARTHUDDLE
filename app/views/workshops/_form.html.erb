@@ -1,29 +1,44 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-      <div class="form-new">
-        <body>
-      <%= simple_form_for(@workshop) do |w| %>
-    <div class="form-inputs">
-      <%= w.input :name %>
-      <%= w.input :category %>
-      <%= w.input :price %>
-      <%= w.input :capacity %>
-      <%= w.input :description %>
-      <%= w.input :area %>
-      <%= w.input :address %>
-      <%= w.input :difficulty %>
-      <%= w.input :syllabus %>
-      <%= w.input :photo %>
-      <%= w.input :photo_cache, as: :hidden %>
+   <h1>Add your workshop:</h1>
+  <div class="form-new form-group">
+    <%= simple_form_for @workshop, wrapper: :horizontal_form, html: { class: 'form-group ' } do |w| %>
+
+    <div class="form-row">
+      <%= w.input :name, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: "Name" %>
+      <%= w.input :price, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: "Price" %>
     </div>
 
-    <div class="form-control">
-      <%= w.button :submit, class: 'btn btn-primary' %>
+    <div class="form-row">
+      <%= w.input :category, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Category' %>
+      <%= w.input :capacity, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Capacity' %>
     </div>
- <% end %>
-      </div>
+
+  <div class="form-row">
+      <%= w.input :area, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Area' %>
+      <%= w.input :address, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Address' %>
     </div>
+
+  <div class="form-row">
+      <%= w.input :description, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Description' %>
   </div>
+
+  <div class="form-row">
+      <%= w.input :difficulty, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Difficulty' %>
+  </div>
+
+  <div class="form-row">
+      <%= w.input :syllabus, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Syllabus'  %>
+  </div>
+
+  <div class="form-row">
+      <%= w.input :photo, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Photo' %>
+      <%= w.input :photo_cache, as: :hidden %>
+  </div>
+
+  <div class="form-row">
+      <%= w.button :submit, class: 'btn-info' %>
+  </div>
+  <% end %>
+
 </div>
-</body>
+</div>

@@ -37,7 +37,7 @@ class WorkshopsController < ApplicationController
         {
           lng: @workshop.longitude,
           lat: @workshop.latitude,
-          infoWindow: { content: render_to_string(partial: "/workshops/map_window", locals: { workshop: workshop }) }
+          infoWindow: { content: render_to_string(partial: "/workshops/map_window", locals: { workshop: @workshop }) }
         }]
 
     end

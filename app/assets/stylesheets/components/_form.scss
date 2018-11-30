@@ -1,7 +1,16 @@
 .form-new {
-  background: #8C3DC3;
+  background: #c4c4c4;
   margin-top: 50px;
   padding: 20px 20px;
   border-radius: 10px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+}
+
+.wrapper.form-background {
+  h1 {
+    color: white;
+    margin-left: 20px;
+    text-shadow: 2px 0.2px #000000;
+  }
 }

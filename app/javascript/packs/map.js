@@ -3,16 +3,15 @@ import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 
 const mapElement = document.getElementById('map');
 
-if (mapElement) { // only build a map if there's a div#map to inject into
+
+if (mapElement) {
+
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v10'
   });
-}
 
-if (mapElement) {
-// [ ... ]
   const markers = JSON.parse(mapElement.dataset.markers);
 
   markers.forEach((marker) => {
@@ -20,10 +19,6 @@ if (mapElement) {
       .setLngLat([marker.lng, marker.lat])
       .addTo(map);
   })
-}
-
-if (mapElement) {
-  // [ ... ]
 
   if (markers.length === 0) {
     map.setZoom(1);
@@ -37,16 +32,13 @@ if (mapElement) {
     });
     map.fitBounds(bounds, { duration: 0, padding: 75 })
   }
-}
 
-if (mapElement) {
-// [ ... ]
-  markers.forEach((marker) => {
+   markers.forEach((marker) => {
     new mapboxgl.Marker()
       .setLngLat([marker.lng, marker.lat])
       .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
       .setHTML(marker.infoWindow.content))
       .addTo(map);
   })
-// [ ... ]
 }
+

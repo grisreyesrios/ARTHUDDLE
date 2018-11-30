@@ -1,7 +1,6 @@
-<div class="wrapper" id="form">
-  <h1>Add your workshop:</h1>
-    <%= render 'form', workshop: @workshop %>
+<div class="wrapper form-background" id="form" style="background-image: url(<%= image_path 'khara-woods-80967-unsplash.jpg'%>)">
   <div class="btn-new">
     <%= link_to 'Back', workshops_path %>
   </div>
+    <%= render 'form', workshop: @workshop %>
 </div>
