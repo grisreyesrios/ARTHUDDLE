@@ -1,9 +1,17 @@
 class NotePolicy < ApplicationPolicy
+  def new?
+    record.user == user
+  end
 
   def create?
-    #record is the @note
-    #user is the current_user
-    #@note.user == current_user
+    record.user == user
+  end
+
+  def update?
+    record.user == user
+  end
+
+  def destroy?
     record.user == user
   end
 
