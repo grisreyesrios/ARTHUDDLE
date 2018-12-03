@@ -1,15 +1,27 @@
 class NotesController < ApplicationController
+  # def new
+  #   @workshop = Workshop.find(params[:workshop_id])
+  #   @workshop = @booking.workshop
+  #   @note = Note.new
+  # end
 
   def index
     @workshop = Workshop.find(params[:workshop_id])
     @notes = policy_scope(Note).where(workshop: @workshop)
   end
 
-  # def new
-  #   @workshop = Workshop.find(params[:workshop_id])
-  #   @workshop = @booking.workshop
-  #   @note = Note.new
-  # end
+  def delete
+    @note = Note.find(params[:note_id])
+    @note.destroy
+  end
+
+  def update
+    if @note.update(note_params)
+      redirect_to workshop_notes_path(@workshop), notice: 'Note updated'
+    else
+      render :edit
+    end
+  end
 
   def create
     @workshop = Workshop.find(params[:workshop_id])
