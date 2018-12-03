@@ -9,6 +9,8 @@ class NotesController < ApplicationController
     @workshop = Workshop.find(params[:workshop_id])
     @notes = policy_scope(Note).where(workshop: @workshop)
     @note = Note.new
+    @note.workshop = @workshop
+    @note.user = current_user
     authorize @note
   end
 

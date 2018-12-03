@@ -1,5 +1,5 @@
 class NotePolicy < ApplicationPolicy
-  def new
+  def new?
     record.user == user
   end
 
