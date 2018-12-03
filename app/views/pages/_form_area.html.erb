@@ -1,10 +1,8 @@
-
 <div class = "flex-container">
  <%= form_tag(workshops_path, method: "get") do %>
  <!--  <h2><%= label_tag(:query, "Area") %></h2> -->
   <%#= text_field_tag(:query) %>
 <!--   <#%= text_field_tag(:query, collection: ["painting", "pottery", "printmaking", "photography", "sculpture"]) %>
-
  -->
  <div style="display: flex">
    <p class="btn btn-secondary btn-lg" ><%= select_tag(:query, "<option>Mitte</option><option>Kreuzberg</option><option>Neukölln</option><option>Prenzlauer Berg</option><<option>Charlottenberg</option>".html_safe)%>

@@ -8,6 +8,45 @@
     <div id="search-bar"><%= render 'form', workshop: @workshops_path %></div>
     <div id="search-bar"><%= render 'form_area', workshop: @workshops_path %></div>
   </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4">
+          <ul style="background-color: red">
+             <li><input type="text" name="query" id="query" class="form-control" value="Painting"></li>
+            <li><input type="text" name="query" id="query" class="form-control" value="Pottery"></li>
+            <li><input type="text" name="query" id="query" class="form-control" value="Printmaking"></li>
+            <li><input type="text" name="query" id="query" class="form-control" value="Photography"></li
+            <li><input type="text" name="query" id="query" class="form-control" value="Sculpture"></li>
+          </ul>
+      </div>
+       <div class="col-xs-4">
+          <ul style="background-color: red">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+          </ul>
+      </div>
+       <div class="col-xs-4">
+          <ul style="background-color: red">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="search-box-drop">
+    <ul style="background-color: blue; height: 300px;">
+    <%= form_tag workshops_path, method: :get do %>
+    <%= submit_tag("sumbit") %>
+    <% end %>
+  </ul>
+</div>
+
+<!-- editor-container -->
 
   <div class="landing-search">
   </div>

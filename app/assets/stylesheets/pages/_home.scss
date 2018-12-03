@@ -157,4 +157,27 @@ body {
 
 #footer-logo {
   text-align: center;
-}
+ }
+  .span3 {
+      width:200px;
+  }
+    .droppable {
+         height:400px;
+    }
+  .droppable:hover {
+//      background: red;
+  }
+  .draggable:hover {
+      background: olive;
+  }
+  .editable:hover {
+      background: cyan;
+  }
+  .ui-state-active {
+      background: red;
+  }
+  .span3 {
+      border-style:solid;
+      border-width:1px;
+  }
+
