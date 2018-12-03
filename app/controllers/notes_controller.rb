@@ -1,17 +1,19 @@
 class NotesController < ApplicationController
-  # def new
-  #   @workshop = Workshop.find(params[:workshop_id])
-  #   @workshop = @booking.workshop
-  #   @note = Note.new
-  # end
 
   def index
     @workshop = Workshop.find(params[:workshop_id])
     @notes = policy_scope(Note).where(workshop: @workshop)
   end
 
+  def new
+    @workshop = Workshop.find(params[:workshop_id])
+    @notes = policy_scope(Note).where(workshop: @workshop)
+    @note = Note.new
+  end
+
   def destroy
-    @note = Note.find(params[:note_id])
+    @workshop = Workshop.find(params[:workshop_id])
+    @note = Note.find(params[:id])
     authorize @note
     if @note.destroy
       redirect_to workshop_notes_path(@workshop), notice: 'Note deleted'
@@ -22,7 +24,8 @@ class NotesController < ApplicationController
   end
 
   def update
-    @note = Note.find(params[:note_id])
+    @workshop = Workshop.find(params[:workshop_id])
+    @note = Note.find(params[:id])
     authorize @note
     if @note.update(note_params)
       redirect_to workshop_notes_path(@workshop), notice: 'Note updated'
