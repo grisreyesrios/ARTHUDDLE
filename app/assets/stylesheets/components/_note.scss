@@ -2,10 +2,16 @@
     margin-top: 1em;
     background-color: #d5feac;
     padding: 1em;
+    box-shadow: 10px 10px grey;
 }
 
 .note-poster {
   margin-top: 3em;
+  background-color: #8C3DC3;
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 10px 10px grey;
 }
 
 .note {
@@ -14,7 +20,6 @@
   background-color: white;
   padding: 26px;
 }
-
 
 .add-note {
   color: blue;
@@ -59,4 +64,8 @@
 
 #notes-submit {
   text-align: center;
+  color: black;
+  margin-top: 20px;
 }
+
+
