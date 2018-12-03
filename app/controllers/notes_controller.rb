@@ -9,12 +9,14 @@ class NotesController < ApplicationController
     @workshop = Workshop.find(params[:workshop_id])
     @notes = policy_scope(Note).where(workshop: @workshop)
     @note = Note.new
+    authorize @note
   end
 
   def edit
-    workshop = Workshop.find(params[:workshop_id])
+    @workshop = Workshop.find(params[:workshop_id])
     @notes = policy_scope(Note).where(workshop: @workshop)
     @note = Note.find(params[:id])
+    authorize @note
   end
 
   def destroy

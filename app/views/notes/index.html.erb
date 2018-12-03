@@ -4,7 +4,7 @@
    <h1 id="notes-header"><%= @workshop.name %></h1>
    <p id="notes-icon"><%= image_tag "notebook.png", height: 100; %></p>
    <h2 id="notes-about">share your notes notes with the workshop!</h2>
-  <%= link_to "Add note", workshop_notes_path(@workshop), class: "btn-info", method: :get %>
+  <%= link_to "Add note", workshop_notes_path(@workshop), class: "btn-info" %>
   </div>
 
 
@@ -18,7 +18,7 @@
           <p id="note-stamp"><%= "-#{note.user.email}, #{time_ago_in_words(note.created_at)} ago" %></p>
           <% if note.user == current_user %>
           <%= link_to "Delete Note", workshop_note_path(note.workshop, note), class: "btn-info", method: :delete %>
-          <%= link_to "Edit Note", workshop_note_path(note.workshop, note), class: "btn-info", method: :patch %>
+          <%= link_to "Edit Note", edit_workshop_note_path(note.workshop, note), class: "btn-info" %>
           <% end %>
     </div>
     <% end %>
