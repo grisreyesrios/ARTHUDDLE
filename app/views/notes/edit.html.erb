@@ -1,5 +1,9 @@
 <div class="note-poster">
 
-<%= render 'form' %>
+  <%= simple_form_for([@workshop, @note]) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <p id="notes-submit"><%= f.submit "Add" %></p>
+  <% end %>
 
 </div>

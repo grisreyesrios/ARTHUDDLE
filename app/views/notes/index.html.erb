@@ -4,6 +4,7 @@
    <h1 id="notes-header"><%= @workshop.name %></h1>
    <p id="notes-icon"><%= image_tag "notebook.png", height: 100; %></p>
    <h2 id="notes-about">share your notes notes with the workshop!</h2>
+  <%= link_to "Add note", workshop_notes_path(@workshop), class: "btn-info", method: :get %>
   </div>
 
 
@@ -22,4 +23,5 @@
     </div>
     <% end %>
 </div>
+
 
