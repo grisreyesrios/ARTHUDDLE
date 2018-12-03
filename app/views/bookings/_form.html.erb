@@ -3,7 +3,7 @@
     <h1>Book <%= @workshop.name %>!</h1>
     <%= simple_form_for ([@workshop, @booking]), wrapper: :horizontal_form, html: { class: 'form-group '} do |b| %>
     <div class="form-row">
-      <h2>How many people are attending <%= @workshop.name %>?</h2>
+      <h2>How many people are attending?</h2>
       <%= b.input :number, input_html: { class: 'booking-input' }, label: false, placeholder: "Number" %>
       </div>
       <div class="form-row">
