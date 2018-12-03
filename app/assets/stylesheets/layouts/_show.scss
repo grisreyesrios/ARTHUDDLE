@@ -26,6 +26,7 @@
   // flex-direction: column;
   margin: 20px;
   border-radius: 5px;
+  position:relative;
 }
 
 .show-info {
@@ -33,6 +34,8 @@
   width: 200px;
   justify-content: center;
   background: #C4C4C4;
+  position: relative;
+  top: -200px
 }
 
 .workshop-show-data {

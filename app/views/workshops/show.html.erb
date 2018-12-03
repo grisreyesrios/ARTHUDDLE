@@ -32,7 +32,12 @@
          <%= link_to "Notes", workshop_notes_path(@workshop), class: "btn-info" %>
       </div>
     </div>
+      <div class="booking-new-form">
+      <%= render 'form_booking', workshop: new_workshop_booking_path(@workshop) %>
+      </div>
+    </div>
   </div>
+
 
   <div class="show-map"
         id="map"
