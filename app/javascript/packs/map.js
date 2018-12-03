@@ -39,6 +39,14 @@ if (mapElement) {
       .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
       .setHTML(marker.infoWindow.content))
       .addTo(map);
-  })
+  });
+
 }
 
+   const addressInput = document.getElementById('workshop_address');
+  if (addressInput) {
+    const places = require('places.js');
+    const placesAutocomplete = places({
+      container: addressInput
+    });
+}
