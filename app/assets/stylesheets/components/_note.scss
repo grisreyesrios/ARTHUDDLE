@@ -13,7 +13,9 @@
   color: white;
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 10px 10px grey;
+  -webkit-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
+  -moz-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
+  box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
 }
 
 .note {
@@ -28,7 +30,7 @@
 
 .btn-note {
   color: black;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 #note-box {
@@ -63,6 +65,10 @@
 #note-title {
   font-size: 19px;
   text-align: center;
+    font-size: 19px;
+    text-align: center;
+    background: #faf9ff;
+    padding: 1em;
 }
 
 .note-content {
