@@ -10,16 +10,25 @@ class NotesController < ApplicationController
     @notes = policy_scope(Note).where(workshop: @workshop)
   end
 
-  def delete
+  def destroy
     @note = Note.find(params[:note_id])
-    @note.destroy
+    authorize @note
+    if @note.destroy
+      redirect_to workshop_notes_path(@workshop), notice: 'Note deleted'
+    else
+      @notes = policy_scope(Note).where(workshop: @workshop)
+      render :index
+    end
   end
 
   def update
+    @note = Note.find(params[:note_id])
+    authorize @note
     if @note.update(note_params)
       redirect_to workshop_notes_path(@workshop), notice: 'Note updated'
     else
-      render :edit
+      @notes = policy_scope(Note).where(workshop: @workshop)
+      render :index
     end
   end
 

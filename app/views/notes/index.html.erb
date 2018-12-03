@@ -25,11 +25,11 @@
           <br>
           <p id="note-content"><%= note.content %></p>
           <br><br>
-          <p id="note-stamp"><%= "-#{note.user.email}, #{time_ago_in_words(note.created_at)} ago " %></p>
+          <p id="note-stamp"><%= "-#{note.user.email}, #{time_ago_in_words(note.created_at)} ago" %></p>
+          <% if @note.user == current_user %>
+          <p><%= link_to workshop_note_path(@destroy) %></p>
+          <% end %>
     </div>
     <% end %>
-
 </div>
-
-
 
