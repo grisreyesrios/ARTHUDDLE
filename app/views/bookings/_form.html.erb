@@ -1,16 +1,16 @@
-<div class="form-new form-group">
-    <h1><%= @workshop.name %></h1>
-    <%= @workshop.description %>
+<div class="container">
+  <div class="form-new form-group">
+    <h1>Book <%= @workshop.name %>!</h1>
     <%= simple_form_for ([@workshop, @booking]), wrapper: :horizontal_form, html: { class: 'form-group '} do |b| %>
     <div class="form-row">
-        <h2>Please select the date:</h2>
-        <%= b.input :date, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>
+      <h2>How many people are attending <%= @workshop.name %>?</h2>
+      <%= b.input :number, input_html: { class: 'booking-input' }, label: false, placeholder: "Number" %>
       </div>
+      <div class="form-row">
+        <h2>Please select the date:</h2>
+        <%= b.input :date, wrapper_html: { class: 'col-sm-6' }, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>
+      </div>
+      <%= b.button :submit, class: 'btn-info' %>
     </div>
-    <%= b.button :submit, class: 'btn-book' %>
-    </div>
-  <% end %>
-
-
-
-
+    <% end %>
+  </div>
