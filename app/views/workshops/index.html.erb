@@ -5,7 +5,7 @@
     <%= link_to 'HOSTING A WORKSHOP? LIST IT HERE!', new_workshop_path, class: "btn-book" %>
   </div>
 
-  <div class="card-contaienr">
+  <div class="card-container">
     <% @workshops.each do |workshop| %>
     <div class="card" id="workshop-card">
       <div class="card-title"><%= link_to workshop.name, workshop_path(workshop) %></div>

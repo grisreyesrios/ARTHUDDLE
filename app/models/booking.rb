@@ -4,5 +4,6 @@ class Booking < ApplicationRecord
   has_many :reviews
 
   validates :date, presence: true
+  validates :number, presence: true
   validates :user_id, presence: true
 end

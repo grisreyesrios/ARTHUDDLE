@@ -9,11 +9,21 @@
 <div class="show-box">
 
   <div class="show-info">
-       <div class="workshop-show-data" id="show-description"><%= @workshop.description %></div>
-       <div class="workshop-show-data"><%= @workshop.syllabus %></div>
-       <div class="workshop-show-data" id="show-address"><%= @workshop.address %></div>
-       <div class="workshop-show-data" id="show-date"><%= @workshop.date %></div>
-       <div class="workshop-show-data" id="show-price"><%= @workshop.price %> EUR</div>
+       <div class="workshop-show-data" id="show-description"><strong>Description:</strong>
+        <br></br>
+        <%= @workshop.description %></div>
+       <div class="workshop-show-data" id="show-syllabus"><strong>Syllabus:</strong>
+        <br></br>
+        <%= @workshop.syllabus %></div>
+       <div class="workshop-show-data" id="show-address"><strong>Address:</strong>
+        <br></br>
+        <%= @workshop.address %></div>
+       <div class="workshop-show-data" id="show-date"><strong>Date:</strong>
+        <br></br>
+        <%= @workshop.date %></div>
+       <div class="workshop-show-data" id="show-price"><strong>Price:</strong>
+        <br></br>
+        <%= @workshop.price %> EUR</div>
     <div class="show-button-container">
       <div class="show-button-book">
          <%= link_to "Book", new_workshop_booking_path(@workshop), class: "btn-info" %>
@@ -27,7 +37,7 @@
   <div class="show-map"
         id="map"
         style="width: 400px;
-        height: 800px;"
+        height: 100vh;"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
