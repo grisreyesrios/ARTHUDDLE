@@ -30,16 +30,44 @@
 
 .workshop-icon-flex {
   position: absolute;
-  bottom: 3%;
-  left: 5%;
+  bottom: 6%;
+  left: 9%
 }
 
 .favourite-ticker {
    position: absolute;
-   bottom: 3%;
+   bottom: 6%;
    left: 86%;
 }
 
+.shadowbox {
+  -webkit-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
+  -moz-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
+  box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
+}
+
+#workshop-index-address {
+ position: absolute;
+ bottom: 18%;
+ left: 10%;
+ font-size: 11px;
+ width: 70%;
+}
+
+#favourite {
+  font-size: 28px;
+}
+
+#browse-header {
+  text-align: left;
+  margin-left: 9%;
+}
+
+#hostbutton {
+    padding-left: 30em;
+    padding-bottom: 1em;
+    border-radius: 3px;
+}
 
 
 // .workshop-index-content {
@@ -74,24 +102,6 @@
 //   border-radius: 3px;
 //   background-color: #FC573D;
 // }
-
-.shadowbox {
-  -webkit-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
-  -moz-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
-  box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
-}
-
-
-#favourite {
-font-size: 28px;
-}
-
-#hostbutton {
-    padding-left: 30em;
-    padding-bottom: 1em;
-    border-radius: 3px;
-}
-
 
 
 // .card-title {

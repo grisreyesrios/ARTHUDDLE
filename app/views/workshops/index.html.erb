@@ -15,7 +15,7 @@
         </div>
         <div class="workshop-main-text">
           <%= link_to workshop.name, workshop_path(workshop) %>
-         <p id="workshop-index-address"><%= workshop.address %></p>
+         <div id="workshop-index-address"><%= workshop.address %></div>
         </div>
         <div class="favourite-ticker">
            <% if current_user %>
