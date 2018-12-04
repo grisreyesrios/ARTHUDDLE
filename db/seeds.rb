@@ -18,6 +18,23 @@ puts 'Creating workshops...'
  user6 = User.create(email: 'ollie@arthuddle.com', password: 'trymeout')
  user7 = User.create(email: 'trevory@arthuddle.com', password: 'letmebeme')
  user8 = User.create(email: 'quentin@arthuddle.com', password: 'lifeiscode')
+ user9 = User.create(email: 'tim@arthuddle.com', password: 'witshhoewi')
+ user10 = User.create(email: 'love@arthuddle.com', password: 'yesyeyse')
+ user11 = User.create(email: 'you@arthuddle.com', password: 'nowhers')
+ user12 = User.create(email: 'me@arthuddle.com', password: 'brightet')
+ user13 = User.create(email: 'lust@arthuddle.com', password: 'spitting')
+ user14 = User.create(email: 'wrong@arthuddle.com', password: 'loveint')
+ user15 = User.create(email: 'wish@arthuddle.com', password: 'whyyyy')
+ user16 = User.create(email: 'laugh@arthuddle.com', password: 'wahwahwah')
+user17 = User.create(email: 'tim@arthuddle.com', password: 'witshhoewi')
+ user18 = User.create(email: 'wendy@arthuddle.com', password: 'nfiorwngiorwe')
+ user19 = User.create(email: 'alice@arthuddle.com', password: 'nfiorwngiow')
+ user20 = User.create(email: 'olivia@arthuddle.com', password: 'fuirwginf')
+ user21 = User.create(email: 'caroline@arthuddle.com', password: 'fnriowgfrw')
+ user22 = User.create(email: 'wrong@arthuddle.com', password: 'nfiorngore')
+ user23 = User.create(email: 'lala@arthuddle.com', password: 'fenwofiw')
+ user24 = User.create(email: 'rachel@arthuddle.com', password: 'fweionfwe')
+user25 = User.create(email: 'diana@arthuddle.com', password: 'feiwonfewo')
 
 
 workshop1 = Workshop.create!(
@@ -33,12 +50,13 @@ workshop1 = Workshop.create!(
   syllabus:       'Ensure you come prepared with brushes and pencils. All paints will be provided',
   user_id:        user1.id
   )
+
 workshop1.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589273/khara-woods-80967-unsplash.jpg'
 workshop1.save!
 
 workshop2 = Workshop.create!(
   name:         'Pot-Throwing Crash Course',
-  category:     'pottery',
+  category:     'ceramics',
   price:         25,
   capacity:      20,
   difficulty:    'medium',
@@ -49,6 +67,7 @@ workshop2 = Workshop.create!(
   syllabus:       'Firstly we will recap the basics of rolling your clay on wooden boards and kneeding excess air out. After an in-depth demo from your teacher, students will take turns on the wheel spinning their first set of cups!',
   user_id:        user2.id
   )
+
 workshop2.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589391/pot-throwing.jpg'
 workshop2.save!
 
@@ -69,12 +88,13 @@ workshop3 = Workshop.create!(
                   screens, before moving onto the specifics.',
   user_id:        user3.id
   )
+
 workshop3.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589281/jose-aljovin-486564-unsplash.jpg'
 workshop3.save!
 
 workshop4 = Workshop.create!(
   name:           'Cat Painting 101',
-  category:       'printmaking',
+  category:       'painting',
   price:          0,
   capacity:       16,
   difficulty:     'beginner',
@@ -86,6 +106,7 @@ workshop4 = Workshop.create!(
   syllabus:       'The day may be short, but we will pack in a great deal! We will meet at the BaristaCats Katzencafé.',
   user_id:        user4.id
   )
+
 workshop4.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589484/Degas-The-Dance-class-Met-cat-min.jpg'
 workshop4.save!
 
@@ -105,12 +126,13 @@ workshop5 = Workshop.create!(
   syllabus:       'We will spend the morning taking a quick walk around to explore, before heading back into the studio to develop your film and give you a quick lecture on getting that perfect shot.',
   user_id:        user5.id
   )
+
 workshop5.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589592/tim-graf-72723-unsplash.jpg'
 workshop5.save!
 
 workshop6 = Workshop.create!(
   name:           'Ice Sculpture with Barbara Scott',
-  category:       'sculpture',
+  category:       'other',
   price:          70,
   capacity:       17,
   difficulty:     'advanced',
@@ -121,6 +143,7 @@ workshop6 = Workshop.create!(
   syllabus:       'We will kick off with a lecture on the history of ice sculpting, before we pick up a chisel. Bring a coat.',
   user_id:        user6.id
   )
+
 workshop6.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589680/ice_sculpture.jpg'
 workshop6.save!
 
@@ -138,6 +161,7 @@ workshop7 = Workshop.create!(
                   before starting on your designs. Bring a range of coloured paper.',
   user_id:        user7.id
   )
+
 workshop7.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589158/origami.jpg'
 workshop7.save!
 
@@ -155,6 +179,7 @@ workshop8 = Workshop.create!(
                   suggest a theme in the notes.',
   user_id:        user8.id
   )
+
 workshop7.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589876/performance_art.jpg'
 workshop7.save!
 
@@ -179,6 +204,7 @@ workshop8 = Workshop.create!(
                   downloads.',
   user_id:        user8.id
   )
+
 workshop8.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543931736/Sound-Design-Studio-Mixer.jpg'
 workshop8.save!
 
@@ -203,6 +229,7 @@ workshop9 = Workshop.create!(
                   Everyone is welcome but please be respectful of letting everyone have their say.',
   user_id:        user9.id
   )
+
 workshop9.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543936250/pinkflamingos.jpg'
 workshop9.save!
 
@@ -294,5 +321,222 @@ workshop9.save!
     )
   workshop13.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543944985/group-crit-2014.jpg'
   workshop13.save!
+
+  workshop14 = Workshop.create (
+    name:         'Choral Experimental Performance Piece',
+    category:     'performance',
+    price:         0,
+    capacity:      40,
+    difficulty:    'medium',
+    description:   'This workshop is both an experiemntal live artpiece and a teaching opportunity. This piece is about learning to sing
+                    in a choral setting, but is also an opportunity to be part of a bigger artistic work. We look forward to hearing from you!
+                    Spaces are limited so get in there quick!',
+    area:          'Mitte',
+    address:       'Karl-Liebknecht-Str. 8, 10178 Berlin',
+    date:          '17/12/2018',
+    syllabus:      'We will begin with some warm-up exercises, before we begin singing some popular hits reimagined in a classical sense.
+                    Sheet music and printed words will be provided.',
+    user_id:        user14.id
+    )
+  workshop14.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543945751/choir_singing.png'
+  workshop14.save!
+
+
+  workshop15 = Workshop.create (
+    name:         'Explore the Berlinische Galerie',
+    category:     'tour',
+    price:         5,
+    capacity:      15,
+    difficulty:    'beginner',
+    description:   'In this event, we will be undertaking a walking tour around the Berlinische Galerie. In the style of the institutional
+                    critique live art events from the 1960s, this tour will involve a retelling of history, using the museum\'s
+                    collection. You can use this as both an opportunity to see the exhibitions and a chance to think more creatively about
+                    visiting a gallery. We are looking forward to exploring this within an iconic space whose specialization is on art created in Berlin since 1870.',
+    area:          'Mitte',
+    address:       'Alte Jakobstraße 124-128, 10969 Berlin',
+    date:          '03/01/2018',
+    syllabus:      'Entry fee is required for the Berlinische Galerie, and we request a donation of 5 Euros. We will spend approximately
+                    an hour and a half completing this walk.',
+    user_id:        user15.id
+    )
+  workshop15.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543946767/berlinische_galerie.jpg'
+  workshop15.save!
+
+  workshop16 = Workshop.create (
+    name:         'Explore Gardening and Land Art',
+    category:     'environmental',
+    price:         25,
+    capacity:      10,
+    difficulty:    'medium',
+    description:   'Did you know that land art has a long and fascinating history in the art world? Now is your chance to become involved.
+                    Join us for a stint of gardening as both a social encounter and a chance to engage with some wider environmental issues.',
+    area:          'Mitte',
+    address:       'Prinzenstraße 35-38, 10969 Berlin',
+    date:          '03/03/2019',
+    syllabus:      'Join us for the morning lecture where we will go over the basics of handling a garden, whatever size. Following this,
+                    we will progress into getting our hands dirty with potting.  learn how to extend your garden through winter,
+                    and how to prune and protect your plants (and your lawn) from a harsh winter.',
+    user_id:        user16.id
+    )
+  workshop16.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543947092/Gardening_Image.jpg'
+  workshop16.save!
+
+  workshop17 = Workshop.create (
+    name:         'Casting and Mouldmaking',
+    category:     'sculpture',
+    price:         35,
+    capacity:      10,
+    difficulty:    'beginner',
+    description:   'Ever dreamed of casting your favourite figurine? Kitchen utensil? Even a body part? This workshop allows you to do just that.
+                    Expect a supportive environment for working with plaster, silicon and wax.',
+    area:          'Mitte',
+    address:       'Osloer Str. 102, 13359 Berlin',
+    date:          '07/02/2019',
+    syllabus:      'Learn the principals of multi-part moulds, making a two-part mould from a ready-made object.',
+    user_id:        user17.id
+    )
+  workshop17.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543947934/mouldmaking_and_casting.jpg'
+  workshop17.save!
+
+
+  workshop18 = Workshop.create (
+    name:         'Wood Workshop 101',
+    category:     'woodwork',
+    price:         35,
+    capacity:      10,
+    difficulty:    'advanced',
+    description:   'Not for the faint-hearted, this masterclass will allow an expert-led dive into some of the more refined techniques of woodwork.',
+    area:          'Mitte',
+    address:       'Osloer Str. 102, 13359 Berlin',
+    date:          '07/02/2019',
+    syllabus:      'We will cover carving-techniques, furniture manufacturing, and best of all, the big machines.',
+    user_id:        user18.id
+    )
+  workshop18.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543948323/wood_workshop.jpg'
+  workshop18.save!
+
+  workshop19 = Workshop.create (
+    name:         'Ceramics Workshop',
+    category:     'ceramics',
+    price:         10,
+    capacity:      16,
+    difficulty:    'beginner',
+    description:   'An examination of clay, glaze, decoration methods, and firing process. The aim is to provide you with skills to apply the
+                    aesthetics, form, and function of ceramics as a form of art.',
+    area:          'Friedrichshain',
+    address:       'Frankfurter Allee 36A, 10247 Berlin',
+    date:          '07/02/2019',
+    syllabus:      'You will get introduced to qualities and potential of working with clay, and create your first ceramic piece.',
+    user_id:        user19.id
+    )
+  workshop19.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543949002/Ceramics_workshop.jpg'
+  workshop19.save!
+
+  workshop20 = Workshop.create (
+    name:         'How To Launch Your Art Online',
+    category:     'online',
+    price:         10,
+    capacity:      16,
+    difficulty:    'beginner',
+    description:   'Web-based artwork is so hot right now. Jump on the wagon with this crash course in creating interactive websites
+                    for your artwork.',
+    area:          'Friedrichshain',
+    address:       'Frankfurter Allee 36A, 10247 Berlin',
+    date:          '07/02/2019',
+    syllabus:      'We will equip you for using simple JavaScript and C++ to bring your artworks to life.',
+    user_id:        user20.id
+    )
+  workshop20.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543950860/online_course.jpg'
+  workshop20.save!
+
+  workshop21 = Workshop.create (
+    name:         'Audio Compilation Class',
+    category:     'audio',
+    price:         20,
+    capacity:      30,
+    difficulty:    'medium',
+    description:   'This workshop provides an opportunity to experiment with sound through collecting field recordings, and processing
+                    and programming with a range of hardware. Now you can conjure sounds and sequences yourself in a professional studio environment. ',
+    area:          'Friedrichshain',
+    address:       'Rudi-Dutschke-Straße 23, 10969 Berlin',
+    date:          '13/01/2018',
+    syllabus:      'We shall briefly cover the basics of audio engineering, but be prepared to move quickly. Audio equipment will be provided.',
+    user_id:        user21.id
+    )
+
+  workshop21.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543949589/audio_workshop.jpg'
+  workshop21.save!
+
+  workshop22 = Workshop.create (
+    name:         '"Visual Pleasure and Narrative Cinema:" Discussion of Laura Mulvey',
+    category:     'reading group',
+    price:         20,
+    capacity:      30,
+    difficulty:    'medium',
+    description:   'This workshop provides an opportunity to experiment with sound through collecting field recordings, and processing
+                    and programming with a range of hardware. Now you can conjure sounds and sequences yourself in a professional studio environment. ',
+    area:          'Friedrichshain',
+    address:       'Rudi-Dutschke-Straße 23, 10969 Berlin',
+    date:          '30/01/2018',
+    syllabus:      'Please ensure that you read Visual Pleasure and Narrative Cinema in advance of this meetup.',
+    user_id:        user22.id
+    )
+
+  workshop22.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543951030/Laura-Mulvey-web.jpg'
+  workshop22.save!
+
+
+  workshop23 = Workshop.create (
+    name:         'Design and Communications Learning Meetup',
+    category:     'design',
+    price:         35,
+    capacity:      10,
+    difficulty:    'medium',
+    description:   'Students will gain a basic and functional understanding of three essential software applications for a
+                    graphic designer: Adobe Photoshop, Illustrator, and InDesign.',
+    area:          'Neukölln',
+    address:       'Legiendamm 14, 10179 Berlin',
+    date:          '23/02/2018',
+    syllabus:      'The course will cover current information, tools, and techniques used to create digital materials for
+                    a variety of visual communications applications.',
+    user_id:        user23.id
+    )
+
+  workshop23.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543951030/Laura-Mulvey-web.jpg'
+  workshop23.save!
+
+  workshop24 = Workshop.create (
+    name:         'Digital Rendering Class (4D Cinema)',
+    category:     'digital',
+    price:         10,
+    capacity:      10,
+    difficulty:    'medium',
+    description:   'Master the basics in creating images with 3D software, and learn some extra style perks along the way!',
+    area:          'Neukölln',
+    address:       'Hardenbergstraße 33, 10623 Berlin',
+    date:          '30/12/2018',
+    syllabus:      '.',
+    user_id:        user24.id
+    )
+  workshop24.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543952618/3d_rendering.jpg'
+  workshop24.save!
+
+  workshop25 = Workshop.create (
+    name:         'A Community Art Project',
+    category:     'social',
+    price:         0,
+    capacity:      25,
+    difficulty:    'beginner',
+    description:   'Who said art can\'t also give back to the community? Come join our rubbish collecting trip, where we will
+                    be collecting rubbish until the end.',
+    area:          'Prenzlauer Berg',
+    address:       'Gleimstraße 55, 10437 Berlin',
+    date:          '30/12/2018',
+    syllabus:      'Just bring yourselves! (And any rubbish pickers you may have to spare).',
+    user_id:        user25.id
+    )
+  workshop25.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543952684/picking-up-plastic-litter.jpg'
+  workshop25.save!
+
 
 puts 'Finished!'
