@@ -19,6 +19,13 @@
   margin-bottom: 30px;
 }
 
+.centered-input {
+    width: 300px !important;
+    float: none !important;
+    margin: 0 auto !important;
+    margin-right: 0 !important;
+}
+
 .show-box {
   display: flex;
   padding: 2em;
@@ -27,20 +34,30 @@
   margin: 20px;
   border-radius: 5px;
   position:relative;
+  height: 120vh;
 }
 
 
 .show-info {
   flex: 2 auto;
-  width: 200px;
+  height: calc(100vh + 200px);
+  width: 500px;
   justify-content: center;
   background: #C4C4C4;
   position: relative;
-  top: -200px;
+  top: -193px;
 }
 
 .workshop-show-data {
   padding: 10px 20px 10px 20px;
+}
+
+.booking-new-form {
+
+}
+.container-form {
+  text-align: center;
+  margin: 40px;
 }
 
 
