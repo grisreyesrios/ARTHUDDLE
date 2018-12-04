@@ -35,9 +35,8 @@
           </div>
         </div>
     </div>
-  </div>
-     </div>
          <div class="card" id="notes-card">
+          <h3 id="workshop-notes-header">Workshop notes:</h3>
           <% @bookings.each do |booking| %>
             <% booking.workshop.notes.each do |note| %>
               <%= link_to note.title, workshop_notes_path(booking.workshop) %>
@@ -45,6 +44,8 @@
             <% end %>
       <p>User</p>
     </div>
+  </div>
+     </div>
 </div>
 
 
