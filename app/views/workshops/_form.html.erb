@@ -12,11 +12,11 @@
       <%= w.input :category, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Category' %>
       <%= w.input :capacity, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Capacity' %>
     </div>
+    <%= w.input :date, wrapper_html: { class: 'col-sm-6' }, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>
 
   <div class="form-row">
 
-    <%= w.input :area, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input'}, label: false, :collection => %w[ Mitte Kreuzberg Neukölln Prenzlauer\Berg Charlottenberg] %>
-
+    <%= w.input :area, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input', id: 'workshop_area'}, label: false, include_blank: "Area",:collection => %w[ Mitte Kreuzberg Neukölln Prenzlauer-Berg Charlottenberg] %>
 
     <%= w.input :address, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input', id: 'workshop_address' }, label: false, placeholder: 'Address' %>
 
@@ -27,7 +27,7 @@
   </div>
 
   <div class="form-row">
-      <%= w.input :difficulty, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Difficulty' %>
+    <%= w.input :difficulty, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input'}, label: false, include_blank: "Difficulty",:collection => %w[ Beginner Medium Advanced] %>
   </div>
 
   <div class="form-row">
