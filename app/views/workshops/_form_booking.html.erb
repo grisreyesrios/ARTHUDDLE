@@ -5,10 +5,6 @@
       <%= simple_form_for [@workshop, @booking], wrapper: :horizontal_form, html: { class: 'form-group '} do |b| %>
         <h2>How many people are attending?</h2>
         <%= b.input :number, input_html: { class: 'booking-input centered-input', style: "width: 100%" }, label: false, placeholder: "Number" %>
-      <div class="form-row">
-        <h2>Please select the date:</h2>
-        <%= b.input :date, wrapper_html: { class: 'col-sm-6' }, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>
-      </div>
       <%= b.button :submit, class: 'btn-info' %>
     </div>
     <% end %>
