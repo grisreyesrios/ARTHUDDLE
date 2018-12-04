@@ -27,15 +27,24 @@
             <div class="class-item">
             <% @bookings.each do |booking| %>
             <p id="dashboard-workshop"><%=  link_to booking.workshop.name, workshop_path(booking.workshop) %></p>
+            <% if false %>
             <p id="booked">Booked: <strong><%= booking.date %></strong></p>
+            <% end %>
              </div>
           <% end %>
           </div>
         </div>
     </div>
   </div>
-      </div>
+     </div>
          <div class="card" id="notes-card">
+          <% @bookings.each do |booking| %>
+            <% booking.workshop.notes.each do |note| %>
+              <%= link_to note.title, workshop_notes_path(booking.workshop) %>
+              <% end %>
+            <% end %>
       <p>User</p>
+    </div>
 </div>
+
 
