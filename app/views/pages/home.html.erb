@@ -11,47 +11,32 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-4">
-          <ul style="background-color: red">
-             <li><%= image_tag "sewing.png", height: 100 %></li>
-            <li><input type="text" name="query" id="query" class="form-control" value="Pottery"></li>
-            <li><input type="text" name="query" id="query" class="form-control" value="Printmaking"></li>
-            <li><input type="text" name="query" id="query" class="form-control" value="Photography"></li
-            <li><input type="text" name="query" id="query" class="form-control" value="Sculpture"></li>
+        <div class="sortable-container">
+          <ul class='sortable-dropzone' style="background-color: red">
+            <% Workshop::CATEGORIES.each do |category| %>
+              <li data-value="<%= category %>" class='sortable-item'>
+
+                <%= category %>
+
+              </li>
+            <% end %>
           </ul>
+        </div>
       </div>
-       <div class="col-xs-4">
-          <ul style="background-color: red">
-            <li>a</li>
-            <li>b</li>
-            <li>c</li>
-            <li>d</li>
-          </ul>
-      </div>
-       <div class="col-xs-4">
-          <ul style="background-color: red">
-            <li>a</li>
-            <li>b</li>
-            <li>c</li>
-            <li>d</li>
-          </ul>
+    </div>
+    <div class="flex-container">
+      <div class="sortable-container" style="display: flex; justify-content: center; border: 5px solid black">
+        <ul id="search-box-drop" class='sortable-dropzone' style="background-color: white; height: 300px; width: 100%">
+        </ul>
       </div>
     </div>
   </div>
 
-  <div id="search-box-drop">
-    <ul style="background-color: blue; height: 300px;">
-    <%= form_tag workshops_path, method: :get do %>
-    <%= submit_tag("sumbit") %>
+    <%= form_tag workshops_path, method: "get", id: 'searchForm' do %>
+      <%= text_field_tag("categories[]", nil, id: "categories", hidden: true) %>
+      <%= submit_tag("Search") %>
     <% end %>
-  </ul>
-</div>
-
-<!-- editor-container -->
-
-  <div class="landing-search">
-  </div>
-
-  <div class="icon-bar">
+<div class="icon-bar">
     <div class="landing-icon">
       <%= image_tag "sewing.png", height: 100 %>
     </div>

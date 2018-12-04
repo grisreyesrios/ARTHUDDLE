@@ -19,4 +19,6 @@ class Workshop < ApplicationRecord
   # has_many :reviews, through: :bookings, dependent: :destroy
 
   belongs_to :user, optional: true
+
+  CATEGORIES = %w(Painting Pottery Printmaking Photography Sculpture)
 end
