@@ -14,8 +14,12 @@
     </div>
 
   <div class="form-row">
-    <%= w.input :area, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Area' %>
-      <%= w.input :address, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input', id: 'workshop_address' }, label: false, placeholder: 'Address' %>
+
+    <%= w.input :area, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input'}, label: false, :collection => %w[ Mitte Kreuzberg Neukölln Prenzlauer\Berg Charlottenberg] %>
+
+
+    <%= w.input :address, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input', id: 'workshop_address' }, label: false, placeholder: 'Address' %>
+
     </div>
 
   <div class="form-row">
