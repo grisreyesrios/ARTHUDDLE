@@ -1,5 +1,5 @@
 .overflow {
-  overflow: scroll;
+  overflow-y:auto
 }
 
 .dashboard-container {
@@ -79,6 +79,15 @@
   height: 22vh;
   background-color: #d5feab;
   color: black;
+}
+
+#dashboard-workshop-date {
+  font-size: 10px;
+  text-align: left;
+}
+
+#dashboard-note-workshop {
+  font-size: 12px;
 }
 
 #favourited-workshop-section {

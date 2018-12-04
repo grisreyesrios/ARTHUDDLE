@@ -6,8 +6,8 @@
       <p>User</p>
     </div>
 
-      <div class="dashboard-card shadowbox overflow" id="booked-card">
-          <div class="favourited-workshop-section">
+      <div class="dashboard-card shadowbox" id="booked-card">
+          <div class="favourited-workshop-section overflow">
             <h3 class="dashboard-card-header">Favourited workshops:</h3>
             <br><br>
              <% current_user.find_liked_items.each do |workshop| %>
@@ -17,29 +17,27 @@
           </div>
         </div>
 
-         <div class="dashboard-card shadowbox overflow" id="favourited-card">
+         <div class="dashboard-card shadowbox" id="favourited-card">
             <div class="booked-section">
               <h3 class="dashboard-card-header">Booked workshops:</h3>
                 <br><br>
-                  <div class="class-item">
+                  <div class="class-item overflow">
                 <% @bookings.each do |booking| %>
                 <p id="dashboard-workshop"><%=  link_to booking.workshop.name, workshop_path(booking.workshop) %></p>
-                <% if false %>
-                 <p id="booked">Booked: <strong><%= booking.date %></strong></p>
-                <% end %>
+                <p id="dashboard-workshop-date"><%= booking.workshop.date %></p>
               </div>
             <% end %>
           </div>
-        </div>
-    </div>
      </div>
-         <div class="dashboard-card shadowbox overflow" id="notes-card">
+         <div class="dashboard-card shadowbox" id="notes-card">
           <h3 class="dashboard-card-header">Workshop notes:</h3>
           <% @bookings.each do |booking| %>
             <% booking.workshop.notes.each do |note| %>
-              <%= link_to note.title, workshop_notes_path(booking.workshop) %>
+              <%= link_to note.title, workshop_notes_path(booking.workshop) %> <p id="dashboard-note-workshop"> in <%= booking.workshop.name %></p>
               <% end %>
             <% end %>
+    </div>
+        </div>
     </div>
   </div>
 </div>
