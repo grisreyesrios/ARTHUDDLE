@@ -6,7 +6,6 @@
 
   <div class="landing-search">
     <div id="search-bar"><%= render 'form', workshop: @workshops_path %></div>
-    <div id="search-bar"><%= render 'form_area', workshop: @workshops_path %></div>
   </div>
   <div class="container">
     <div class="row">
@@ -16,8 +15,7 @@
             <% Workshop::CATEGORIES.each do |category| %>
               <li data-value="<%= category %>" class='sortable-item'>
 
-                <%= category %>
-                <%= image_tag "paintbrush.png", height: 100 %>
+                <%= category%>
 
               </li>
             <% end %>
@@ -32,18 +30,19 @@
       </div>
     </div>
   </div>
-
+  <div>
     <%= form_tag workshops_path, method: "get", id: 'searchForm' do %>
       <%= text_field_tag("categories[]", nil, id: "categories", hidden: true) %>
       <%= submit_tag("Search") %>
     <% end %>
+  </div>
 
 
 
 
 
 
-<div class="icon-bar">
+<!-- <div class="icon-bar">
     <div class="landing-icon">
       <%= image_tag "sewing.png", height: 100 %>
     </div>
@@ -63,7 +62,7 @@
       <%= image_tag "camera.png", height: 100 %>
     </div>
 
-  </div>
+  </div> -->
 
 </div>
 
