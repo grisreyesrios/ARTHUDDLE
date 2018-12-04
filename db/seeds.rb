@@ -41,7 +41,7 @@ workshop2 = Workshop.create!(
   category:     'pottery',
   price:         25,
   capacity:      20,
-  difficulty:    'intermediate',
+  difficulty:    'medium',
   description:   'Pot-throwing is not only a fun activity, it is immensely rewarding. It requires hands-on interaction with the pottery wheel. By the end of the class, you will master kneeding out extra water, and removing excess clay',
   area:          'Kreuzberg',
   address:       'Alexandrinenstraße 118, 10969 Berlin',
@@ -58,11 +58,15 @@ workshop3 = Workshop.create!(
   price:          30,
   capacity:       10,
   difficulty:     'advanced',
-  description:    'With screen-printing, the possibilities are endless. With over 10 years of experience, our teachers will provide expert advice to guide you through some of the more challenging techniques of producing prints.',
+  description:    'With screen-printing, the possibilities are endless. With over 10 years of experience,
+                  our teachers will provide expert advice to guide you through some of the more challenging
+                  techniques of producing prints.',
   area:           'Neukölln',
   address:        'Jonasstraße 33, 12053 Berlin',
   date:           '14/01/2018',
-  syllabus:       'Come prepared; we will dive straight in with this course. Please bring your designs on a USB in photoshop, we will be printing them on trace. Later, we will show you how to handle emulsion on screens, before moving onto the specifics.',
+  syllabus:       'Come prepared; we will dive straight in with this course. Please bring your designs on a USB in
+                  photoshop, we will be printing them on trace. Later, we will show you how to handle emulsion on
+                  screens, before moving onto the specifics.',
   user_id:        user3.id
   )
 workshop3.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589281/jose-aljovin-486564-unsplash.jpg'
@@ -74,7 +78,8 @@ workshop4 = Workshop.create!(
   price:          0,
   capacity:       16,
   difficulty:     'beginner',
-  description:    'Stuck on what to get Mittens for christmas? Why not a personalised portrait! Channel your inner-artist with our course in beautifying moggy until she purs with joy.',
+  description:    'Stuck on what to get Mittens for christmas? Why not a personalised portrait! Channel your
+                  inner-artist with our course in beautifying moggy until she purs with joy.',
   area:           'Neukölln',
   address:        'Malchower Weg 68, 13053 Berlin',
   date:           '14/01/2018',
@@ -89,8 +94,11 @@ workshop5 = Workshop.create!(
   category:       'photography',
   price:          0,
   capacity:       9,
-  difficulty:     'intermediate',
-  description:    'If you are looking to explore more of Berlin and capture its sites in beautiful colour photoghraphy, then this is the class for you! Whether you have some experience in handling a camera or are already at advanced level, this class will give you the chance to expand on those skills or gain more insight from our trained teachers.',
+  difficulty:     'medium',
+  description:    'If you are looking to explore more of Berlin and capture its sites in beautiful colour photoghraphy,
+                   then this is the class for you! Whether you have some experience in handling a camera or are already
+                   at advanced level, this class will give you the chance to expand on those skills or gain more insight
+                   from our trained teachers.',
   area:           'Prenzlauer Berg',
   address:        'Fuldastraße 60, 12043 Berlin',
   date:           '14/01/2018',
@@ -135,9 +143,9 @@ workshop7.save!
 
 workshop8 = Workshop.create!(
   name:           'Performance Art and Media',
-  category:       'sculpture',
+  category:       'performance',
   price:          15,
-  capacity:       0,
+  capacity:       10,
   difficulty:     'advanced',
   description:    'Free introductory class on performance art with role play exercises.',
   area:           'Kreuzberg',
@@ -179,7 +187,7 @@ workshop9 = Workshop.create!(
   category:     'theoretical',
   price:         5,
   capacity:      10,
-  difficulty:    'intermediate',
+  difficulty:    'medium',
   description:   'This theory-based event will focus on the contribution of queer insight to art history. Veering always
                   from the predominant. This workshop is aimed at people with some baseline knowledge of art history, but
                   nothing too advanced!',
@@ -219,7 +227,72 @@ workshop9.save!
                     limited. We can also provide you with contacts for borrowing or renting if required.',
     user_id:        user10.id
       )
+  workshop10.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543932801/videoartgame.jpg'
+  workshop10.save!
 
-                    'Bergmannstraße 56, 10961 Berlin'
+  workshop11 = Workshop.create (
+    name:         'Radical Sewing: A Short Course',
+    category:     'textiles',
+    price:         40,
+    capacity:      12,
+    difficulty:    'advanced',
+    description:   'What is your perception of textiles? Do you believe that textiles should be restricted to clothes alone
+                    , or do you think you could see them with a more boundary-pushing motive? Join us in our beautiful, well-lit
+                    Berlin studio where we will be sewing together pieces and patches to create substantial woven works.
+                    The aim is to reinterpet heritage crafts within a contemporary context.',
+    area:          'Kreuzberg',
+    address:       'Bergmannstraße 56, 10961 Berlin',
+    date:          '15/04/2019',
+    syllabus:      'Short course participants will learn the main techniques of textile design and printing. You will
+                    also be introduced to the production of textile swatch designs to create a textile book. Over the course
+                    we will cover some key printing techniques, including block, stencil, heat press and screen-printing.',
+    user_id:        user11.id
+    )
+  workshop10.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543938361/textiles.jpg'
+  workshop11.save!
+
+  workshop12 = Workshop.create (
+    name:         'Self Portraiture Drawing',
+    category:     'drawing',
+    price:         12,
+    capacity:      20,
+    difficulty:    'medium',
+    description:   'This class will throw you into portrait drawing, but not in the way you expect. The aim of the course
+                    is to make you rethink what \'drawing\' is. For this reason, expect this class to divert you from the
+                    figurative demands of traditional drawing; we will focus more on getting you to express your personality
+                    through drawing. Please bring charcoal and pencils.',
+    area:          'Neukölln',
+    address:       'Bouchéstraße 75, 12435 Berlin',
+    date:          '15/12/2018',
+    syllabus:      'Please bring charcoal along to this class. We will start with some warm-up exercises; we will ask you to
+                    write down some aspects of your personality that you find interesting. Then, we will show you some techniques
+                    for quick sketching. From here, we will start breaking some of the rules.
+                    Easels are available for use at the workshop, but please also feel free to work in any other way that feels
+                    comfortable.',
+    user_id:        user12.id
+    )
+  workshop12.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543939423/portrait_drawing.jpg'
+  workshop12.save!
+
+  workshop13 = Workshop.create (
+    name:         '\'Documenting the Tide\': Learning Art Journalism.',
+    category:     'writing',
+    price:         12,
+    capacity:      20,
+    difficulty:    'medium',
+    description:   'Have a go at one of the most challenging careers in the art world; documenting art through words! There is no
+                    set way for creating your own unique writing style, and we will utilize this in the class to help you unleash
+                    your inner critic. And what better way to go about this than to work directly with artists. Our team of artists
+                    will be available to converse with you about their work, and from there you will construct an informed opinion.',
+    area:          'Neukölln',
+    address:       'Mariannenstraße 48, 10997 Berlin',
+    date:          '29/12/2018',
+    syllabus:      'The class shall begin with a discussion between our volunteer artist team and budding writers. After the crit
+                    you will be given one hour to write half a page. Be as insightful as possible, but ensure you focus on a particular
+                    point. Great art documentation is all about precision!',
+    user_id:        user13.id
+    )
+  workshop13.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543944985/group-crit-2014.jpg'
+  workshop13.save!
 
 puts 'Finished!'
