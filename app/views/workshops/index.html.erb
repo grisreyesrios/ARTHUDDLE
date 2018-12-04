@@ -7,7 +7,7 @@
 
   <div class="card-container">
     <% @workshops.each do |workshop| %>
-    <div class="card" id="workshop-card">
+    <div class="card" id="workshop-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path workshop.photo, width: 300, height: 300, crop: :fill unless workshop.photo.blank? %>')">
       <div class="card-title"><%= link_to workshop.name, workshop_path(workshop) %></div>
       <div class="card-body">
         <div class="card-text">

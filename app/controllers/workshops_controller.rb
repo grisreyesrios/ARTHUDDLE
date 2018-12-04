@@ -31,8 +31,10 @@ class WorkshopsController < ApplicationController
   end
 
   def show
+
     @workshop = Workshop.find(params[:id])
     authorize @workshop
+    @booking = Booking.new
     # @workshop = Workshop.where.not(latitude: nil, longitude: nil)
     if @workshop.longitude && @workshop.latitude
       @markers = [
