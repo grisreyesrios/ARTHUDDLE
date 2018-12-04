@@ -35,6 +35,7 @@ workshop1 = Workshop.create!(
   )
 workshop1.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589273/khara-woods-80967-unsplash.jpg'
 workshop1.save!
+
 workshop2 = Workshop.create!(
   name:         'Pot-Throwing Crash Course',
   category:     'pottery',
@@ -50,6 +51,7 @@ workshop2 = Workshop.create!(
   )
 workshop2.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589391/pot-throwing.jpg'
 workshop2.save!
+
 workshop3 = Workshop.create!(
   name:           'Screen-printing Masterclass',
   category:       'printmaking',
@@ -65,6 +67,7 @@ workshop3 = Workshop.create!(
   )
 workshop3.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589281/jose-aljovin-486564-unsplash.jpg'
 workshop3.save!
+
 workshop4 = Workshop.create!(
   name:           'Cat Painting 101',
   category:       'printmaking',
@@ -80,6 +83,7 @@ workshop4 = Workshop.create!(
   )
 workshop4.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589484/Degas-The-Dance-class-Met-cat-min.jpg'
 workshop4.save!
+
 workshop5 = Workshop.create!(
   name:           'Colour film photography walking tour',
   category:       'photography',
@@ -95,6 +99,7 @@ workshop5 = Workshop.create!(
   )
 workshop5.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589592/tim-graf-72723-unsplash.jpg'
 workshop5.save!
+
 workshop6 = Workshop.create!(
   name:           'Ice Sculpture with Barbara Scott',
   category:       'sculpture',
@@ -110,6 +115,7 @@ workshop6 = Workshop.create!(
   )
 workshop6.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589680/ice_sculpture.jpg'
 workshop6.save!
+
 workshop7 = Workshop.create!(
   name:           'An Introduction to Origami',
   category:       'sculpture',
@@ -120,11 +126,13 @@ workshop7 = Workshop.create!(
   area:           'Charlottenberg',
   address:        'Wilhelm-Kabus-Straße 42 - 44, 10829 Berlin',
   date:           '27/12/2018',
-  syllabus:       'This workshop takes place over two hours, we shall start with a group chat over coffee, before starting on your designs. Bring a range of coloured paper.',
+  syllabus:       'This workshop takes place over two hours, we shall start with a group chat over coffee,
+                  before starting on your designs. Bring a range of coloured paper.',
   user_id:        user7.id
   )
 workshop7.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589158/origami.jpg'
 workshop7.save!
+
 workshop8 = Workshop.create!(
   name:           'Performance Art and Media',
   category:       'sculpture',
@@ -135,9 +143,83 @@ workshop8 = Workshop.create!(
   area:           'Kreuzberg',
   address:        'Kottbusser Damm 95, 10967 Berlin',
   date:           '09/12/2018',
-  syllabus:       'This workshop is both a debate and a chance to perform. Bring questions and ideas. Feel free to suggest a theme in the notes.',
+  syllabus:       'This workshop is both a debate and a chance to perform. Bring questions and ideas. Feel free to
+                  suggest a theme in the notes.',
   user_id:        user8.id
   )
 workshop7.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589876/performance_art.jpg'
 workshop7.save!
+
+
+workshop8 = Workshop.create!(
+  name:         'Sound Design Masterclass',
+  category:     'music',
+  price:         40,
+  capacity:      25,
+  difficulty:    'beginner',
+  description:   'Have you always wanted to push your work further into the realms of sound design? Within this course,
+                  our trusted teachers will show you how to upgrade your work to the next level by introducing you to some
+                  useful software, including Ableton and Sibelius. By the end of the day, you will have gained understanding
+                  in the fundamentals of building your own sonic work.',
+  area:          'Kreuzberg',
+  address:       'Waldemarstraße 24, 10999 Berlin',
+  date:          '30/02/2019',
+  syllabus:       'In the morning, we will start by equipping everyone with some ideas of where to start with
+                  designing. We will then proceed with a run-through of the software, and will provide you with insights
+                  into how best to manouevre these programmes. We will finish with demonstrations of your final work!
+                  Please ensure that you bring your laptop with you, and that you have enough storage for the
+                  downloads.',
+  user_id:        user8.id
+  )
+workshop8.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543931736/Sound-Design-Studio-Mixer.jpg'
+workshop8.save!
+
+workshop9 = Workshop.create!(
+  name:         'Queering the Gaze: Queer Politics and Art History',
+  category:     'theoretical',
+  price:         5,
+  capacity:      10,
+  difficulty:    'intermediate',
+  description:   'This theory-based event will focus on the contribution of queer insight to art history. Veering always
+                  from the predominant. This workshop is aimed at people with some baseline knowledge of art history, but
+                  nothing too advanced!',
+  area:          'Mitte',
+  address:       'Osloer Str. 102, 13359 Berlin',
+  date:          '18/03/2019',
+  syllabus:      'Before you attend this workshop, please ensure that you read the first two chapters of Testo Junkie by
+                  Paul B. Preciado and the third chapter of Queer Art: 1960s to the Present. We will be focusing primarily on
+                  reimagining art history through a queer perspective,
+                  Your teacher will lead the discussion,
+                  but ultimately it is up to you to contribute ideas and thoughts generated from the texts! We are keen to
+                  hear your ideas, equally we encourage those who would just like to listen to the conversation.
+                  Everyone is welcome but please be respectful of letting everyone have their say.',
+  user_id:        user9.id
+  )
+workshop9.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543936250/pinkflamingos.jpg'
+workshop9.save!
+
+  workshop10 = Workshop.create (
+    name:         'DIY Video Recording Course',
+    category:     'video',
+    price:         20,
+    capacity:      9,
+    difficulty:    'beginner',
+    description:   'Video art is an art form which relies on using video technology as a visual and audio medium. But by
+                    no means does it need to be hi-tech or overly snazzy; the more DIY the better! As a
+                    collective, we feel that this form is too often restricted to artists themselves, but we want to see
+                    what you can offer! Come along to our workshop and see what you can achieve  with simple video recording
+                    equipment (smartphone and camcorder recording greatly encouraged!)',
+    area:          'Mitte',
+    address:       'Osloer Str. 102, 13359 Berlin',
+    date:          '30/02/2019',
+    syllabus:      'We will begin by storyboarding some ideas on paper (this just means planning your frames in sequence).
+                    This will be a quick mockup, so no need to plan ahead; we will encourage you to think on the spot, and
+                    provide some handy advice for this! In terms of extras, just bring yourselves (and any equipment
+                    you might have). We will have some spare available but supplies are of course
+                    limited. We can also provide you with contacts for borrowing or renting if required.',
+    user_id:        user10.id
+      )
+
+                    'Bergmannstraße 56, 10961 Berlin'
+
 puts 'Finished!'
