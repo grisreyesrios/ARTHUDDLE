@@ -7,10 +7,14 @@ const sortable = new Sortable(document.querySelectorAll('ul'), {
 
 setInterval( function search()  {
   var count = 0
-  var searchBoxInit = document.querySelector("#search-box-drop > ul").childElementCount
+  var searchBox = document.querySelector("#search-box-drop > ul")
+  if (searchBox) {
+    var searchBoxInit = searchBox.childElementCount
+
+
   if(searchBoxInit > count) {
     var count = searchBoxInit
     }
-}, 1000);
+}}, 1000);
 
 
