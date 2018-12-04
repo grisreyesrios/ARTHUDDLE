@@ -9,7 +9,7 @@
       <div class="card" id="booked-card">
         <div class="card-content">
           <div class="favourited-workshop-section">
-            <h3 id="my-favourited">My favourited workshops:</h3>
+            <h3 id="my-favourited">Favourited workshops:</h3>
             <br><br>
              <% current_user.find_liked_items.each do |workshop| %>
              <p><%=  link_to workshop.name, workshop_path(workshop) %></p>
@@ -22,20 +22,30 @@
          <div class="card" id="favourited-card"">
           <div class="card-content">
           <div class="booked-section">
-            <h3 id="my-booked">My booked workshops:</h3>
+            <h3 id="my-booked">Booked workshops:</h3>
             <br><br>
             <div class="class-item">
             <% @bookings.each do |booking| %>
             <p id="dashboard-workshop"><%=  link_to booking.workshop.name, workshop_path(booking.workshop) %></p>
+            <% if false %>
             <p id="booked">Booked: <strong><%= booking.date %></strong></p>
+            <% end %>
              </div>
           <% end %>
           </div>
         </div>
     </div>
-  </div>
-      </div>
          <div class="card" id="notes-card">
+          <h3 id="workshop-notes-header">Workshop notes:</h3>
+          <% @bookings.each do |booking| %>
+            <% booking.workshop.notes.each do |note| %>
+              <%= link_to note.title, workshop_notes_path(booking.workshop) %>
+              <% end %>
+            <% end %>
       <p>User</p>
+    </div>
+  </div>
+     </div>
 </div>
+
 
