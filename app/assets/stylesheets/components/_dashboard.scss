@@ -23,7 +23,10 @@
     font-size: 30px;
   }
   a {
-    color: white;
+    color: black;
+  }
+  p {
+    color: black;
   }
   -webkit-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
   -moz-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
@@ -39,6 +42,11 @@
 #profile-card {
   width: 17%;
   height: 35vh;
+  background-color: #f5fbfc;
+  color: black;
+  h3 {
+    font-size: 23px;;
+  }
 }
 
 #favourited-header {
@@ -53,37 +61,43 @@
   margin-left: 0em;
   width: 40%;
   height: 35vh;
+  background-color: #8c3dc3;
+  color: black;
 }
 
 #booked-card {
   margin-left: 0em;
   width: 40%;
   height: 35vh;
+  background-color: #FF5634;
+  color: black;
 }
 
 #notes-card {
   align-self: flex-end;
   height: 22vh;
+  background-color: #d5feab;
+  color: black;
 }
 
 #favourited-workshop-section {
 
 }
 
-#my-favourited {
-  margin-top: -15px;
-}
+// #my-favourited {
+//   margin-top: -15px;
+// }
 
-#my-booked {
-  margin-top: -15px;
-}
+// #my-booked {
+//   margin-top: -15px;
+// }
 
 #favourited-details {
   font-size: 10px;
 }
 
-#booked-section {
-
+.booked-section {
+  justify-content: flex-start;
 }
 
 #booked {
