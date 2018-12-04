@@ -17,6 +17,7 @@
               <li data-value="<%= category %>" class='sortable-item'>
 
                 <%= category %>
+                <%= image_tag "paintbrush.png", height: 100 %>
 
               </li>
             <% end %>
@@ -36,6 +37,12 @@
       <%= text_field_tag("categories[]", nil, id: "categories", hidden: true) %>
       <%= submit_tag("Search") %>
     <% end %>
+
+
+
+
+
+
 <div class="icon-bar">
     <div class="landing-icon">
       <%= image_tag "sewing.png", height: 100 %>
