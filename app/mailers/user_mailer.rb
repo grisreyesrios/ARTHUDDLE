@@ -11,12 +11,12 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Welcome to Arthuddle!')
   end
 
-  def creation_confirmation(workshop)
-    @workshop = workshop
+  # def creation_confirmation(workshop)
+  #   @workshop = workshop
 
-    mail(
-      to: @workshop.user.email,
-      subject: "Workshop #{@workshop.name} created!"
-      )
-  end
+  #   mail(
+  #     to: @workshop.user.email,
+  #     subject: "Workshop #{@workshop.name} created!"
+  #     )
+  # end
 end

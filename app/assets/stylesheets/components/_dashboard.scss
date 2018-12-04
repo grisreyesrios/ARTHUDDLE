@@ -1,3 +1,7 @@
+.overflow {
+  overflow: scroll;
+}
+
 .dashboard-container {
   display: flex;
   justify-content: space-around;
@@ -6,16 +10,16 @@
   flex-wrap: nowrap;
 }
 
-.card {
+.dashboard-card {
   background-color: #ED6242;
   color: white;
   padding: 10px;
   margin: 10px;
-  border-radius: 20px;
+  border-radius: 4px;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-around;
   h1 {
     font-size: 50px;
   }
@@ -28,9 +32,6 @@
   p {
     color: black;
   }
-  -webkit-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
-  -moz-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
-  box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
 }
 
 .card-content {
@@ -84,9 +85,12 @@
 
 }
 
-// #my-favourited {
-//   margin-top: -15px;
-// }
+.dashboard-card-header {
+  margin-top: 0%;
+  text-align: left;
+  font-size: 22px;
+  margin-left: 1%
+}
 
 // #my-booked {
 //   margin-top: -15px;
