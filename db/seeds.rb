@@ -233,8 +233,8 @@ workshop9 = Workshop.create!(
 workshop9.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543936250/pinkflamingos.jpg'
 workshop9.save!
 
-  workshop10 = Workshop.create (
-    name:         'DIY Video Recording Course',
+  workshop10 = Workshop.create!(
+    name:         'Filming Course',
     category:     'video',
     price:         20,
     capacity:      9,
@@ -257,7 +257,7 @@ workshop9.save!
   workshop10.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543932801/videoartgame.jpg'
   workshop10.save!
 
-  workshop11 = Workshop.create (
+  workshop11 = Workshop.create!(
     name:         'Radical Sewing: A Short Course',
     category:     'textiles',
     price:         40,
@@ -278,7 +278,7 @@ workshop9.save!
   workshop10.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543938361/textiles.jpg'
   workshop11.save!
 
-  workshop12 = Workshop.create (
+  workshop12 = Workshop.create!(
     name:         'Self Portraiture Drawing',
     category:     'drawing',
     price:         12,
@@ -301,7 +301,7 @@ workshop9.save!
   workshop12.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543939423/portrait_drawing.jpg'
   workshop12.save!
 
-  workshop13 = Workshop.create (
+  workshop13 = Workshop.create!(
     name:         '\'Documenting the Tide\': Learning Art Journalism.',
     category:     'writing',
     price:         12,
@@ -322,7 +322,7 @@ workshop9.save!
   workshop13.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543944985/group-crit-2014.jpg'
   workshop13.save!
 
-  workshop14 = Workshop.create (
+  workshop14 = Workshop.create!(
     name:         'Choral Experimental Performance Piece',
     category:     'performance',
     price:         0,
@@ -342,7 +342,7 @@ workshop9.save!
   workshop14.save!
 
 
-  workshop15 = Workshop.create (
+  workshop15 = Workshop.create!(
     name:         'Explore the Berlinische Galerie',
     category:     'tour',
     price:         5,
@@ -362,7 +362,7 @@ workshop9.save!
   workshop15.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543946767/berlinische_galerie.jpg'
   workshop15.save!
 
-  workshop16 = Workshop.create (
+  workshop16 = Workshop.create!(
     name:         'Explore Gardening and Land Art',
     category:     'environmental',
     price:         25,
@@ -381,7 +381,7 @@ workshop9.save!
   workshop16.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543947092/Gardening_Image.jpg'
   workshop16.save!
 
-  workshop17 = Workshop.create (
+  workshop17 = Workshop.create!(
     name:         'Casting and Mouldmaking',
     category:     'sculpture',
     price:         35,
@@ -399,7 +399,7 @@ workshop9.save!
   workshop17.save!
 
 
-  workshop18 = Workshop.create (
+  workshop18 = Workshop.create!(
     name:         'Wood Workshop 101',
     category:     'woodwork',
     price:         35,
@@ -415,7 +415,7 @@ workshop9.save!
   workshop18.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543948323/wood_workshop.jpg'
   workshop18.save!
 
-  workshop19 = Workshop.create (
+  workshop19 = Workshop.create!(
     name:         'Ceramics Workshop',
     category:     'ceramics',
     price:         10,
@@ -432,7 +432,7 @@ workshop9.save!
   workshop19.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543949002/Ceramics_workshop.jpg'
   workshop19.save!
 
-  workshop20 = Workshop.create (
+  workshop20 = Workshop.create!(
     name:         'How To Launch Your Art Online',
     category:     'online',
     price:         10,
@@ -449,7 +449,7 @@ workshop9.save!
   workshop20.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543950860/online_course.jpg'
   workshop20.save!
 
-  workshop21 = Workshop.create (
+  workshop21 = Workshop.create!(
     name:         'Audio Compilation Class',
     category:     'audio',
     price:         20,
@@ -467,7 +467,7 @@ workshop9.save!
   workshop21.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543949589/audio_workshop.jpg'
   workshop21.save!
 
-  workshop22 = Workshop.create (
+  workshop22 = Workshop.create!(
     name:         '"Visual Pleasure and Narrative Cinema:" Discussion of Laura Mulvey',
     category:     'reading group',
     price:         20,
@@ -486,7 +486,7 @@ workshop9.save!
   workshop22.save!
 
 
-  workshop23 = Workshop.create (
+  workshop23 = Workshop.create!(
     name:         'Design and Communications Learning Meetup',
     category:     'design',
     price:         35,
@@ -505,7 +505,7 @@ workshop9.save!
   workshop23.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543951030/Laura-Mulvey-web.jpg'
   workshop23.save!
 
-  workshop24 = Workshop.create (
+  workshop24 = Workshop.create!(
     name:         'Digital Rendering Class (4D Cinema)',
     category:     'digital',
     price:         10,
@@ -521,7 +521,7 @@ workshop9.save!
   workshop24.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543952618/3d_rendering.jpg'
   workshop24.save!
 
-  workshop25 = Workshop.create (
+  workshop25 = Workshop.create!(
     name:         'A Community Art Project',
     category:     'social',
     price:         0,
