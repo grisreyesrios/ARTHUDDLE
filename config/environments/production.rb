@@ -24,6 +24,9 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: "arthuddle.herokuapp.com" }
+
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
