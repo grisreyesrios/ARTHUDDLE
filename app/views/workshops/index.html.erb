@@ -1,56 +1,58 @@
 <div class="container">
-  <h1>Browse Workshops</h1>
+  <h1 id="browse-header">Browse Workshops</h1>
 
-  <div class="div" id="hostbutton">
+  <div class="hostbutton" id="hostbutton">
     <%= link_to 'HOSTING A WORKSHOP? LIST IT HERE!', new_workshop_path, class: "btn-book" %>
   </div>
 
-  <div class="card-container">
-    <% @workshops.each do |workshop| %>
-    <div class="card" id="workshop-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path workshop.photo, width: 300, height: 300, crop: :fill unless workshop.photo.blank? %>')">
-      <div class="card-title"><%= link_to workshop.name, workshop_path(workshop) %></div>
-      <div class="card-body">
-        <div class="card-text">
-          <%= workshop.description %>
+
+<div class="container">
+  <% @workshops.each do |workshop| %>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="workshop-index-card shadowbox">
+        <div class="workshop-top-image">
+          <%= cl_image_tag workshop.photo, width: 313, height: 120, crop: :fill unless workshop.photo.blank? %>
         </div>
-        <div class="card-icons">
-          <!--  icons -->
-
-          <% if workshop.description.include?("painting") || workshop.name.include?("painting") %>
-          <%= image_tag "paint.png", height: 50 %>
-          <% elsif workshop.description.include?("origami") || workshop.name.include?("origami") %>
-          <%= image_tag "origami.png", height: 50 %>
-          <% elsif workshop.description.include?("pottery") || workshop.name.include?("pottery") %>
-          <%= image_tag "ceramics.png", height: 50 %>
-          <% elsif workshop.description.include?("printing") || workshop.name.include?("priting") %>
-          <%= image_tag "paintroll.png", height: 50 %>
-          <% elsif workshop.description.include?("photography") || workshop.name.include?("photography") %>
-          <%= image_tag "camera.png", height: 50 %>
-          <% elsif workshop.description.include?("Cat") || workshop.name.include?("Cat") %>
-          <%= image_tag "cat.png", height: 50 %>
-          <% elsif workshop.description.include?("ice") || workshop.name.include?("ice") %>
-          <%= image_tag "ice.png", height: 50 %>
-          <% end %>
-
-          <% if workshop.price != 0 %>
-          <%= image_tag "money.png", height: 50 %>
-          <% end %>
-
-          <% if workshop.difficulty.include?("advanced") %>
-          <%= image_tag "puzzle.png", height: 50 %>
-          <% end %>
-
-          <!--  icons -->
-          <div id="fav-link-<%= workshop.id %>">
-            <% if current_user %>
+        <div class="workshop-main-text">
+          <%= link_to workshop.name, workshop_path(workshop) %>
+         <p id="workshop-index-address"><%= workshop.address %></p>
+        </div>
+        <div class="favourite-ticker">
+           <% if current_user %>
               <%= render 'favourited_link', workshop: workshop %>
-            <% end %>
+          <% end %>
           </div>
+        <div class="workshop-icon-flex">
+           <!--  icons -->
+
+                        <% if workshop.description.include?("painting") || workshop.name.include?("painting") %>
+                        <%= image_tag "paint.png", height: 30 %>
+                        <% elsif workshop.description.include?("origami") || workshop.name.include?("origami") %>
+                        <%= image_tag "origami.png", height: 30 %>
+                        <% elsif workshop.description.include?("pottery") || workshop.name.include?("pottery") %>
+                        <%= image_tag "ceramics.png", height: 30 %>
+                        <% elsif workshop.description.include?("printing") || workshop.name.include?("priting") %>
+                        <%= image_tag "paintroll.png", height: 30 %>
+                        <% elsif workshop.description.include?("photography") || workshop.name.include?("photography") %>
+                        <%= image_tag "camera.png", height: 30 %>
+                        <% elsif workshop.description.include?("Cat") || workshop.name.include?("Cat") %>
+                        <%= image_tag "cat.png", height: 30 %>
+                        <% elsif workshop.description.include?("ice") || workshop.name.include?("ice") %>
+                        <%= image_tag "ice.png", height: 30 %>
+                        <% end %>
+
+                        <% if workshop.price != 0 %>
+                        <%= image_tag "money.png", height: 30 %>
+                        <% end %>
+
+                        <% if workshop.difficulty.include?("advanced") %>
+                        <%= image_tag "puzzle.png", height: 30 %>
+                        <% end %>
+                      <!--  icons -->
+                    
+                     
         </div>
       </div>
-      <% end %>
     </div>
-  </div>
+  <% end %>
 </div>
-
-
