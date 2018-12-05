@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     post :favourited
     resources :bookings, only: [:index, :show, :new, :create, :destroy, :edit]
     resources :notes, only: [:new, :index, :create, :update, :edit, :destroy]
+    resources :users, only:[:new, :create, :update]
   end
 
   devise_for :users
