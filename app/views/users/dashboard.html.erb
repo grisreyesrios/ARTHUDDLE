@@ -9,7 +9,7 @@
       <div class="dashboard-card shadowbox overflow" id="favourited-card">
           <div class="favourited-workshop-section overflow">
             <div class="dashboard-highlight">
-            <p><%= image_tag "heart_white.png", height: 45, id: "dashboard-header-fave" %></p>
+            <p id="favourited-header"><%= image_tag "heart_white.png", height: 45, id: "dashboard-header-fave" %>Favourited</p>
             </div>
              <% current_user.find_liked_items.each do |workshop| %>
              <p class="dashboard-workshop"><%=  link_to workshop.name, workshop_path(workshop) %></p>
@@ -21,7 +21,8 @@
          <div class="dashboard-card shadowbox overflow" id="booked-card">
             <div class="booked-section">
                 <div class="dashboard-highlight">
-              <p><%= image_tag "appointment_white.png", height: 45, id: "dashboard-header-booked" %></p>
+
+              <p id="favourited-header"><%= image_tag "appointment_white.png", height: 45, id: "dashboard-header-booked" %>Booked</p>
                 </div>
                 <div class="class-item overflow">
                 <% @bookings.each do |booking| %>
@@ -36,7 +37,7 @@
       <!--     <h3 class="dashboard-card-header">Workshop notes:</h3> -->
           <div class="note-preview">
       <div id="dashboard-notes-highlight">
-      <p id="notes-icon"><%= image_tag "notebook.png", height: 70; %></p>
+      <p id="notes-icon"><%= image_tag "notebook.png", height: 70; %>Notes</p>
       </div>
             <div class="row">
 
@@ -44,7 +45,7 @@
           <% @bookings.each do |booking| %>
               <% booking.workshop.notes.each do |note| %>
                   <div class="col-xs-12 col-sm-6 col-md-4" id="note-col">
-                <%= link_to note.title, workshop_notes_path(booking.workshop) %> <p id="dashboard-note-workshop"> in <%= booking.workshop.name %></p>
+                <%= link_to note.title, workshop_notes_path(booking.workshop), id: "dashboard-note-title" %> <p id="dashboard-note-workshop"> in <%= booking.workshop.name %></p>
                   </div>
                 <% end %>
             <% end %>
