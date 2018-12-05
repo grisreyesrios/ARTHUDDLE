@@ -25,32 +25,6 @@
           <% end %>
           </div>
         <div class="workshop-icon-flex">
-           <!--  icons -->
-
-                        <% if workshop.description.include?("painting") || workshop.name.include?("painting") %>
-                        <%= image_tag "paint.png", height: 30 %>
-                        <% elsif workshop.description.include?("origami") || workshop.name.include?("origami") %>
-                        <%= image_tag "origami.png", height: 30 %>
-                        <% elsif workshop.description.include?("pottery") || workshop.name.include?("pottery") %>
-                        <%= image_tag "ceramics.png", height: 30 %>
-                        <% elsif workshop.description.include?("printing") || workshop.name.include?("priting") %>
-                        <%= image_tag "paintroll.png", height: 30 %>
-                        <% elsif workshop.description.include?("photography") || workshop.name.include?("photography") %>
-                        <%= image_tag "camera.png", height: 30 %>
-                        <% elsif workshop.description.include?("Cat") || workshop.name.include?("Cat") %>
-                        <%= image_tag "cat.png", height: 30 %>
-                        <% elsif workshop.description.include?("ice") || workshop.name.include?("ice") %>
-                        <%= image_tag "ice.png", height: 30 %>
-                        <% end %>
-
-                        <% if workshop.price != 0 %>
-                        <%= image_tag "money.png", height: 30 %>
-                        <% end %>
-
-                        <% if workshop.difficulty.include?("advanced") %>
-                        <%= image_tag "puzzle.png", height: 30 %>
-                        <% end %>
-                      <!--  icons -->
 
 
         </div>

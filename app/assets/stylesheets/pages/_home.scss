@@ -162,6 +162,14 @@ body {
   text-align: center;
 }
 
+#all-icons {
+  height: 20em;
+}
+
+#category-icon {
+
+}
+
 #footer-logo {
   text-align: center;
  }
@@ -171,6 +179,7 @@ body {
     .droppable {
          height:400px;
     }
+
   .droppable:hover {
 //      background: red;
   }
@@ -190,7 +199,37 @@ body {
 
 .icon-home {
   position: relative;
+  display: flex;
+  width: 41px;
+  justify-content: center;
+  margin: 10px 20px;
+}
 
+.sortable-container ul {
+  padding: 0;
+}
+
+.sortable-container li {
+  list-style: none;
+}
+
+.watermark {
+  color: black;
+  font-size: 150%;
+  overflow: hidden;
+  z-index: 98;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.watermark:after {
+  width: 100%;
+  font-size: 150%;
+/*  position: absolute; */
+  content: "Drag and drop your choices here";
+  z-index: 99;
+  opacity: 0.45;
 }
 
 .icon-hover{

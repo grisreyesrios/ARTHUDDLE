@@ -25,7 +25,7 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: "arthuddle.herokuapp.com" }
+  config.action_mailer.default_url_options = { host: "www.arthuddle.info" }
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
