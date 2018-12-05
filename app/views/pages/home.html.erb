@@ -12,19 +12,21 @@
 
 
     <div class="col-xs-4">
-      <div class="sortable-container" style="display: flex; justify-content: center; border: 5px solid black; width: 100%">
-        <ul class='sortable-dropzone' style="background-color: white; height: 600px; width: 100%">
+      <div class="sortable-container" style="overflow: scroll; overflow-x: hidden; display: flex; justify-content: center; border: 5px solid black; width: 100%" id="all-icons">
+        <ul class='sortable-dropzone' style="background-color: #eee9eb; height: 600px; width: 100%" id="all-icons">
           <h2 style="text-align: center">Category</h2>
           <% Workshop::CATEGORIES.each do |category| %>
-          <div class="col-xs-4">
-            <li data-value="<%= category %>" class='sortable-item icon-home' style = "list-style-type: none";>
+          <li class="sortable-item col-xs-4">
+
+            <div data-value="<%= category %>" class='icon-home' style = "list-style-type: none"; id="category-icon">
               <% asset_url = "#{category}.png" %>
-              <%= image_tag(asset_url, width: 60, height: 60) %>
+              <%= image_tag(asset_url, width: 45, height: 45) %>
               <div class="icon-hover">
                 <%= category %>
               </div>
-            </li>
-          </div>
+            </div>
+
+          </li>
           <% end %>
         </ul>
       </div>
@@ -36,7 +38,7 @@
     <div class="col-xs-8">
       <div class="flex-container">
         <div class="sortable-container" style="display: flex; justify-content: center; border: 5px solid black">
-          <ul id="search-box-drop" class='sortable-dropzone' style="display: flex; background-color: white; height: 300px; width: 50%">
+          <ul id="search-box-drop" class='sortable-dropzone' style="display: flex; height: 300px; width: 100%">
           </ul>
         </div>
       </div>
@@ -51,7 +53,7 @@
 </div>
 
 
-  <div class="landing-box-1">
+<!--   <div class="landing-box-1">
     <div class="landing-image-box-1">
       <img class="landing-image-1" src="https://www.plymouthart.ac.uk/images/uploads/courses/BA_Painting_Drawing_and_Printmaking/15709633014_e2283923ed_k.jpg" alt="class">
     </div>
@@ -65,8 +67,8 @@
        <br><br>
      </div>
    </div>
- </div>
-
+ </div> -->
+<!--
  <div class="seperator-box-1">
  </div>
 
@@ -84,7 +86,7 @@
      <br><br>
    </div>
    <div><!-- for flexbox --></div>
-
+ -->
  </div>
 
 </div>
