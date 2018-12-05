@@ -1,5 +1,5 @@
 .overflow {
-  overflow-y:auto
+  overflow: scroll;
 }
 
 .dashboard-container {
@@ -34,9 +34,16 @@
   }
 }
 
+.note-preview {
+  // margin-left: 1em;
+  flex-grow: 1;
+
+  margin-left: 3%;
+  margin-right: 2%;
+}
+
 .card-content {
   padding: 26px;
-  text-align: justif;
   text-align: justify;
 }
 
@@ -48,6 +55,12 @@
   h3 {
     font-size: 23px;;
   }
+}
+
+#note-col {
+  background-color: #e4ffc7;
+  text-align: left;
+
 }
 
 #favourited-header {
@@ -75,15 +88,17 @@
 }
 
 #notes-card {
-  align-self: flex-end;
-  height: 22vh;
+  display: flex;
+  min-height: 22vh;
   background-color: #d5feab;
   color: black;
+  justify-content: space-around;
+  margin-top: 0px;
 }
 
 #dashboard-workshop-date {
   font-size: 10px;
-  text-align: left;
+  text-align: center;
 }
 
 #dashboard-note-workshop {
