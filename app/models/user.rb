@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  mount_uploader :photo, PhotoUploader, :mount_on => :photo
+
   acts_as_voter
   has_many :workshops
   has_many :bookings

@@ -10,6 +10,11 @@
                 autofocus: true,
                 value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email),
                 input_html: { autocomplete: "email" } %>
+    <%= f.input :username,
+                required: true,
+                autofocus: true,
+                value: (resource.pending_reconfirmation? ? resource.unconfirmed_username : resource.username),
+                input_html: { autocomplete: "username" } %>
   </div>
 
   <div class="form-actions">
