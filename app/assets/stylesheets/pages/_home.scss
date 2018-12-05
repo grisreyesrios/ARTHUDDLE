@@ -46,6 +46,7 @@ body {
   flex: 2 auto;
 }
 
+
 .icon-bar {
   display: flex;
   background-color: #D4FFA8;
@@ -161,6 +162,14 @@ body {
   text-align: center;
 }
 
+#all-icons {
+  height: 20em;
+}
+
+#category-icon {
+
+}
+
 #footer-logo {
   text-align: center;
  }
@@ -170,6 +179,7 @@ body {
     .droppable {
          height:400px;
     }
+
   .droppable:hover {
 //      background: red;
   }
@@ -189,10 +199,19 @@ body {
 
 .icon-home {
   position: relative;
-
+  display: flex;
+  width: 41px;
+  justify-content: center;
+  margin: 10px 20px;
 }
 
+.sortable-container ul {
+  padding: 0;
+}
 
+.sortable-container li {
+  list-style: none;
+}
 
 
 .icon-hover{
