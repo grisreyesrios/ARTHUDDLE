@@ -17,7 +17,12 @@
         <%= image_tag(asset_url, width: 30, height: 30) %>
         </div>
       </div>
-      <div id="booking-index-address"><%= @workshop.address %>
+        <div class="booking-address-date">
+      <div id="booking-index-address">
+        <%= @workshop.address %>
+        </div>
+        <div id="booking-index-date">Date:
+          <%= @workshop.date %>
       </div>
     </div>
   </div>
