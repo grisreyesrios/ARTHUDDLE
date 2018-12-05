@@ -20,5 +20,28 @@ class Workshop < ApplicationRecord
 
   belongs_to :user, optional: true
 
-  CATEGORIES = %w(Painting Pottery Printmaking Photography Sculpture)
+  CATEGORIES = %w(Audio
+Ceramics
+Design
+Digital
+Drawing
+Environmental
+Music
+Online
+Painting
+Photography
+Printmaking
+Video
+Performance
+Social
+Textiles
+Theoretical
+Reading Group
+Tour
+Writing
+Sculpture
+Woodwork
+
+Other
+ )
 end

@@ -1,19 +1,20 @@
 <div class="header-box">
-
+ <div id="typed-strings">
   <h1 class="landing-title">ARTHUDDLE</h1>
   <h2 class="landing-subheading">Discover your creative potential</h2>
+</div>
+<span id="typed"></span>
 
 
   <div class="landing-search">
-    <div id="search-bar"><%= render 'form', workshop: @workshops_path %></div>
   </div>
   <div class="container">
     <div class="row">
       <div class="col-xs-4">
-        <div class="sortable-container">
-          <ul class='sortable-dropzone' style="background-color: red">
+        <div class="sortable-container" style="display: flex; justify-content: center; border: 5px solid black">
+          <ul class='sortable-dropzone' style="background-color: white; height: 400px">
             <% Workshop::CATEGORIES.each do |category| %>
-              <li data-value="<%= category %>" class='sortable-item'>
+              <li data-value="<%= category %>" class='sortable-item' style = "list-style-type: none";>
 
                 <%= category%>
 
@@ -25,7 +26,7 @@
     </div>
     <div class="flex-container">
       <div class="sortable-container" style="display: flex; justify-content: center; border: 5px solid black">
-        <ul id="search-box-drop" class='sortable-dropzone' style="background-color: white; height: 300px; width: 100%">
+        <ul id="search-box-drop" class='sortable-dropzone' style="display: flex; background-color: white; height: 300px; width: 50%">
         </ul>
       </div>
     </div>
@@ -33,7 +34,7 @@
   <div>
     <%= form_tag workshops_path, method: "get", id: 'searchForm' do %>
       <%= text_field_tag("categories[]", nil, id: "categories", hidden: true) %>
-      <%= submit_tag("Search") %>
+      <%= submit_tag("Search")%>
     <% end %>
   </div>
 
@@ -123,3 +124,8 @@
     </div>
 
 </div>
+<script>
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings'
+  });
+</script>
