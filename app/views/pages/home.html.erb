@@ -62,10 +62,11 @@
 
     <div class="landing-about-1">
       <div class="text-content-1">
-       <p id="blurb-1-header">Find local workshops.</p>
+       <p id="blurb-1-header">Browse workshops happening near you.</p>
        <br><br>
-       <p id="splash-info">Filter through upcoming events and find the ideal place to try something new.</p>
+       <p id="splash-info">Try something new today. Explore upcoming events in a range of media, and find the ideal setting to gain exciting new skills and unleash your creative spirit.</p>
        <br><br>
+       <%= link_to "Browse Workshops", workshops_path, class: 'btn-book'%>
      </div>
    </div>
  </div>
@@ -81,12 +82,11 @@
 
   <div class="landing-about-2">
     <div class="text-content-2">
-     <p id="blurb-2-header">Share notes.</p>
+     <p id="blurb-2-header">Hosting a workshop? Advertise it here!</p>
      <br><br>
-     <p id="splash-info">Post insights from workshops, reflect on experiences and share inspiration.</p>
-     <br><br>
+     <p id="splash-info">Post personalised notes covering topics from the class. Share insights from your experiences, reflect on what you've learnt and share inspiration!</p>
+     <%= link_to "Add Your Workshop", new_workshop_path, class: 'btn-book' %>
    </div>
-   <div><!-- for flexbox --></div>
  </div>
 
 </div>
@@ -98,11 +98,27 @@
 
  <div class="landing-about-3">
   <div class="text-content-3">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dui sem, dapibus sit amet orci lacinia, consectetur tincidunt quam. Nunc vestibulum arcu nisl, eget dictum ante laoreet blandit. Praesent vitae tellus at lorem ultrices mollis. Maecenas scelerisque, nisi ut vestibulum rhoncus, dui metus vulputate augue, non venenatis nisi ex non risus.
+    <div id="footer-logo"><%= image_tag "logo_black.png", height: 100 %>
+    </div>
+    <div class="meet-team-header">
+      Meet the ArtHuddle Team
+    </div>
+    <div class="team-container">
+      <div class="team-column">
+      <%= image_tag "griselle.png", class: 'team-img' %>
+        <h1>Grisell Reyes Rios</h1>
+      </div>
+      <div class="team-column">
+      <%= image_tag "Image of ME.jpeg", class: 'team-img' %>
+        <h1>Katharine Doyle</h1>
+      </div>
+      <div class="team-column">
+      <%= image_tag "Sam_pic.jpg", class: 'team-img' %>
+        <h1>Samuel Beca</h1>
+      </div>
+    </div>
   </div>
-  <br>
-  <div id="footer-logo"><%= image_tag "logo_black.png", height: 100 %></div>
-  <div><!-- for flexbox --></div>
+</div>
 
 </div>
 
