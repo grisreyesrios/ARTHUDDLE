@@ -2,27 +2,31 @@
    <h1 style="text-align: center">Dashboard</h1>
   <div class="dashboard-container">
 
-    <div class="dashboard-card shadowbox" id="profile-card">
+  <!--   <div class="dashboard-card shadowbox" id="profile-card">
       <%= current_user.username %>
     </div>
-
-      <div class="dashboard-card shadowbox" id="favourited-card">
+ -->
+      <div class="dashboard-card shadowbox overflow" id="favourited-card">
           <div class="favourited-workshop-section overflow">
-            <p id="dashboard-header-black"><%= image_tag "heart_black.png", height: 45; %></p>
+            <div class="dashboard-highlight">
+            <p><%= image_tag "heart_white.png", height: 45, id: "dashboard-header-fave" %></p>
+            </div>
              <% current_user.find_liked_items.each do |workshop| %>
-             <p><%=  link_to workshop.name, workshop_path(workshop) %></p>
-             <p id="dashboard-workshop"><%=  link_to workshop.date, workshop_path(workshop) %>, <%=  link_to workshop.area, workshop_path(workshop) %>eur</p>
+             <p class="dashboard-workshop"><%=  link_to workshop.name, workshop_path(workshop) %></p>
+             <p class="dashboard-workshop-date"><%=  link_to workshop.date, workshop_path(workshop) %></p>
              <% end %>
           </div>
         </div>
 
          <div class="dashboard-card shadowbox overflow" id="booked-card">
             <div class="booked-section">
-              <p id="dashboard-header-icon"><%= image_tag "appointment_black.png", height: 45; %></p>
-                  <div class="class-item overflow">
+                <div class="dashboard-highlight">
+              <p><%= image_tag "appointment_white.png", height: 45, id: "dashboard-header-booked" %></p>
+                </div>
+                <div class="class-item overflow">
                 <% @bookings.each do |booking| %>
-                <p id="dashboard-workshop"><%=  link_to booking.workshop.name, workshop_path(booking.workshop) %></p>
-                <p id="dashboard-workshop-date"><%= booking.workshop.date %></p>
+                <p class="dashboard-workshop"><%=  link_to booking.workshop.name, workshop_path(booking.workshop) %></p>
+                <p class="dashboard-workshop-date"><%= booking.workshop.date %></p>
                 <% end %>
               </div>
           </div>
@@ -30,8 +34,10 @@
         </div>
          <div class="dashboard-card shadowbox" id="notes-card">
       <!--     <h3 class="dashboard-card-header">Workshop notes:</h3> -->
-      <p id="notes-icon"><%= image_tag "notebook.png", height: 70; %></p>
           <div class="note-preview">
+      <div id="dashboard-notes-highlight">
+      <p id="notes-icon"><%= image_tag "notebook.png", height: 70; %></p>
+      </div>
             <div class="row">
 
 

@@ -4,7 +4,7 @@
 
 .dashboard-container {
   display: flex;
-  justify-content: space-around;
+  // justify-content: space-around;
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: nowrap;
@@ -17,6 +17,8 @@
   margin: 10px;
   border-radius: 4px;
   text-align: center;
+  height: 400px;
+  width: 1000px;
   // display: flex;
   // align-items: center;
   // justify-content: space-around;
@@ -34,6 +36,13 @@
   }
 }
 
+.dashboard-highlight {
+  background-color: #FF5634;
+}
+
+#dashboard-notes-highlight {
+  background-color: #d5feab;
+}
 #dashboard-header-icon {
   text-align: center;
 }
@@ -51,18 +60,8 @@
   text-align: justify;
 }
 
-#profile-card {
-  width: 17%;
-  height: 35vh;
-  background-color: #f5fbfc;
-  color: black;
-  h3 {
-    font-size: 23px;;
-  }
-}
 
 #note-col {
-  background-color: #e4ffc7;
   text-align: left;
 
 }
@@ -77,36 +76,40 @@
 
 #favourited-card {
   margin-left: 0em;
-  width: 40%;
-  height: 35vh;
-  background-color: #8c3dc3;
+  background-color: #eee9eb;
   color: black;
 }
 
 #booked-card {
   margin-left: 0em;
-  width: 40%;
-  height: 35vh;
-  background-color: #FF5634;
+  background-color: #eee9eb;
   color: black;
 }
 
 #notes-card {
   display: flex;
   min-height: 22vh;
-  background-color: #d5feab;
+  background-color: #eee9eb;
   color: black;
   justify-content: space-around;
   margin-top: 0px;
+  width: 96%;
 }
 
-#dashboard-workshop {
+#dashboard-header-fave {
+  margin: 2%;
+}
+
+#dashboard-header-booked {
+  margin: 2%;
+}
+
+.dashboard-workshop {
   color: #eee9eb;
 }
 
-#dashboard-workshop-date {
+.dashboard-workshop-date {
   font-size: 10px;
-  text-align: center;
 }
 
 #dashboard-note-workshop {
