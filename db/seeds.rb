@@ -469,7 +469,7 @@ workshop9.save!
 
   workshop22 = Workshop.create!(
     name:         '"Visual Pleasure and Narrative Cinema:" Discussion of Laura Mulvey',
-    category:     'reading group',
+    category:     'reading',
     price:         20,
     capacity:      30,
     difficulty:    'medium',

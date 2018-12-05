@@ -36,12 +36,11 @@ class Workshop < ApplicationRecord
  social
  textiles
  theoretical
- reading_group
+ reading
  tour
  writing
  sculpture
  woodwork
-
  other
   )
 end
