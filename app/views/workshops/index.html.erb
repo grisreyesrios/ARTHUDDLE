@@ -19,8 +19,8 @@
           <%= link_to workshop.name, workshop_path(workshop) %>
          <div id="workshop-index-address"><%= workshop.address %></div>
         </div>
-        <div class="favourite-ticker">
-           <% if current_user %>
+        <div class="favourite-ticker" id="fav-link-<%= workshop.id %>">
+           <% if user_signed_in? %>
               <%= render 'favourited_link', workshop: workshop %>
           <% end %>
           </div>

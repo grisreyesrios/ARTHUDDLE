@@ -12,7 +12,6 @@
              <% current_user.find_liked_items.each do |workshop| %>
              <p><%=  link_to workshop.name, workshop_path(workshop) %></p>
              <p id="dashboard-workshop"><%=  link_to workshop.date, workshop_path(workshop) %>, <%=  link_to workshop.area, workshop_path(workshop) %>eur</p>
-              <p id="dashboard-workshop-date"><%= booking.workshop.date %></p>
              <% end %>
           </div>
         </div>

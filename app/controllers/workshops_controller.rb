@@ -25,7 +25,7 @@ class WorkshopsController < ApplicationController
     authorize @workshop
     if @workshop.save
       redirect_to workshop_path(@workshop), notice: "Huzzah! Your workshop has been created!"
-      UserMailer.creation_confirmation(@workshop).deliver_now
+      # UserMailer.creation_confirmation(@workshop).deliver_now
       redirect_to workshop_path(@workskshop)
     else
       render 'new'
@@ -58,7 +58,7 @@ class WorkshopsController < ApplicationController
       current_user.likes @workshop
     end
     respond_to do |format|
-      format.js
+      format.js # favourited.js.erb
       format.html { redirect_to workshops_path }
     end
     # @workshop.favourited = !@workshop.favourited
