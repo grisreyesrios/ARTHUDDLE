@@ -24,10 +24,10 @@ gem 'bootstrap-datepicker-rails'
 gem 'acts_as_votable', '~> 0.12.0'
 gem "geocoder"
 gem "font-awesome-rails"
-gem "letter_opener", group: :development
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem 'letter_opener'
 end
 
 group :development, :test do
