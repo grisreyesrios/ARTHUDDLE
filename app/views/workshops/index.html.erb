@@ -37,8 +37,6 @@
                         <%= image_tag "paintroll.png", height: 30 %>
                         <% elsif workshop.description.include?("photography") || workshop.name.include?("photography") %>
                         <%= image_tag "camera.png", height: 30 %>
-                        <% elsif workshop.description.include?("Cat") || workshop.name.include?("Cat") %>
-                        <%= image_tag "cat.png", height: 30 %>
                         <% elsif workshop.description.include?("ice") || workshop.name.include?("ice") %>
                         <%= image_tag "ice.png", height: 30 %>
                         <% end %>
@@ -50,6 +48,8 @@
                         <% if workshop.difficulty.include?("advanced") %>
                         <%= image_tag "puzzle.png", height: 30 %>
                         <% end %>
+
+
                       <!--  icons -->
 
 

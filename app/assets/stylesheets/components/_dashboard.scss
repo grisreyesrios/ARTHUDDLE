@@ -34,6 +34,10 @@
   }
 }
 
+#dashboard-header-icon {
+  text-align: center;
+}
+
 .note-preview {
   // margin-left: 1em;
   flex-grow: 1;
@@ -94,6 +98,10 @@
   color: black;
   justify-content: space-around;
   margin-top: 0px;
+}
+
+#dashboard-workshop {
+  color: #eee9eb;
 }
 
 #dashboard-workshop-date {

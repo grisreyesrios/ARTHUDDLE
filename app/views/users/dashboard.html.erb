@@ -3,12 +3,12 @@
   <div class="dashboard-container">
 
     <div class="dashboard-card shadowbox" id="profile-card">
-      <p>User</p>
+      <%= current_user.email %>
     </div>
 
-      <div class="dashboard-card shadowbox" id="booked-card">
+      <div class="dashboard-card shadowbox" id="favourited-card">
           <div class="favourited-workshop-section overflow">
-            <h3 class="dashboard-card-header">Favourited workshops:</h3>
+            <p id="dashboard-header-black"><%= image_tag "heart_black.png", height: 45; %></p>
              <% current_user.find_liked_items.each do |workshop| %>
              <p><%=  link_to workshop.name, workshop_path(workshop) %></p>
              <p id="dashboard-workshop"><%=  link_to workshop.date, workshop_path(workshop) %>, <%=  link_to workshop.area, workshop_path(workshop) %>eur</p>
@@ -16,9 +16,9 @@
           </div>
         </div>
 
-         <div class="dashboard-card shadowbox overflow" id="favourited-card">
+         <div class="dashboard-card shadowbox overflow" id="booked-card">
             <div class="booked-section">
-              <h3 class="dashboard-card-header">Booked workshops:</h3>
+              <p id="dashboard-header-icon"><%= image_tag "appointment_black.png", height: 45; %></p>
                   <div class="class-item overflow">
                 <% @bookings.each do |booking| %>
                 <p id="dashboard-workshop"><%=  link_to booking.workshop.name, workshop_path(booking.workshop) %></p>
