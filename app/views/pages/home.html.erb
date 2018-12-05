@@ -1,45 +1,53 @@
 <div class="header-box">
- <div id="typed-strings">
-  <h1 class="landing-title">ARTHUDDLE</h1>
-  <h2 class="landing-subheading">Discover your creative potential</h2>
-</div>
-<span id="typed"></span>
-
-
-  <div class="landing-search">
+  <div id="typed-strings">
+    <h1 class="landing-title">ARTHUDDLE</h1>
+    <h2 class="landing-subheading">Discover your creative potential</h2>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-4">
-        <div class="sortable-container" style="display: flex; justify-content: center; border: 5px solid black">
-          <ul class='sortable-dropzone' style="background-color: white; height: 400px">
-            <% Workshop::CATEGORIES.each do |category| %>
-              <li data-value="<%= category %>" class='sortable-item' style = "list-style-type: none";>
+</div>
 
-                <%= category%>
+<div class="container">
 
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="flex-container">
+
+  <div class="row">
+
+
+    <div class="col-xs-4">
       <div class="sortable-container" style="display: flex; justify-content: center; border: 5px solid black">
-        <ul id="search-box-drop" class='sortable-dropzone' style="display: flex; background-color: white; height: 300px; width: 50%">
+        <ul class='sortable-dropzone' style="background-color: white; height: 400px">
+          <% Workshop::CATEGORIES.each do |category| %>
+          <div class="col-xs-4">
+            <li data-value="<%= category %>" class='sortable-item icon-home' style = "list-style-type: none";>
+              <% asset_url = "#{category}.png" %>
+              <%= image_tag(asset_url, width: 60, height: 60) %>
+              <div class="icon-hover">
+                <%= category %>
+              </div>
+            </li>
+          </div>
+          <% end %>
         </ul>
       </div>
     </div>
+
+
+
+
+    <div class="col-xs-8">
+      <div class="flex-container">
+        <div class="sortable-container" style="display: flex; justify-content: center; border: 5px solid black">
+          <ul id="search-box-drop" class='sortable-dropzone' style="display: flex; background-color: white; height: 300px; width: 50%">
+          </ul>
+        </div>
+      </div>
+      <div>
+        <%= form_tag workshops_path, method: "get", id: 'searchForm' do %>
+        <%= text_field_tag("categories[]", nil, id: "categories", hidden: true) %>
+        <%= submit_tag("Search")%>
+        <% end %>
+      </div>
+    </div>
   </div>
-  <div>
-    <%= form_tag workshops_path, method: "get", id: 'searchForm' do %>
-      <%= text_field_tag("categories[]", nil, id: "categories", hidden: true) %>
-      <%= submit_tag("Search")%>
-    <% end %>
-  </div>
-
-
-
+</div>
 
 
 
@@ -65,46 +73,42 @@
 
   </div> -->
 
-</div>
 
-<div class="landing-box-1">
-  <div class="landing-image-box-1">
-    <img class="landing-image-1" src="https://www.plymouthart.ac.uk/images/uploads/courses/BA_Painting_Drawing_and_Printmaking/15709633014_e2283923ed_k.jpg" alt="class">
-  </div>
-
-
-     <div class="landing-about-1">
-        <div class="text-content-1">
-         <p id="blurb-1-header">Find local workshops.</p>
-         <br><br>
-         <p id="splash-info">Filter through upcoming events and find the ideal place to try something new.</p>
-         <br><br>
-        </div>
-      <div></div>
-
+  <div class="landing-box-1">
+    <div class="landing-image-box-1">
+      <img class="landing-image-1" src="https://www.plymouthart.ac.uk/images/uploads/courses/BA_Painting_Drawing_and_Printmaking/15709633014_e2283923ed_k.jpg" alt="class">
     </div>
 
-</div>
 
-<div class="seperator-box-1">
-</div>
+    <div class="landing-about-1">
+      <div class="text-content-1">
+       <p id="blurb-1-header">Find local workshops.</p>
+       <br><br>
+       <p id="splash-info">Filter through upcoming events and find the ideal place to try something new.</p>
+       <br><br>
+     </div>
+   </div>
+ </div>
 
-<div class="landing-box-2">
-<div class="landing-image-box-2">
+ <div class="seperator-box-1">
+ </div>
+
+ <div class="landing-box-2">
+  <div class="landing-image-box-2">
     <img class="landing-image-2" src="https://fryemuseum.org/images/program_images/path-printmaking.jpg" alt="class">
   </div>
 
 
-     <div class="landing-about-2">
-        <div class="text-content-2">
-         <p id="blurb-2-header">Share notes.</p>
-         <br><br>
-         <p id="splash-info">Post insights from workshops, reflect on experiences and share inspiration.</p>
-         <br><br>
-        </div>
-      <div><!-- for flexbox --></div>
+  <div class="landing-about-2">
+    <div class="text-content-2">
+     <p id="blurb-2-header">Share notes.</p>
+     <br><br>
+     <p id="splash-info">Post insights from workshops, reflect on experiences and share inspiration.</p>
+     <br><br>
+   </div>
+   <div><!-- for flexbox --></div>
 
-    </div>
+ </div>
 
 </div>
 
@@ -113,15 +117,15 @@
 
 <div class="landing-box-3">
 
-     <div class="landing-about-3">
-        <div class="text-content-3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dui sem, dapibus sit amet orci lacinia, consectetur tincidunt quam. Nunc vestibulum arcu nisl, eget dictum ante laoreet blandit. Praesent vitae tellus at lorem ultrices mollis. Maecenas scelerisque, nisi ut vestibulum rhoncus, dui metus vulputate augue, non venenatis nisi ex non risus.
-        </div>
-        <br>
-        <div id="footer-logo"><%= image_tag "logo_black.png", height: 100 %></div>
-      <div><!-- for flexbox --></div>
+ <div class="landing-about-3">
+  <div class="text-content-3">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dui sem, dapibus sit amet orci lacinia, consectetur tincidunt quam. Nunc vestibulum arcu nisl, eget dictum ante laoreet blandit. Praesent vitae tellus at lorem ultrices mollis. Maecenas scelerisque, nisi ut vestibulum rhoncus, dui metus vulputate augue, non venenatis nisi ex non risus.
+  </div>
+  <br>
+  <div id="footer-logo"><%= image_tag "logo_black.png", height: 100 %></div>
+  <div><!-- for flexbox --></div>
 
-    </div>
+</div>
 
 </div>
 <script>

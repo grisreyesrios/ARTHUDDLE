@@ -20,28 +20,36 @@ class Workshop < ApplicationRecord
 
   belongs_to :user, optional: true
 
-  CATEGORIES = %w(Audio
-Ceramics
-Design
-Digital
-Drawing
-Environmental
-Music
-Online
-Painting
-Photography
-Printmaking
-Video
-Performance
-Social
-Textiles
-Theoretical
-Reading Group
-Tour
-Writing
-Sculpture
-Woodwork
+  CATEGORIES = %w(audio
+ceramics
+design
+digital
+drawing
 
-Other
  )
+
+#    CATEGORIES = %w(audio
+# ceramics
+# design
+# digital
+# drawing
+# environmental
+# music
+# online
+# painting
+# photography
+# printmaking
+# Video
+# performance
+# social
+# textiles
+# theoretical
+# reading Group
+# tour
+# writing
+# sculpture
+# woodwork
+
+# other
+#  )
 end
