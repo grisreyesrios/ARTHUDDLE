@@ -1,5 +1,5 @@
 .overflow {
-  overflow-y:auto
+  overflow: scroll;
 }
 
 .dashboard-container {
@@ -32,6 +32,11 @@
   p {
     color: black;
   }
+}
+
+.note-preview {
+  // margin-left: 1em;
+  flex-grow: 1;
 }
 
 .card-content {
@@ -75,10 +80,11 @@
 }
 
 #notes-card {
-  align-self: flex-end;
+  display: flex;
   height: 22vh;
   background-color: #d5feab;
   color: black;
+  justify-content: space-around;
 }
 
 #dashboard-workshop-date {
