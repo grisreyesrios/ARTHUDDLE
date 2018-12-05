@@ -44,3 +44,5 @@ class Workshop < ApplicationRecord
  other
   )
 end
+
+
