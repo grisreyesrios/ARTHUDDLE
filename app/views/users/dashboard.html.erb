@@ -7,12 +7,12 @@
     </div>
 
       <div class="dashboard-card shadowbox" id="booked-card">
-            <h3 class="dashboard-card-header">Favourited workshops:</h3>
           <div class="favourited-workshop-section overflow">
-            <br><br>
+            <h3 class="dashboard-card-header">Favourited workshops:</h3>
              <% current_user.find_liked_items.each do |workshop| %>
              <p><%=  link_to workshop.name, workshop_path(workshop) %></p>
-             <p id="favourited-details"><%=  link_to workshop.date, workshop_path(workshop) %>, <%=  link_to workshop.area, workshop_path(workshop) %>eur</p>
+             <p id="dashboard-workshop"><%=  link_to workshop.date, workshop_path(workshop) %>, <%=  link_to workshop.area, workshop_path(workshop) %>eur</p>
+              <p id="dashboard-workshop-date"><%= booking.workshop.date %></p>
              <% end %>
           </div>
         </div>
@@ -20,7 +20,6 @@
          <div class="dashboard-card shadowbox overflow" id="favourited-card">
             <div class="booked-section">
               <h3 class="dashboard-card-header">Booked workshops:</h3>
-                <br><br>
                   <div class="class-item overflow">
                 <% @bookings.each do |booking| %>
                 <p id="dashboard-workshop"><%=  link_to booking.workshop.name, workshop_path(booking.workshop) %></p>
@@ -31,14 +30,15 @@
      </div>
         </div>
          <div class="dashboard-card shadowbox" id="notes-card">
-          <h3 class="dashboard-card-header">Workshop notes:</h3>
+      <!--     <h3 class="dashboard-card-header">Workshop notes:</h3> -->
+      <p id="notes-icon"><%= image_tag "notebook.png", height: 70; %></p>
           <div class="note-preview">
             <div class="row">
 
 
           <% @bookings.each do |booking| %>
               <% booking.workshop.notes.each do |note| %>
-                  <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="col-xs-12 col-sm-6 col-md-4" id="note-col">
                 <%= link_to note.title, workshop_notes_path(booking.workshop) %> <p id="dashboard-note-workshop"> in <%= booking.workshop.name %></p>
                   </div>
                 <% end %>
