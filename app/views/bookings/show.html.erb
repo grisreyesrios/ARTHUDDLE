@@ -1,8 +1,21 @@
 <div class="container">
-  <div class="">
+  <div class="booking-confirmation">
     <h1>Great! You're going to <%= @workshop.name %></h1>
+  </div>
+  <div class="workshop-index-card shadowbox booking-confirm">
+    <div class="workshop-top-image booking">
+      <%= cl_image_tag @workshop.photo, width: 313, height: 120, crop: :fill unless @workshop.photo.blank? %>
+    </div>
+    <div class="workshop-main-text">
+      <% asset_url = "#{@workshop.category}.png" %>
+      <%= image_tag(asset_url, width: 60, height: 60) %>
+      <%= link_to @workshop.name, workshop_path(@workshop) %>
+      <div id="booking-index-address"><%= @workshop.address %>
+      </div>
+    </div>
     <%= link_to 'See My Dashboard', dashboard_path, class: 'btn-info' %>
     <%= link_to 'Make Another Booking', workshops_path, class: 'btn-book' %>
   </div>
+</div>
 </div>
 
