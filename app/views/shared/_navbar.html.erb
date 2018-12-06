@@ -39,6 +39,8 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
+      <%= link_to "Browse Workshops", workshops_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Add Your Workshop", new_workshop_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
