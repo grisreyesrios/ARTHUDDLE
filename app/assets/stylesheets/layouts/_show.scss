@@ -40,7 +40,7 @@
 
 .show-info {
   flex: 2 auto;
-  height: calc(100vh + 200px);
+  // height: calc(100vh + 200px);
   width: 500px;
   justify-content: center;
   background: #C4C4C4;
@@ -94,5 +94,10 @@
   -webkit-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
   -moz-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
   box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
+}
+
+.map-booking-show {
+  display: flex;
+  flex-direction: column;
 }
 
