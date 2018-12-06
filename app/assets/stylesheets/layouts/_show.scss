@@ -10,6 +10,10 @@
 }
 .banner h1 {
   font-size: 50px;
+  background-color: #DDFCB4;
+  padding: 10px 20px 10px 20px;
+  color: #857D74;
+  opacity: 0.8;
 }
 .banner p {
   font-size: 25px;
@@ -29,12 +33,12 @@
 .show-box {
   display: flex;
   padding: 2em;
+  padding-top: 0;
   justify-content: space-between;
   // flex-direction: column;
   margin: 20px;
   border-radius: 5px;
   position:relative;
-  height: 120vh;
 }
 
 
@@ -45,7 +49,7 @@
   justify-content: center;
   background: #C4C4C4;
   position: relative;
-  top: -193px;
+  top: -100px;
   -webkit-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
   -moz-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
   box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
@@ -53,6 +57,7 @@
 
 .workshop-show-data {
   padding: 10px 20px 10px 20px;
+  margin: 0 14px;
 }
 
 .booking-new-form {
@@ -60,7 +65,8 @@
 }
 .container-form {
   text-align: center;
-  margin: 40px;
+  margin: 0px 40px;
+
 }
 
 
@@ -90,7 +96,7 @@
 .show-map {
   flex: 1 auto;
   background: #C4C4C4;
-  margin-left: 50px;
+  margin-left: 42px;
   -webkit-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
   -moz-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
   box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
@@ -99,5 +105,18 @@
 .map-booking-show {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
+.no-margin-top {
+  margin-top: 0 !important;
+}
+
+.heart-class {
+  color: black;
+  top: 3%;
+}
+
+.fa-heart:before {
+  color: #655D5C;
+}
