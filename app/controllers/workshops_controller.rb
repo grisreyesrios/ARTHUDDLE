@@ -24,7 +24,6 @@ class WorkshopsController < ApplicationController
     if @workshop.save
       redirect_to workshop_path(@workshop), notice: "Huzzah! Your workshop has been created!"
       # UserMailer.creation_confirmation(@workshop).deliver_now
-      redirect_to workshop_path(@workskshop)
     else
       render 'new'
     end
