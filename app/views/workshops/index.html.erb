@@ -7,9 +7,9 @@
 
 
 <div class="container" id="workshop-card-container">
-  <% @workshops.each do |workshop| %>
+  <% @workshops.each_with_index do |workshop, index| %>
     <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="workshop-index-card shadowbox">
+      <div class="workshop-index-card shadowbox" id="<%= index %>">
         <div class="workshop-top-image-box">
           <%= cl_image_tag workshop.photo, crop: :fill, class: "workshop-card-image" unless workshop.photo.blank? %>
         </div>
