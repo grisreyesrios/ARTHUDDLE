@@ -3,6 +3,9 @@ body {
   background-color: #eee9eb;
 }
 
+.main {
+  min-height: calc(100vh - 191px)
+}
 
 #splash-info {
   font-size: 14px;
@@ -11,15 +14,21 @@ body {
 .header-box {
   height: 40vh;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 
 .landing-title {
-  font-size: 150px;
+  font-size: 200px;
   color: #8C3DC3;
+  padding-top: 20px;
 }
 
 .landing-subheading {
+  font-size: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #8C3DC3;
   font-size: 40px;
   color: #8147BC;
 }
@@ -198,12 +207,25 @@ body {
   margin: 10px 20px;
 }
 
-.sortable-container ul {
+.sortable-container {
+ul {
   padding: 0;
 }
+h2 {
+  color: black;
+}
 
-.sortable-container li {
-  list-style: none;
+}
+
+.sortable-container {
+  li {list-style: none;
+  }
+}
+
+.col-xs-8{
+  h2{
+    color: black;
+  }
 }
 
 // .watermark {
@@ -272,11 +294,16 @@ body {
   h1 {
     font-size: 25px;
   }
+  a:hover {
+ text-decoration: none !important;
+  }
+
 }
 
 .landing-box-3 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
+
+}
