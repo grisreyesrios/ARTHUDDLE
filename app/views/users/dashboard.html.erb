@@ -37,9 +37,9 @@
       <!--     <h3 class="dashboard-card-header">Workshop notes:</h3> -->
           <div class="note-preview">
       <div id="dashboard-notes-highlight">
-      <p id="notes-icon"><%= image_tag "notebook.png", height: 70; %>Notes</p>
+      <p id="dashboard-header-notes"><%= image_tag "notebook.png", height: 70; %>Notes from my workshops</p>
       </div>
-            <div class="row">
+            <div class="row" id="notes-row">
 
 
           <% @bookings.each do |booking| %>
