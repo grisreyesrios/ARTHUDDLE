@@ -10,8 +10,8 @@
   <% @workshops.each do |workshop| %>
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="workshop-index-card shadowbox">
-        <div class="workshop-top-image">
-          <%= cl_image_tag workshop.photo, width: 313, height: 120, crop: :fill unless workshop.photo.blank? %>
+        <div class="workshop-top-image-box">
+          <%= cl_image_tag workshop.photo, crop: :fill, class: "workshop-card-image" unless workshop.photo.blank? %>
         </div>
         <div class="workshop-main-text">
           <% asset_url = "#{workshop.category}.png" %>

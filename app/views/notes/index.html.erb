@@ -1,13 +1,16 @@
 <div class="container" id="notes-container">
 
   <div class="note-title-box">
-   <h1 id="notes-header"><%= @workshop.name %></h1>
-   <p id="notes-icon"><%= image_tag "notebook.png", height: 100; %></p>
-
+   <h1 id="notes-header"><%= image_tag "notebook.png", height: 80; %><%= @workshop.name %></h1>
+   <p id="notes-index-icon"></p>
+   <% if current_user.workshops.exists?(@workshop.id) %>
     <h2 id="notes-about">Got any tips? Thoughts? Feedback? Add it here!</h2>
     <div id="add-note-box">
       <%= link_to "+", new_workshop_note_path(@workshop), class: "btn-info", id: "add-note-button" %>
     </div>
+    <% else %>
+    <h1></h1>
+    <% end %>
   </div>
 
   <% @notes.reverse.each do |note| %>
@@ -27,6 +30,3 @@
     </div>
     <% end %>
 </div>
-
-
-

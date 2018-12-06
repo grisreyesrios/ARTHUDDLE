@@ -7,8 +7,8 @@ class User < ApplicationRecord
   mount_uploader :photo, PhotoUploader, :mount_on => :photo
 
   acts_as_voter
-  has_many :workshops
   has_many :bookings
+  has_many :workshops, through: :bookings
   after_create :send_welcome_email
 
   private

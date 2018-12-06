@@ -67,6 +67,10 @@
   text-align: justify;
 }
 
+#notes-icon {
+  text-align: left;
+}
+
 
 #note-col {
   text-align: left;
@@ -100,8 +104,10 @@
   color: black;
   justify-content: space-around;
   margin-top: 0px;
-  width: 96%;
+  width: 99%;
   margin-bottom: 4%;
+  margin-left: 0%;
+
 }
 
 #dashboard-header-fave {
@@ -129,10 +135,6 @@
 
 #dashboard-note-workshop {
   font-size: 10px;
-}
-
-#favourited-workshop-section {
-
 }
 
 #favourited-header {

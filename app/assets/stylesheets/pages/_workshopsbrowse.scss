@@ -6,10 +6,10 @@
   margin: 1em;
 }
 
-.workshop-top-image {
+.workshop-top-image-box {
   height: 40%;
-  background-color: blue;
   background-size: cover;
+  overflow: hidden;
 }
 
 .workshop-main-text {
@@ -26,6 +26,10 @@
     font-size: 10px;
     padding-top: 1em;
   }
+}
+
+.workshop-card-image {
+  width: 100%;
 }
 
 .workshop-icon-flex {

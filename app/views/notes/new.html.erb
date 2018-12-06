@@ -1,14 +1,14 @@
 <div class="container">
-
-  <div class="note-poster">
+  <div class="notes-editor-container">
+    <div class="note-poster">
 
     <%= simple_form_for([@workshop, @note]) do |f| %>
       <%= f.input :title %>
       <%= f.input :content, as: :hidden %>
       <trix-editor class="trix-editor" input="note_content"></trix-editor>
-      <p id="notes-submit"><%= f.submit "Add" %></p>
+      <p id="notes-submit"><%= f.submit "Add", id: "btn-info" %></p>
     <% end %>
 
+    </div>
   </div>
-
 </div>
