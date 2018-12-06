@@ -3,6 +3,9 @@ body {
   background-color: #eee9eb;
 }
 
+.main {
+  min-height: calc(100vh - 191px)
+}
 
 #splash-info {
   font-size: 14px;
