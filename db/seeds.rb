@@ -210,7 +210,7 @@ workshop8.save!
 
 workshop9 = Workshop.create!(
   name:         'Queering the Gaze: Queer Politics and Art History',
-  category:     'theoretical',
+  category:     'theory',
   price:         5,
   capacity:      10,
   difficulty:    'medium',
@@ -364,7 +364,7 @@ workshop9.save!
 
   workshop16 = Workshop.create!(
     name:         'Explore Gardening and Land Art',
-    category:     'environmental',
+    category:     'nature',
     price:         25,
     capacity:      10,
     difficulty:    'medium',

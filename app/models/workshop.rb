@@ -25,7 +25,7 @@ class Workshop < ApplicationRecord
  design
  digital
  drawing
- environmental
+ nature
  music
  online
  painting
@@ -35,7 +35,7 @@ class Workshop < ApplicationRecord
  performance
  social
  textiles
- theoretical
+ theory
  reading
  tour
  writing

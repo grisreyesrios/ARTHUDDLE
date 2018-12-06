@@ -14,14 +14,18 @@ function sortItems() {
     const items = Array.from(dropzone.children);
     removeAddedField()
     items.forEach((item, index) => {
+      console.log(item)
+       let value = item.dataset.value;
+       let categoryField = document.getElementById('categories');
+/*      item.classList.add('category-field-added')
+      item.classList.add('bigger')*/
+       value = item.dataset.value;
+       categoryField = document.getElementById('categories');
 
-      const value = item.dataset.value;
-      const categoryField = document.getElementById('categories');
-      const cloneField = categoryField.cloneNode(true)
+       let cloneField = categoryField.cloneNode(true)
       cloneField.id = categoryField.id + "_" + index
       cloneField.value = value
-      cloneField.classList.add('category-field-added')
-      item.classList.add('bigger')
+       console.log(cloneField)
       console.log(cloneField)
       categoryField.insertAdjacentElement('afterend',cloneField);
 

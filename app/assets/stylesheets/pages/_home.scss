@@ -21,7 +21,6 @@ body {
   padding-bottom: 20px;
   height: 40vh;
   text-align: center;
-  padding-bottom: 30%;
 }
 
 
@@ -87,7 +86,7 @@ body {
   background-color: #FF5634;
   justify-content: flex-end;
   padding: 13%;
-  margin-top: 20%;
+  margin-top: 8%;
   text-align: center;
 }
 
@@ -98,7 +97,7 @@ body {
 .landing-image-1 {
   flex: 1 auto;
   width: 470px;
-  padding-top: 50%;
+  padding-top: 35%;
 }
 
 .landing-image-box-1 {
@@ -144,7 +143,7 @@ body {
 .landing-image-box-2 {
   position: absolute;
   top: 138px;
-  left: 620px;
+  left: 48vw;
 }
 
 .seperator-box-2 {
@@ -240,14 +239,25 @@ h2 {
 }
 .bigger{
  img{
-  height:100px !important;
-  width:100px !important;
+  height:1000px !important;
+  width:1000px !important;
  }
 }
 .col-xs-8{
   h2{
     color: black;
   }
+}
+
+#search-box-drop li > img {
+  width: 100px;
+  height: 100px;
+}
+
+#search-box-drop li {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
 }
 
 // .watermark {
