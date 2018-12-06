@@ -1,1 +1,89 @@
-.show-box.booking-box
+.booking-confirmation {
+  h1 {
+  text-align: center;
+  color: #8147BC;
+  }
+}
+
+.workshop-top-image.booking {
+  object-fit: cover;
+  object-position: center;
+}
+
+.booking-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.workshop-index-card-footer {
+  background-color: white;
+  padding: 15px;
+}
+
+.booking-confirmation {
+  opacity: 1;
+}
+
+.booking-confirmation:hover {
+  opacity: 0.9;
+}
+
+.workshop-index-card-body {
+  height: 70%;
+
+}
+
+.booking-button-container {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.workshop-main-text-booking {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  .booking-text {
+  background-color: #784EB6;
+  color: white;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+}
+
+.booking-address-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-confirm {
+  height: 450px;
+}
+
+.booking-confirmation {
+  h1 {
+  color: #655d5c;
+  }
+}
+
+#booking-index-address {
+  padding: 5px;
+  color: black;
+}
+
+#booking-index-date {
+  padding: 5px;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+
+
+
+

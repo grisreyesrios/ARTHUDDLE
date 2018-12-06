@@ -46,7 +46,6 @@ body {
   flex: 2 auto;
 }
 
-
 .icon-bar {
   display: flex;
   background-color: #D4FFA8;
@@ -76,6 +75,7 @@ body {
   justify-content: flex-end;
   padding: 10%;
   margin-top: 2em;
+  text-align: center;
 }
 
 .text-content-1 {
@@ -213,6 +213,24 @@ body {
   list-style: none;
 }
 
+.watermark {
+  color: black;
+  font-size: 150%;
+  overflow: hidden;
+  z-index: 98;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.watermark:after {
+  width: 100%;
+  font-size: 150%;
+/*  position: absolute; */
+  content: "Drag and drop your choices here";
+  z-index: 99;
+  opacity: 0.45;
+}
 
 .icon-hover{
   position: absolute;
@@ -230,6 +248,42 @@ body {
   opacity: 1;
 }
 
+.team-container {
+  display: flex;
+  justify-content: space-around;
+}
 
+.team-img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
 
+.meet-team-header {
+  text-align: center;
+  padding: 30px;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.text-content-2 {
+  text-align: center;
+}
+
+.team-column {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 40px 10px 40px;
+  h1 {
+    font-size: 25px;
+  }
+}
+
+.landing-box-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
