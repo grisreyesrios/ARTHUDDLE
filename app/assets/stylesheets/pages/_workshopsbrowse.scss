@@ -3,12 +3,12 @@
   background-color: white;
   position: relative;
   margin: 1em;
+  transition: 0.5s ease;
   &:hover {
-   box-shadow: 0px 27px 189px -24px rgba(156,151,156,1);
-   transition: 0.4s ease;
+   box-shadow: 0px 27px 230px -24px rgba(156,151,156,1);
+   transition: 0.5s ease;
  }
 }
-
 
 .workshop-top-image-box {
   height: 40%;
@@ -72,6 +72,10 @@
 
 #favourite {
   font-size: 28px;
+  transition: all 0.5s ease;
+  &:hover {
+    transform:scale(1.06);
+ }
 }
 
 #browse-header {
@@ -84,6 +88,7 @@
     padding-left: 30em;
     padding-bottom: 1em;
     border-radius: 3px;
+    padding-top: 3%;
 }
 
 .workshop-index-card.booking-confirm {

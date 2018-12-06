@@ -109,6 +109,10 @@
 #add-note-button {
   text-align: center;
   text-decoration: none;
+  transition: all 0.3s ease;
+  &:hover {
+   transform:scale(1.01);
+ }
 }
 
 #notes-edit-delete {

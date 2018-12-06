@@ -43,9 +43,8 @@
     <%= @workshop.capacity %>
   </div>
   <div class="show-button-container">
-    <strong>See notes from this workshop:</strong>
     <div class="show-button-info">
-      <%= link_to "Notes", workshop_notes_path(@workshop), class: "btn-info" %>
+      <%= link_to "See notes from this workshop", workshop_notes_path(@workshop), class: "btn-info" %>
     </div>
   </div>
 </div>
@@ -56,7 +55,7 @@
   </div>
   <div class="show-map"
   id="map"
-  style="width: 567px;
+  style="width: 87%;
   height: 100%;"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">

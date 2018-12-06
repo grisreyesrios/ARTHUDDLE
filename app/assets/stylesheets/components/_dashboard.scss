@@ -74,7 +74,6 @@
 
 #note-col {
   text-align: left;
-
 }
 
 #favourited-header {
@@ -89,12 +88,16 @@
   margin-left: 0em;
   background-color: #eee9eb;
   color: black;
+  visibility: hidden;
+  opacity: 0.0;
 }
 
 #booked-card {
   margin-left: 0em;
   background-color: #eee9eb;
   color: black;
+  visibility: hidden;
+  opacity: 0.0;
 }
 
 #notes-card {
@@ -107,6 +110,8 @@
   width: 99%;
   margin-bottom: 4%;
   margin-left: 0%;
+  visibility: hidden;
+  opacity: 0.0;
 
 }
 
@@ -122,6 +127,10 @@
   color: #eee9eb;
   font-size: 15px;
   margin-left: 2%;
+  transition: all 0.5s ease;
+  &:hover {
+     transform:scale(1.01);
+  }
 }
 
 .dashboard-workshop-date {
