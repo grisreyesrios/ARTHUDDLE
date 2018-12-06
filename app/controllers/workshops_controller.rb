@@ -5,8 +5,6 @@ class WorkshopsController < ApplicationController
   def index
     if params[:categories].present?
       @workshops = policy_scope(Workshop).where(category: param_categories)
-    elsif  params[:query].present?
-      @workshops = policy_scope(Workshop).search_by_area(params[:query])
     else
       @workshops = policy_scope(Workshop).order(created_at: :desc)
       # favourited
