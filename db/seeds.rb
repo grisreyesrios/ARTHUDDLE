@@ -162,7 +162,7 @@ workshop7 = Workshop.create!(
   user_id:        user7.id
   )
 
-workshop7.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589158/origami.jpg'
+workshop7.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1544118793/xz9ik5qf1o7zghqcuzxe.jpg'
 workshop7.save!
 
 workshop8 = Workshop.create!(
@@ -180,7 +180,7 @@ workshop8 = Workshop.create!(
   user_id:        user8.id
   )
 
-workshop7.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1544120624/q8obk4jnl5b9t3xb5pj5.jpg'
+workshop7.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1544125377/phic7e7zhefldvnhg6hr.jpg'
 workshop7.save!
 
 
@@ -275,7 +275,7 @@ workshop9.save!
                     we will cover some key printing techniques, including block, stencil, heat press and screen-printing.',
     user_id:        user11.id
     )
-  workshop10.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1544119374/web_28_shiny.jpg'
+  workshop10.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1544124988/ilya-lix-336236-unsplash.jpg'
   workshop11.save!
 
   workshop12 = Workshop.create!(
@@ -298,7 +298,7 @@ workshop9.save!
                     comfortable.',
     user_id:        user12.id
     )
-  workshop12.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1544119730/theatre-arts_body-1.jpg'
+  workshop12.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1544119250/kollwitz-kathe-self-portrait-1924.jpg'
   workshop12.save!
 
   workshop13 = Workshop.create!(
@@ -338,7 +338,7 @@ workshop9.save!
                     Sheet music and printed words will be provided.',
     user_id:        user14.id
     )
-  workshop14.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1544119358/ae3f694b0e4282527ab7aa4e05403ba8.jpg'
+  workshop14.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1544124990/haley-rivera-580013-unsplash.jpg'
   workshop14.save!
 
 
@@ -481,7 +481,7 @@ workshop9.save!
     user_id:        user22.id
     )
 
-  workshop22.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543951030/Laura-Mulvey-web.jpg'
+  workshop22.remote_photo_url ='https://res.cloudinary.com/dozuvnxwx/image/upload/v1544119051/laura-mulvey-anaglif-05.jpg'
   workshop22.save!
 
 
@@ -501,7 +501,7 @@ workshop9.save!
     user_id:        user23.id
     )
 
-  workshop23.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543951030/Laura-Mulvey-web.jpg'
+  workshop23.remote_photo_url ='https://res.cloudinary.com/dozuvnxwx/image/upload/v1544122007/communication-design-1.jpg'
   workshop23.save!
 
   workshop24 = Workshop.create!(
