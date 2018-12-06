@@ -1,10 +1,14 @@
-
 .workshop-index-card {
   height: 300px;
   background-color: white;
   position: relative;
   margin: 1em;
+  &:hover {
+   box-shadow: 0px 27px 189px -24px rgba(156,151,156,1);
+   transition: 0.4s ease;
+ }
 }
+
 
 .workshop-top-image-box {
   height: 40%;
@@ -19,7 +23,7 @@
   a {
     color: black;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
   }
     p {
     color: black;
@@ -50,6 +54,14 @@
   box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
 }
 
+
+#workshop-card-container {
+  padding-bottom: 3%;
+  visibility: hidden;
+  opacity: 0.0;
+}
+
+
 #workshop-index-address {
  position: absolute;
  bottom: 18%;
@@ -63,6 +75,7 @@
 }
 
 #browse-header {
+  color: #8c3dc3;
   text-align: left;
   margin-left: 9%;
 }

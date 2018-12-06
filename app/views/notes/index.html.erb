@@ -9,9 +9,19 @@
       <%= link_to "+", new_workshop_note_path(@workshop), class: "btn-info", id: "add-note-button" %>
     </div>
     <% else %>
-    <h1></h1>
+        <h3 id='book-tip'>Book this workshop and add your notes!</h3>
+    <div id="add-note-box">
+    </div>
     <% end %>
   </div>
+
+  <% if @workshop.notes.empty? %>
+  <div class="note" id="note-box">
+          <p id="note-title">No notes yet!</p>
+          <br>
+          <p id="note-content">Be the first...</p>
+  </div>
+  <% end %>
 
   <% @notes.reverse.each do |note| %>
 

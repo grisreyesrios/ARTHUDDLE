@@ -9,7 +9,29 @@
     </div>
 
     <div class="form-row">
-      <%= w.input :category, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Category' %>
+     <!--  <%= w.input :category, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Category' %> -->
+      <%= w.input :category, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input'}, label: false, include_blank: "Category",:collection => %w[audio
+ ceramics
+ design
+ digital
+ drawing
+ environmental
+ music
+ online
+ painting
+ photography
+ printmaking
+ video
+ performance
+ social
+ textiles
+ theoretical
+ reading
+ tour
+ writing
+ sculpture
+ woodwork
+ other] %>
       <%= w.input :capacity, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Capacity' %>
     </div>
     <%= w.input :date, wrapper_html: { class: 'col-sm-6' }, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>

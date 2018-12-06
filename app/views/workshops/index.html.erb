@@ -2,18 +2,19 @@
   <div class="hostbutton" id="hostbutton">
     <%= link_to 'HOSTING A WORKSHOP? LIST IT HERE!', new_workshop_path, class: "btn-book" %>
   </div>
+</div>
 
 
-<div class="container">
+<div class="container" id="workshop-card-container">
   <% @workshops.each do |workshop| %>
     <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="workshop-index-card shadowbox">
+      <div class="workshop-index-card shadowbox" id="workshop-card">
         <div class="workshop-top-image-box">
           <%= cl_image_tag workshop.photo, crop: :fill, class: "workshop-card-image" unless workshop.photo.blank? %>
         </div>
         <div class="workshop-main-text">
           <% asset_url = "#{workshop.category}.png" %>
-          <%= image_tag(asset_url, width: 60, height: 60) %>
+          <%= image_tag(asset_url, width: 25, height: 25) %>
           <%= link_to workshop.name, workshop_path(workshop) %>
          <div id="workshop-index-address"><%= workshop.address %></div>
         </div>
