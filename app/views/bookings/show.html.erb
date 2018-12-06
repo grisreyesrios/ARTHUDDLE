@@ -27,11 +27,11 @@
     </div>
   </div>
   <% end %>
+</div>
 
   <div class="booking-button-container">
     <%= link_to 'See My Dashboard', dashboard_path, class: 'btn-info' %>
     <%= link_to 'Make Another Booking', workshops_path, class: 'btn-book' %>
+    <%= link_to "Notes", workshop_notes_path(@workshop), class: "btn-grey" %>
   </div>
 </div>
-
-

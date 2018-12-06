@@ -5,12 +5,13 @@
 .alert {
   margin: 0;
   text-align: center;
-  color: white;
+  color: #655D5C;
+  border: none;
   // transition: 5s opacity ease;
 }
 .alert-info {
-  background: $green;
+  background: #DDFDB1;;
 }
 .alert-warning {
-  background: $red;
+  background: #FF5634;
 }
