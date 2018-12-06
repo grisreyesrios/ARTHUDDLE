@@ -180,7 +180,7 @@ workshop8 = Workshop.create!(
   user_id:        user8.id
   )
 
-workshop7.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1544119730/theatre-arts_body-1.jpg'
+workshop7.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1544120624/q8obk4jnl5b9t3xb5pj5.jpg'
 workshop7.save!
 
 
@@ -517,7 +517,7 @@ workshop9.save!
     syllabus:      '.',
     user_id:        user24.id
     )
-  workshop24.remote_photo_url ='https://res.cloudinary.com/dnasixvno/image/upload/v1543952618/3d_rendering.jpg'
+  workshop24.remote_photo_url ='https://res.cloudinary.com/dozuvnxwx/image/upload/v1544121417/rhino-3d-model-3d-print.jpg'
   workshop24.save!
 
   workshop25 = Workshop.create!(
