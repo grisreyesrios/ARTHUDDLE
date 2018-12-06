@@ -4,7 +4,7 @@
       <h1>Book your spot for <%= @workshop.name %>!</h1>
       <%= simple_form_for [@workshop, @booking], wrapper: :horizontal_form, html: { class: 'form-group '} do |b| %>
         <h2>How many people are attending?</h2>
-        <%= b.input :number, input_html: { class: 'booking-input centered-input', style: "width: 100%" }, label: false, placeholder: "Number" %>
+        <%= b.input :number, input_html: { class: 'booking-input centered-input', style: "width: 100%" }, label: false, allow_blank: false, required: true, placeholder: "Number" %>
       <%= b.button :submit, class: 'btn-info' %>
     </div>
     <% end %>

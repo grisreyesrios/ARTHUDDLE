@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.workshop = @workshop
     @booking.user = current_user
     authorize @booking
-    if @booking.save!
+    if @booking.save
       redirect_to workshop_booking_path(@workshop, @booking), notice: 'Booking was successfully created.'
     else
       redirect_to workshop_path(@workshop)
