@@ -30,7 +30,7 @@
 .note {
   margin-top: 2em;
   margin-top: 2em;
-  background-color: white;
+  background-color:   #eee9eb;
   padding: 26px;
   -webkit-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
   -moz-box-shadow: 0px 9px 63px -8px rgba(156,151,156,1);
@@ -40,6 +40,11 @@
 .btn-note {
   color: black;
   font-size: 14px;
+}
+
+#book-tip {
+  font-size: 20px;
+  text-align: center;
 }
 
 #note-box {
@@ -78,16 +83,16 @@
 }
 
 #note-title {
-  font-size: 19px;
-  text-align: center;
-    font-size: 19px;
-    text-align: center;
-    background: #faf9ff;
+  font-size: 17px;
+  text-align: left;
+    text-align: left;
+    background: #fff9f9;
     padding: 1em;
 }
 
-.note-content {
+#note-content {
  font-size: 14px;
+ margin-left: 1%;
 }
 
 
