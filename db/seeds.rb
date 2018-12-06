@@ -180,7 +180,7 @@ workshop8 = Workshop.create!(
   user_id:        user8.id
   )
 
-workshop7.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543589876/performance_art.jpg'
+workshop7.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1544119730/theatre-arts_body-1.jpg'
 workshop7.save!
 
 
@@ -275,7 +275,7 @@ workshop9.save!
                     we will cover some key printing techniques, including block, stencil, heat press and screen-printing.',
     user_id:        user11.id
     )
-  workshop10.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543938361/textiles.jpg'
+  workshop10.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1544119374/web_28_shiny.jpg'
   workshop11.save!
 
   workshop12 = Workshop.create!(
@@ -298,7 +298,7 @@ workshop9.save!
                     comfortable.',
     user_id:        user12.id
     )
-  workshop12.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543939423/portrait_drawing.jpg'
+  workshop12.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1544119730/theatre-arts_body-1.jpg'
   workshop12.save!
 
   workshop13 = Workshop.create!(
@@ -338,7 +338,7 @@ workshop9.save!
                     Sheet music and printed words will be provided.',
     user_id:        user14.id
     )
-  workshop14.remote_photo_url = 'https://res.cloudinary.com/dnasixvno/image/upload/v1543945751/choir_singing.png'
+  workshop14.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1544119358/ae3f694b0e4282527ab7aa4e05403ba8.jpg'
   workshop14.save!
 
 
@@ -457,8 +457,8 @@ workshop9.save!
     difficulty:    'medium',
     description:   'This workshop provides an opportunity to experiment with sound through collecting field recordings, and processing
                     and programming with a range of hardware. Now you can conjure sounds and sequences yourself in a professional studio environment. ',
-    area:          'Friedrichshain',
-    address:       'Rudi-Dutschke-Straße 23, 10969 Berlin',
+    area:          'Neukölln',
+    address:       'Hobrechtstr 66, 12047 Berlin',
     date:          '13/01/2018',
     syllabus:      'We shall briefly cover the basics of audio engineering, but be prepared to move quickly. Audio equipment will be provided.',
     user_id:        user21.id
@@ -468,15 +468,14 @@ workshop9.save!
   workshop21.save!
 
   workshop22 = Workshop.create!(
-    name:         '"Visual Pleasure and Narrative Cinema:" Discussion of Laura Mulvey',
+    name:         'Visual Pleasure and Narrative Cinema: Discussion of Laura Mulvey',
     category:     'reading',
     price:         20,
     capacity:      30,
     difficulty:    'medium',
-    description:   'This workshop provides an opportunity to experiment with sound through collecting field recordings, and processing
-                    and programming with a range of hardware. Now you can conjure sounds and sequences yourself in a professional studio environment. ',
-    area:          'Friedrichshain',
+    description:   'Laura Mulvey is a renowend British feminist film theorist. Join us for a reading of her 1973 essay, Visual Pleasure and Narrative Cinema.',
     address:       'Rudi-Dutschke-Straße 23, 10969 Berlin',
+    area:          'Mitte',
     date:          '30/01/2018',
     syllabus:      'Please ensure that you read Visual Pleasure and Narrative Cinema in advance of this meetup.',
     user_id:        user22.id
