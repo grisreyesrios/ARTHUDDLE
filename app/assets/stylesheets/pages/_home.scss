@@ -28,8 +28,8 @@ body {
 .landing-title {
   font-size: 200px;
   color: #8C3DC3;
-  padding-top: 20px;
   background-color: #DDFDB1;
+  margin-top: 0px;
 }
 
 .landing-subheading {
@@ -108,7 +108,7 @@ body {
 }
 
 .seperator-box-1 {
-  height: 200px;
+  height: 100px;
 }
 
 .landing-image- {
@@ -148,14 +148,14 @@ body {
 }
 
 .seperator-box-2 {
-  height: 200px;
+  height: 100px;
 }
 
 .landing-box-3 {
   display: flex;
   color: white;
   width: 100vw;
-  height: 50vh;
+  height: 100%;
   margin: 0 auto;
   position: relative;
   background: #D4FFA8;
@@ -165,7 +165,7 @@ body {
   margin-left: 12em;
   margin-right: 12em;
   margin-top: 2em;
-  margin-bottom: 2em;
+  margin-bottom: 4em;
   color: black;
 }
 
@@ -183,6 +183,8 @@ body {
 
 #footer-logo {
   text-align: center;
+  position: relative;
+  bottom: 81px;
  }
   .span3 {
       width:200px;
@@ -299,6 +301,7 @@ h2 {
   padding: 30px;
   font-weight: bolder;
   font-size: 30px;
+  padding-top: 0;
 }
 
 .text-content-2 {
@@ -310,9 +313,14 @@ h2 {
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  padding: 10px 40px 10px 40px;
+  flex: 0 0 31%;
   h1 {
     font-size: 25px;
+  }
+  a {
+  text-align: center;
+  margin-top: 20px;
+  color: black;
   }
   a:hover {
  text-decoration: none !important;

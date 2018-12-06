@@ -28,6 +28,16 @@
   padding:7px 49px;
   text-decoration:none;
 }
+
+.form-control:focus {
+  border-color: white !important;
+  box-shadow: none !important;
+}
+
+.btn-info:focus {
+  outline: 1px auto #f9a302 !important;
+}
+
 .btn-info:hover {
   background-color: #D4FFA8;
   color: black;
@@ -46,6 +56,11 @@
 .btn-grey:hover {
   background-color: #655D5C;
   color: black;
+}
+
+#searchForm input:focus {
+  outline: 1px auto white;
+  outline-offset: -2px;
 }
 
 .btn-add {
