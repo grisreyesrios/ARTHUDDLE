@@ -1,6 +1,6 @@
 <div class="container">
-
-  <div class="note-poster">
+  <div class="notes-editor-container">
+    <div class="note-poster">
 
     <%= simple_form_for([@workshop, @note]) do |f| %>
       <%= f.input :title %>
@@ -9,6 +9,6 @@
       <p id="notes-submit"><%= f.submit "Add", id: "btn-info" %></p>
     <% end %>
 
+    </div>
   </div>
-
 </div>
