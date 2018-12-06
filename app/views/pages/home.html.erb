@@ -44,7 +44,7 @@
   <div>
     <%= form_tag workshops_path, method: "get", id: 'searchForm' do %>
     <%= text_field_tag("categories[]", nil, id: "categories", hidden: true) %>
-    <%= submit_tag("Search", :class => "btn btn-secondary btn-lg btn-block" ) %>
+    <%= submit_tag("Search", :class => "btn btn-secondary btn-lg btn-block", id:'bt') %>
     <% end %>
   </div>
 </div>

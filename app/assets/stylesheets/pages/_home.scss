@@ -10,6 +10,10 @@ body {
 .main {
   min-height: calc(100vh - 191px)
 }
+#bt {
+  width: 80vh !important;
+    margin-left: 43px;
+}
 
 #splash-info {
   font-size: 14px;
