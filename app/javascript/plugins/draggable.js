@@ -21,7 +21,8 @@ function sortItems() {
       cloneField.id = categoryField.id + "_" + index
       cloneField.value = value
       cloneField.classList.add('category-field-added')
-      console.log(cloneField.value)
+      item.classList.add('bigger')
+      console.log(cloneField)
       categoryField.insertAdjacentElement('afterend',cloneField);
 
     })

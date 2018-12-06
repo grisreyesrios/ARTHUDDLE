@@ -2,7 +2,11 @@
 body {
   background-color: #eee9eb;
 }
+#search-box-drop{
+  background: repeating-linear-gradient(45deg,transparent,transparent 5px,#ccc 5px,#ccc 20px),linear-gradient(to bottom,#eee,#999);
 
+    flex-wrap: wrap;
+}
 .main {
   min-height: calc(100vh - 191px)
 }
@@ -78,8 +82,8 @@ body {
   flex: 2 auto;
   background-color: #FF5634;
   justify-content: flex-end;
-  padding: 10%;
-  margin-top: 2em;
+  padding: 13%;
+  margin-top: 20%;
   text-align: center;
 }
 
@@ -90,6 +94,7 @@ body {
 .landing-image-1 {
   flex: 1 auto;
   width: 470px;
+  padding-top: 50%;
 }
 
 .landing-image-box-1 {
@@ -218,10 +223,21 @@ h2 {
 }
 
 .sortable-container {
-  li {list-style: none;
+  li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+        justify-content: flex-start;
+        height:fit-content;
+
   }
 }
-
+.bigger{
+ img{
+  height:100px !important;
+  width:100px !important;
+ }
+}
 .col-xs-8{
   h2{
     color: black;
