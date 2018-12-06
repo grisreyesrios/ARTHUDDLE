@@ -2,16 +2,19 @@ import { Sortable } from '@shopify/draggable';
 
 
 function sortItems() {
+
   const sortable = new Sortable(document.querySelectorAll('.sortable-dropzone'), {
     draggable: '.sortable-item'
   });
 
   const form = document.getElementById('searchForm');
   sortable.on('sortable:stop', () => {
+
     const dropzone = document.getElementById('search-box-drop');
     const items = Array.from(dropzone.children);
     removeAddedField()
     items.forEach((item, index) => {
+
       const value = item.dataset.value;
       const categoryField = document.getElementById('categories');
       const cloneField = categoryField.cloneNode(true)
@@ -20,6 +23,7 @@ function sortItems() {
       cloneField.classList.add('category-field-added')
       console.log(cloneField.value)
       categoryField.insertAdjacentElement('afterend',cloneField);
+
     })
   });
 }
