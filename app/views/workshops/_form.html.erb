@@ -34,7 +34,6 @@
  other] %>
       <%= w.input :capacity, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Capacity' %>
     </div>
-    <%= w.input :date, wrapper_html: { class: 'col-sm-6' }, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>
 
   <div class="form-row">
 
@@ -59,6 +58,7 @@
   <div class="form-row">
       <%= w.input :photo, wrapper_html: { class: 'col-sm-6' }, input_html: { class: 'workshop-input' }, label: false, placeholder: 'Photo' %>
       <%= w.input :photo_cache, as: :hidden %>
+    <%= w.input :date, wrapper_html: { class: 'col-sm-6' }, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %>
   </div>
 
   <div class="form-row">
